@@ -16,7 +16,7 @@ async (conn, mek, m, { from }) => {
     const usdAddress = "0152928279700";
 
     const caption = `╔✦『 *DML PAYMENT* 』✦╗
-║💳 *Binance ID:* \`${binanceID}\`
+║💳 *Dml ID:* \`${binanceID}\`
 ║💵 *USD Address:* \`${usdAddress}\`
 ║🔗 *Send your payments securely!*
 ╚═══════════════╝
