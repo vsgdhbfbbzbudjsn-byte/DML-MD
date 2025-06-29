@@ -1,7 +1,7 @@
 const { cmd } = require("../command"); // Import command handler
 
 cmd({
-  pattern: "binance",
+  pattern: "dml1",
   react: "💰",
   alias: ["payment"],
   desc: "Displays Binance payment details with your USD address.",
@@ -20,7 +20,7 @@ async (conn, mek, m, { from }) => {
 ║💵 *USD Address:* \`${usdAddress}\`
 ║🔗 *Send your payments securely!*
 ╚═══════════════╝
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜᴢᴀɴ ꜱɪɢᴍᴀ `;
+> POWERED BY DML-MD `;
 
     await conn.sendMessage(from, { image: { url: binanceImage }, caption }, { quoted: m });
   } catch (error) {
@@ -52,9 +52,9 @@ async (conn, mek, m, { from, reply }) => {
 ║💳 *Account Number:* \`${accountNumber}\`
 ║🔗 *Make payments securely!*
 ║🖼️ *screenshot(ss) needed*
-║🖼️ *send ss here t.me/faradad_11*
+║🖼️ *send ss here https://wa.me/255622220680*
 ╚═══════════════╝
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜᴢᴀɴ ꜱɪɢᴍᴀ `;
+> POWERED BY DML-MD `;
 
     await conn.sendMessage(from, { image: { url: opayImage }, caption }, { quoted: mek });
   } catch (error) {
@@ -87,9 +87,9 @@ async (conn, mek, m, { from, reply }) => {
 ║💳 *Account Number:* \`${accountNumber}\`
 ║🔗 *Make payments securely!*
 ║🖼️ *screenshot(ss) needed*
-║🖼️ *send ss here t.me/faradad_11*
+║🖼️ *send ss here https://wa.me/255622220680*
 ╚═══════════════╝
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜᴢᴀɴ ꜱɪɢᴍᴀ `;
+> POWERED BY DML-MD `;
 
     await conn.sendMessage(from, { image: { url: opayImage }, caption }, { quoted: mek });
   } catch (error) {
