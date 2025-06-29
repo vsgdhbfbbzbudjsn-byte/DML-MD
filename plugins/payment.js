@@ -11,8 +11,8 @@ cmd({
 }, 
 async (conn, mek, m, { from }) => {
   try {
-    const binanceImage = "https://files.catbox.moe/hwp9k1.jpg"; // Binance image URL
-    const binanceID = "255785591288";
+    const binanceImage = "https://files.catbox.moe/khxnbd.jpg"; // Binance image URL
+    const binanceID = "255713541112";
     const usdAddress = "0152928279700";
 
     const caption = `╔✦『 *DML PAYMENT* 』✦╗
@@ -24,7 +24,7 @@ async (conn, mek, m, { from }) => {
 
     await conn.sendMessage(from, { image: { url: binanceImage }, caption }, { quoted: m });
   } catch (error) {
-    console.error("Error in Binance command:", error);
+    console.error("Error in Dml command:", error);
     await conn.sendMessage(from, { text: "❌ An error occurred while fetching Binance details." }, { quoted: m });
   }
 });
@@ -41,8 +41,8 @@ cmd({
 }, 
 async (conn, mek, m, { from, reply }) => {
   try {
-    const opayImage = "https://files.catbox.moe/hwp9k1.jpg"; // Image URL
-    const accountNumber = "255622220680";
+    const opayImage = "https://files.catbox.moe/khxnbd.jpg"; // Image URL
+    const accountNumber = "255713541112";
     const accountName = "Daudy Musa";
     const bankName = "Crdb";
 
@@ -77,7 +77,7 @@ cmd({
 async (conn, mek, m, { from, reply }) => {
   try {
     const opayImage = "https://files.catbox.moe/hwp9k1.jpg"; // Image URL
-    const accountNumber = "255622220680";
+    const accountNumber = "255713541112";
     const accountName = "Daudy Musa";
     const bankName = "crdb";
 
