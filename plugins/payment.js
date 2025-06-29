@@ -11,9 +11,9 @@ cmd({
 }, 
 async (conn, mek, m, { from }) => {
   try {
-    const binanceImage = "https://raw.githubusercontent.com/Mayelprince/url/main/url/IMG-20250325-WA0057.jpg"; // Binance image URL
+    const binanceImage = "https://files.catbox.moe/hwp9k1.jpg"; // Binance image URL
     const binanceID = "255785591288";
-    const usdAddress = "TQgh6GRGZWp2uqKBd668sbPTCqe5uxYyxK";
+    const usdAddress = "0152928279700";
 
     const caption = `╔✦『 *DML PAYMENT* 』✦╗
 ║💳 *Binance ID:* \`${binanceID}\`
@@ -41,7 +41,7 @@ cmd({
 }, 
 async (conn, mek, m, { from, reply }) => {
   try {
-    const opayImage = "https://raw.githubusercontent.com/Mayelprince/url/main/url/images.png"; // Image URL
+    const opayImage = "https://files.catbox.moe/hwp9k1.jpg"; // Image URL
     const accountNumber = "255622220680";
     const accountName = "Daudy Musa";
     const bankName = "Crdb";
@@ -76,7 +76,7 @@ cmd({
 }, 
 async (conn, mek, m, { from, reply }) => {
   try {
-    const opayImage = "https://cdn.giftedtech.web.id/file/nqCsY.jpg"; // Image URL
+    const opayImage = "https://files.catbox.moe/hwp9k1.jpg"; // Image URL
     const accountNumber = "255622220680";
     const accountName = "Daudy Musa";
     const bankName = "crdb";
