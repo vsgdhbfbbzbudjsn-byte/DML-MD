@@ -4,7 +4,7 @@ cmd({
   pattern: "dml",
   react: "💰",
   alias: ["payment"],
-  desc: "Displays Binance payment details with your USD address.",
+  desc: "Displays Dml payment details with your USD address.",
   category: "finance",
   use: ".binance",
   filename: __filename
