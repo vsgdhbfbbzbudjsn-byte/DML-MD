@@ -1,7 +1,7 @@
 const { cmd } = require("../command"); // Import command handler
 
 cmd({
-  pattern: "dml1",
+  pattern: "dml",
   react: "💰",
   alias: ["payment"],
   desc: "Displays Binance payment details with your USD address.",
