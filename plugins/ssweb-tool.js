@@ -1,4 +1,4 @@
-// code by ⿻ ⌜ 𝐊𝐇𝐀𝐍 ⌟⿻⃮͛🇵🇰𖤐
+// code by ⿻ ⌜ DML ⌟⿻⃮͛🇵🇰𖤐
 
 const axios = require("axios");
 const config = require('../config');
@@ -24,8 +24,8 @@ async (conn, mek, m, {
   }
 
   try {
-    // created by jawad tech 
-    const response = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`);
+    // created by Dml tech 
+    const response = await axios.get(`https://bk9.fun/tools/screenshot?device=tablet&url= ${q}`);
     const screenshotUrl = response.data.screenshotUrl;
 
     // give credit and use
