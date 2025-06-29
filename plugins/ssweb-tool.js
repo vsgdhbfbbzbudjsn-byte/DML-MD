@@ -1,4 +1,4 @@
-// code by ⿻ ⌜ DML ⌟⿻⃮͛🇵🇰𖤐
+// code by ⿻ ⌜ DML ⌟⿻⃮͛🇹🇿𖤐
 
 const axios = require("axios");
 const config = require('../config');
