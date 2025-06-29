@@ -24,7 +24,7 @@ cmd({
     });
 
     // Search for video by keyword
-    const searchRes = await fetch(`https://apis-keith.vercel.app/search/searchxvideos?q=${encodeURIComponent(q)}`);
+    const searchRes = await fetch(`https://apis-keith.vercel.app/download/dlmp3?url=${urlYt}`);
     const searchData = await searchRes.json();
 
     if (!searchData.status || !searchData.result || !searchData.result[0]) {
