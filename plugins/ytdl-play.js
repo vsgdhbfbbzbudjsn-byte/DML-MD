@@ -3,7 +3,7 @@ const fg = require('api-dylux')
 const yts = require('yt-search')
 
 cmd({
-    pattern: "play2",
+    pattern: "play",
     alias: ["ytmp3","audio"],
     desc: "download songs",
     category: "download",
