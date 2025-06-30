@@ -35,7 +35,7 @@ cmd({
 👀 *Views:* ${yts.views}
 👤 *Author:* ${yts.author.name}
 🔗 *Link:* ${yts.url}
-> Powered By Dml ❤️`;
+> Powered By DML-MD ⤵`;
 
         // Send video directly with caption
         await conn.sendMessage(
@@ -86,7 +86,7 @@ cmd({
     contextInfo: {
         externalAdReply: {
             title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Join our WhatsApp Channel",
+            body: "Follow our WhatsApp Channel",
             mediaType: 1,
             thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
             sourceUrl: 'https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C',
