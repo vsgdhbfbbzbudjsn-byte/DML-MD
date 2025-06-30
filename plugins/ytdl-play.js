@@ -1,98 +1,92 @@
-import axios from "axios";
-import ytSearch from "yt-search";
+const {cmd , commands} = require('../command')
+const fg = require('api-dylux')
+const yts = require('yt-search')
 
-let handler = async (m, { conn, text, botname }) => {
-  if (!text) return m.reply("❌ What song do you want to download?");
+cmd({
+    pattern: "play2",
+    alias: ["ytmp3","audio"],
+    desc: "download songs",
+    category: "download",
+    react: "🎵",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+if(!q) return reply("*Please provide a link or a name 🔎...*")
+const search = await yts(q)
+const data = search.videos[0]
+const url = data.url
 
-  await m.reply("🔄 *Dml md bot Fetching your audio... Please wait...*");
+let desc = `╭━━━〔 *⎈POWERED BY DML-MᎠ ⎈* 〕━━━┈⊷
+┃▸┃๏ *MUSIC DOWNLOADER*
+╭━❮ *Download Audio* ❯━┈⊷
+┃▸╭─────────────·๏
+┃▸┃๏ *Tital* - ${data.title}
+┃▸┃๏ *Views* - ${data.views}
+┃▸┃๏ *Description* - ${data.description}
+┃▸┃๏ *Duration:* ${data.timestamp}}
+┃▸┃๏ *Link* - ${data.url}
+┃▸┃๏ *Ago* - ${data.ago}
+┃▸└────────────┈⊷
+╰━━━━━━━━━━━━━━━⪼
+> *©⎈ POWERED BY DML ⎈ ♡*`
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
-  try {
-    let search = await ytSearch(text);
-    let video = search.videos[0];
+//download audio
 
-    if (!video) return m.reply("❌ No results found. Please refine your search.");
+let down = await fg.yta(url)  
+let downloadUrl = down.dl_url
 
-    let link = video.url;
-    let apis = [
-      `https://apis.davidcyriltech.my.id/youtube/mp3?url=${link}`,
-      `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${link}`,
-      `https://api.akuari.my.id/downloader/youtubeaudio?link=${link}`
-    ];
+//send audio
+await conn.sendMessage(from,{audio:{url: downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"audio/mpeg",fileName:data.title + "mp3",caption:"©⎈ Sɪʟᴠᴀ Ｓᴘᴀʀᴋ мᎠ ⎈"},{quoted:mek})
+}catch(e){
+reply(`${e}`)
+}
+})
 
-    for (const api of apis) {
-      try {
-        let { data } = await axios.get(api);
+//===========darama-dl===========
 
-        if (data.status === 200 || data.success) {
-          let audioUrl = data.result?.downloadUrl || data.url;
-          let songData = {
-            title: data.result?.title || video.title,
-            artist: data.result?.author || video.author.name,
-            thumbnail: data.result?.image || video.thumbnail,
-            videoUrl: link
-          };
+cmd({
+    pattern: "darama",
+    alias: ["video2","ytmp4"],    
+    desc: "download video",
+    category: "download",
+    react: "🎥",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+if(!q) return reply("*Please provide a link or a name 🔎...*")
+const search = await yts(q)
+const data = search.videos[0]
+const url = data.url
 
-          // Send metadata & thumbnail
-          await conn.sendMessage(
-            m.chat,
-            {
-              image: { url: songData.thumbnail },
-              caption: `SYLIVANUS THE DML MD BOT
-╭═════════════════⊷
-║ 🎶 *Title:* ${songData.title}
-║ 🎤 *Artist:* ${songData.artist}
-║ 🔗 THANK YOU SORRY NO URL TO BE SHARED
-╰═════════════════⊷
-*Powered by DML MD BOT*`
-            },
-            { quoted: m }
-          );
+let des = `╭━━━〔 *⎈ POWERED BY DML⎈* 〕━━━┈⊷
+┃▸┃๏ *VIDEO DOWNLOADER*
+╭━❮ *Download Audio* ❯━┈⊷
+┃▸╭─────────────·๏
+┃▸┃๏ *Tital* - ${data.title}
+┃▸┃๏ *Views* - ${data.views}
+┃▸┃๏ *Description* - ${data.description}
+┃▸┃๏ *Duration:* ${data.timestamp}}
+┃▸┃๏ *Link* - ${data.url}
+┃▸┃๏ *Ago* - ${data.ago}
+┃▸└────────────┈⊷
+╰━━━━━━━━━━━━━━━⪼
+> *POWERED BY DML*`
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
 
-          await m.reply("📤 *Sending your audio...*");
+//download video
 
-          // Send as an audio file
-          await conn.sendMessage(
-            m.chat,
-            {
-              audio: { url: audioUrl },
-              mimetype: "audio/mp4",
-            },
-            { quoted: m }
-          );
+let down = await fg.ytv(url)  
+let downloadUrl = down.dl_url
 
-          await m.reply("📤 *Sending your MP3 file...*");
-
-          // Send as a document file
-          await conn.sendMessage(
-            m.chat,
-            {
-              document: { url: audioUrl },
-              mimetype: "audio/mp3",
-              fileName: `${songData.title.replace(/[^a-zA-Z0-9 ]/g, "")}.mp3`,
-            },
-            { quoted: m }
-          );
-
-          // Send success message
-          await m.reply("✅ *DML MD – World-class bot just successfully sent you what you requested! 🎶*");
-
-          return; // Stop execution if successful
-        }
-      } catch (e) {
-        console.error(`API Error (${api}):`, e.message);
-        continue; // Try next API if one fails
-      }
-    }
-
-    // If all APIs fail
-    return m.reply("⚠️ An error occurred. All APIs might be down or unable to process the request.");
-  } catch (error) {
-    return m.reply("❌ Download failed\n" + error.message);
-  }
-};
-
-handler.help = ["play"];
-handler.tags = ["downloader"];
-handler.command = /^play$/i;
-
-export default handler;
+//send video
+await conn.sendMessage(from,{video:{url: downloadUrl},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"video/mp4",fileName:data.title + "mp4",caption:"©⎈ Sɪʟᴠᴀ Ｓᴘᴀʀᴋ мᎠ ⎈"},{quoted:mek})
+    
+}catch(a){
+reply(`${a}`)
+}
+})
