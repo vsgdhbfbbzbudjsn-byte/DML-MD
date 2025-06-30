@@ -1,54 +1,98 @@
-const config = require('../config');
-const { cmd } = require('../command');
-const yts = require('yt-search');
+import axios from "axios";
+import ytSearch from "yt-search";
 
-cmd({
-    pattern: "yt2",
-    alias: ["play2", "music"],
-    react: "🎵",
-    desc: "Download audio from YouTube",
-    category: "download",
-    use: ".song <query or url>",
-    filename: __filename
-}, async (conn, m, mek, { from, q, reply }) => {
-    try {
-        if (!q) return await reply("❌ Please provide a song name or YouTube URL!");
+let handler = async (m, { conn, text, botname }) => {
+  if (!text) return m.reply("❌ What song do you want to download?");
 
-        let videoUrl, title;
-        
-        // Check if it's a URL
-        if (q.match(/(youtube\.com|youtu\.be)/)) {
-            videoUrl = q;
-            const videoInfo = await yts({ videoId: q.split(/[=/]/).pop() });
-            title = videoInfo.title;
-        } else {
-            // Search YouTube
-            const search = await yts(q);
-            if (!search.videos.length) return await reply("❌ No results found!");
-            videoUrl = search.videos[0].url;
-            title = search.videos[0].title;
+  await m.reply("🔄 *Dml md bot Fetching your audio... Please wait...*");
+
+  try {
+    let search = await ytSearch(text);
+    let video = search.videos[0];
+
+    if (!video) return m.reply("❌ No results found. Please refine your search.");
+
+    let link = video.url;
+    let apis = [
+      `https://apis.davidcyriltech.my.id/youtube/mp3?url=${link}`,
+      `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${link}`,
+      `https://api.akuari.my.id/downloader/youtubeaudio?link=${link}`
+    ];
+
+    for (const api of apis) {
+      try {
+        let { data } = await axios.get(api);
+
+        if (data.status === 200 || data.success) {
+          let audioUrl = data.result?.downloadUrl || data.url;
+          let songData = {
+            title: data.result?.title || video.title,
+            artist: data.result?.author || video.author.name,
+            thumbnail: data.result?.image || video.thumbnail,
+            videoUrl: link
+          };
+
+          // Send metadata & thumbnail
+          await conn.sendMessage(
+            m.chat,
+            {
+              image: { url: songData.thumbnail },
+              caption: `SYLIVANUS THE DML MD BOT
+╭═════════════════⊷
+║ 🎶 *Title:* ${songData.title}
+║ 🎤 *Artist:* ${songData.artist}
+║ 🔗 THANK YOU SORRY NO URL TO BE SHARED
+╰═════════════════⊷
+*Powered by DML MD BOT*`
+            },
+            { quoted: m }
+          );
+
+          await m.reply("📤 *Sending your audio...*");
+
+          // Send as an audio file
+          await conn.sendMessage(
+            m.chat,
+            {
+              audio: { url: audioUrl },
+              mimetype: "audio/mp4",
+            },
+            { quoted: m }
+          );
+
+          await m.reply("📤 *Sending your MP3 file...*");
+
+          // Send as a document file
+          await conn.sendMessage(
+            m.chat,
+            {
+              document: { url: audioUrl },
+              mimetype: "audio/mp3",
+              fileName: `${songData.title.replace(/[^a-zA-Z0-9 ]/g, "")}.mp3`,
+            },
+            { quoted: m }
+          );
+
+          // Send success message
+          await m.reply("✅ *DML MD – World-class bot just successfully sent you what you requested! 🎶*");
+
+          return; // Stop execution if successful
         }
-
-        await reply("⏳ Downloading audio...");
-
-        // Use API to get audio
-        const apiUrl = `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`;
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        if (!data.success) return await reply("❌ Failed to download audio!");
-
-        await conn.sendMessage(from, {
-            audio: { url: data.result.download_url },
-            mimetype: 'audio/mpeg',
-            ptt: false
-        }, { quoted: mek });
-
-        await reply(`✅ *${title}* downloaded successfully!`);
-
-    } catch (error) {
-        console.error(error);
-        await reply(`❌ Error: ${error.message}`);
+      } catch (e) {
+        console.error(`API Error (${api}):`, e.message);
+        continue; // Try next API if one fails
+      }
     }
-});
 
+    // If all APIs fail
+    return m.reply("⚠️ An error occurred. All APIs might be down or unable to process the request.");
+  } catch (error) {
+    return m.reply("❌ Download failed\n" + error.message);
+  }
+};
+
+handler.help = ["play"];
+handler.tags = ["downloader"];
+handler.command = /^play$/i;
+
+export default handler;
