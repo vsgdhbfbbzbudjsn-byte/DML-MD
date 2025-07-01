@@ -213,7 +213,7 @@ izumi({
 });
 
 izumi({
-  pattern: 'play ?(.*)',
+  pattern: 'play3 ?(.*)',
   fromMe: mode,
   desc: 'Search and download',
   type: 'downloader'
