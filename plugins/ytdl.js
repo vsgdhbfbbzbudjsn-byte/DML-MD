@@ -1,5 +1,6 @@
 const config = require('../config');
 const { cmd } = require('../command');
+const axios = require('axios');
 const DY_SCRAP = require('@dark-yasiya/scrap');
 const dy_scrap = new DY_SCRAP();
 
@@ -9,13 +10,24 @@ function replaceYouTubeID(url) {
     return match ? match[1] : null;
 }
 
+async function downloadMP4(url) {
+    try {
+        const apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(url)}`;
+        const response = await axios.get(apiUrl);
+        return response.data;
+    } catch (error) {
+        console.error('Error downloading MP4:', error);
+        return null;
+    }
+}
+
 cmd({
     pattern: "play",
-    alias: ["mp3", "ytmp3"],
+    alias: ["mp3", "ytmp3", "ytmp4", "mp4"],
     react: "🎵",
-    desc: "Download Ytmp3",
+    desc: "Download YouTube audio or video",
     category: "download",
-    use: ".song <Text or YT URL>",
+    use: ".play <Text or YT URL>",
     filename: __filename
 }, async (conn, m, mek, { from, q, reply }) => {
     try {
@@ -34,7 +46,7 @@ cmd({
 
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
-        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
+        let info = `🍄 *𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
             `🎵 *Title:* ${title || "Unknown"}\n` +
             `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
             `👀 *Views:* ${views || "Unknown"}\n` +
@@ -42,8 +54,10 @@ cmd({
             `👤 *Author:* ${author?.name || "Unknown"}\n` +
             `🖇 *Url:* ${url || "Unknown"}\n\n` +
             `🔽 *Reply with your choice:*\n` +
-            `1.1 *Audio Type* 🎵\n` +
-            `1.2 *Document Type* 📁\n\n` +
+            `1.1 *Audio (MP3)* 🎵\n` +
+            `1.2 *Audio (Document MP3)* 📁\n` +
+            `2.1 *Video (MP4)* 🎬\n` +
+            `2.2 *Video (Document MP4)* 📁\n\n` +
             `${config.FOOTER || "DML-MD"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
@@ -51,7 +65,7 @@ cmd({
         await conn.sendMessage(from, { react: { text: '🎶', key: sentMsg.key } });
 
         // Listen for user reply only once!
-        conn.ev.on('messages.upsert', async (messageUpdate) => { 
+        const replyListener = async (messageUpdate) => {
             try {
                 const mekInfo = messageUpdate?.messages[0];
                 if (!mekInfo?.message) return;
@@ -61,27 +75,41 @@ cmd({
 
                 if (!isReplyToSentMsg) return;
 
+                // Remove the listener after first response
+                conn.ev.off('messages.upsert', replyListener);
+
                 let userReply = messageType.trim();
                 let msg;
                 let type;
-                let response;
                 
                 if (userReply === "1.1") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
-                    response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
+                    msg = await conn.sendMessage(from, { text: "⏳ Processing MP3 audio..." }, { quoted: mek });
+                    const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
-                    if (!downloadUrl) return await reply("❌ Download link not found!");
+                    if (!downloadUrl) return await reply("❌ MP3 download link not found!");
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
                     
                 } else if (userReply === "1.2") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, { text: "⏳ Processing MP3 document..." }, { quoted: mek });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
-                    if (!downloadUrl) return await reply("❌ Download link not found!");
+                    if (!downloadUrl) return await reply("❌ MP3 download link not found!");
                     type = { document: { url: downloadUrl }, fileName: `${title}.mp3`, mimetype: "audio/mpeg", caption: title };
                     
+                } else if (userReply === "2.1") {
+                    msg = await conn.sendMessage(from, { text: "⏳ Processing MP4 video..." }, { quoted: mek });
+                    const response = await downloadMP4(`https://youtube.com/watch?v=${id}`);
+                    if (!response?.result?.download?.url) return await reply("❌ MP4 download link not found!");
+                    type = { video: { url: response.result.download.url }, caption: title };
+                    
+                } else if (userReply === "2.2") {
+                    msg = await conn.sendMessage(from, { text: "⏳ Processing MP4 document..." }, { quoted: mek });
+                    const response = await downloadMP4(`https://youtube.com/watch?v=${id}`);
+                    if (!response?.result?.download?.url) return await reply("❌ MP4 download link not found!");
+                    type = { document: { url: response.result.download.url }, fileName: `${title}.mp4`, mimetype: "video/mp4", caption: title };
+                    
                 } else { 
-                    return await reply("❌ Invalid choice! Reply with 1.1 or 1.2.");
+                    return await reply("❌ Invalid choice! Reply with 1.1, 1.2, 2.1, or 2.2.");
                 }
 
                 await conn.sendMessage(from, type, { quoted: mek });
@@ -91,7 +119,9 @@ cmd({
                 console.error(error);
                 await reply(`❌ *An error occurred while processing:* ${error.message || "Error!"}`);
             }
-        });
+        };
+
+        conn.ev.on('messages.upsert', replyListener);
 
     } catch (error) {
         console.error(error);
@@ -99,4 +129,3 @@ cmd({
         await reply(`❌ *An error occurred:* ${error.message || "Error!"}`);
     }
 });
-                               
