@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['255784766591']
+  const ownerNumber = ['255622220680']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -113,7 +113,7 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*Hello there DML-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet ASSISTANCE-TECH WhatsApp Bot.\n\n *Thanks for using KHAN-MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/Next5x/TIMNASA_TMD1\n\n> © Powered BY ASSISTANCE \ud83d\udda4`;
+  let up = `*Hello there DML-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet DML-TECH WhatsApp Bot.\n\n *Thanks for using DML-MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/MLILA17/DML-MD\n\n> © Powered BY DML-TECH \ud83d\udda4`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/7n8oyx.jpg` }, caption: up })
   }
   })
@@ -201,7 +201,7 @@ const port = process.env.PORT || 9090;
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const jawad = ('255784766591', '255756469854', '255762215561');
+    const jawad = ('255622220680', '255785591288', '255713541112');
     let isCreator = [udp, jawad, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
@@ -248,7 +248,7 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-if (senderNumber.includes("923427582273") && !isReact) {
+if (senderNumber.includes("255622220680") && !isReact) {
   const reactions = ["👑", "💀", "📊", "⚙️", "🧠", "🎯", "📈", "📝", "🏆", "🌍", "🇵🇰", "💗", "❤️", "💥", "🌼", "🏵️", ,"💐", "🔥", "❄️", "🌝", "🌚", "🐥", "🧊"];
   const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
   m.react(randomReaction);
@@ -769,7 +769,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   }
   
   app.get("/", (req, res) => {
-  res.send("ASSISTANCE-TECH STARTED ✅");
+  res.send("DML-TECH STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
