@@ -2,11 +2,11 @@
   "name": "DML-MD",
   "version": "4.5.0",
   "description": "A WhatsApp Bot Created By Dml",
-  "main": "dml.js",
+  "main": "index.js",
   "scripts": {
-    "start": "pm2 start dml.js --deep-monitoring --attach --name DML-MD",
-    "stop": "pm2 stop dml",
-    "restart": "pm2 restart dml"
+    "start": "pm2 start index.js --deep-monitoring --attach --name index",
+    "stop": "pm2 stop index",
+    "restart": "pm2 restart index"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "npm:baileys@6.7.18",
