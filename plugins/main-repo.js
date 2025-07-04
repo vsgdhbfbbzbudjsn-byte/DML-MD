@@ -6,7 +6,7 @@ cmd({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch GitHub repository information",
-    react: "📂",
+    react: "🚀",
     category: "info",
     filename: __filename,
 },
@@ -48,7 +48,7 @@ async (conn, mek, m, { from, reply }) => {
 > *POWERED BY DML-TECH*`;
 
         await conn.sendMessage(from, {
-            image: { url: `#` },
+            image: { url: `https://files.catbox.moe/vcdwmp.jpg` },
             caption: message,
             contextInfo: { 
                 mentionedJid: [m.sender],
