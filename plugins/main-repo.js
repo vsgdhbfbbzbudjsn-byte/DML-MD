@@ -30,7 +30,7 @@ async (conn, mek, m, { from, reply }) => {
         }
 
         if (!response.ok) {
-            return reply(`❌ Échec de récupération des infos du repo. Code: ${response.status}`);
+            return reply(`❌ Error: connect ETIMEDOUT Code: ${response.status}`);
         }
 
         const repoData = await response.json();
@@ -64,6 +64,6 @@ async (conn, mek, m, { from, reply }) => {
 
     } catch (error) {
         console.error("Repo command error:", error);
-        reply("❌ Une erreur est survenue lors de la récupération du dépôt.");
+        reply("❌ An error occurred while fetching the repository.");
     }
 });
