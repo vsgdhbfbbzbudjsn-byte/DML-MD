@@ -18,7 +18,7 @@ cmd({
         if (!q) return await reply("Please provide a YouTube URL or video name.");
 
         // Fast reply: searching for video (do NOT await so it replies instantly)
-        conn.sendMessage(from, { text: "🔍 ᴄʀɪss ᴀɪ is searching for your video..." }, { quoted: mek });
+        conn.sendMessage(from, { text: "🔍 DML is searching for your video..." }, { quoted: mek });
 
         const yt = await ytsearch(q);
         if (yt.results.length < 1) return reply("No results found!");
