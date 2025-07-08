@@ -31,6 +31,17 @@ async (conn, mek, m, { from, reply, text, isCreator }) => {
         else {
             return reply('Invalid command. Usage:\n• .antidelete on\n• .antidelete off\n• .antidelete status');
         }
+         await zk.sendMessage(m.chat, {
+      text: message.trim(),
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: "120363387497418815@newsletter",
+          newsletterName: "🇹🇿DML-MD",
+          serverMessageId: 1
+        }
+      }
     } catch (e) {
         console.error("Error in antidelete command:", e);
         return reply("An error occurred while processing your request.");
