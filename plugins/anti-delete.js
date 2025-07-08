@@ -31,9 +31,6 @@ async (conn, mek, m, { from, reply, text, isCreator }) => {
         else {
             return reply('Invalid command. Usage:\n• .antidelete on\n• .antidelete off\n• .antidelete status');
         }
-         await zk.sendMessage(m.chat, {
-      text: message.trim(),
-      
     } catch (e) {
         console.error("Error in antidelete command:", e);
         return reply("An error occurred while processing your request.");
