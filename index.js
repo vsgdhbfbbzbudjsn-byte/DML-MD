@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['255622220680']
+  const ownerNumber = ['255785591288']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -68,8 +68,8 @@ const {
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("DML-MD~", '');
-const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
+const sessdata = config.SESSION_ID.replace("DML-MD", '');
+const filer = File.fromURL(https://mega.nz/file/${sessdata})
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
@@ -83,7 +83,7 @@ const port = process.env.PORT || 9090;
   //=============================================
   
   async function connectToWA() {
-  console.log("Connecting to WhatsApp ⏳️...");
+  console.log("Connecting to WhatsApp ⏳...");
   const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
   var { version } = await fetchLatestBaileysVersion()
   
@@ -113,21 +113,21 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `╭─〔 *🤖 DML-MD BOT* 〕  
-├─▸ *Ultra Super Fast Powerfull ⚠️*  
-│     *World Best BOT DML-MD* 
-╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
+  let up = `╭─〔 🤖 DML-MD BOT 〕  
+├─▸ Ultra Super Fast Powerfull ⚠  
+│     World Best BOT DML-MD 
+╰─➤ Your Smart WhatsApp Bot is Ready To use 🍁!  
 
-- *🖤 Thank You for Choosing DML-MD!* 
+- 🤝 Thank You for Choosing DML-MD! 
 
-╭──〔 🔗 *Information* 〕  
-├─ ↪ Prefix:= ${prefix}
+╭──〔 🔗 Information 〕  
+├─ 🧩 Prefix: = ${prefix}
 ├─ 📢 Join Channel:  
-│    https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C  
+│     https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C  
 ├─ 🌟 Star the Repo:  
 │    https://github.com/MLILA17/DML-MD  
-╰─🚀 *Powered by Dml*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/vcdwmp.jpg` }, caption: up })
+╰─🚀 *Powered by DML-MD*`;
+    conn.sendMessage(conn.user.id, { image: { url: https://files.catbox.moe/vcdwmp.jpg }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -157,7 +157,7 @@ const port = process.env.PORT || 9090;
     //console.log("New Message Detected:", JSON.stringify(mek, null, 2));
   if (config.READ_MESSAGE === 'true') {
     await conn.readMessages([mek.key]);  // Mark message as read
-    console.log(`Marked message from ${mek.key.remoteJid} as read.`);
+    console.log(Marked message from ${mek.key.remoteJid} as read.);
   }
     if(mek.message.viewOnceMessageV2)
     mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
@@ -166,7 +166,7 @@ const port = process.env.PORT || 9090;
     }
   if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REACT === "true"){
     const jawadlike = await conn.decodeJid(conn.user.id);
-    const emojis = ['❤️', '💸', '😇', '🍂', '💥', '💯', '🔥', '💫', '💎', '💗', '🤍', '🖤', '👀', '🙌', '🙆', '🚩', '🥰', '💐', '😎', '🤎', '✅', '🫀', '🧡', '😁', '😄', '🌸', '🕊️', '🌷', '⛅', '🌟', '🗿', '🇵🇰', '💜', '💙', '🌝', '🖤', '💚'];
+    const emojis = ['❤', '💸', '😇', '🍂', '💥', '💯', '🔥', '💫', '💎', '💗', '🤍', '🖤', '👀', '🙌', '🙆', '🚩', '🥰', '💐', '😎', '🤎', '✅', '🫀', '🧡', '😁', '😄', '🌸', '🕊', '🌷', '⛅', '🌟', '🗿', '🇵🇰', '💜', '💙', '🌝', '🖤', '💚'];
     const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
     await conn.sendMessage(mek.key.remoteJid, {
       react: {
@@ -177,7 +177,7 @@ const port = process.env.PORT || 9090;
   }                       
   if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REPLY === "true"){
   const user = mek.key.participant
-  const text = `${config.AUTO_STATUS_MSG}`
+  const text = ${config.AUTO_STATUS_MSG}
   await conn.sendMessage(user, { text: text, react: { text: '💜', key: mek.key } }, { quoted: mek })
             }
             await Promise.all([
@@ -215,7 +215,7 @@ const port = process.env.PORT || 9090;
   }
 
   const udp = botNumber.split('@')[0];
-    const jawadop = ('255785591288', '255713541112', '255785561288');
+    const jawadop = ('255713541112', '255622220680', '255785591288');
     
     const ownerFilev2 = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  
     
@@ -227,7 +227,7 @@ const port = process.env.PORT || 9090;
 	  if (isCreator && mek.text.startsWith("&")) {
             let code = budy.slice(2);
             if (!code) {
-                reply(`Provide me with a query to run Master!`);
+                reply(Provide me with a query to run Master!);
                 return;
             }
             const { spawn } = require("child_process");
@@ -244,7 +244,7 @@ const port = process.env.PORT || 9090;
                 });
                 resultTest.on("close", code => {
                     if (code !== 0) {
-                        reply(`command exited with code ${code}`);
+                        reply(command exited with code ${code});
                     }
                 });
             } catch (err) {
@@ -258,21 +258,21 @@ const port = process.env.PORT || 9090;
 // Auto React for all messages (public and owner)
 if (!isReact && config.AUTO_REACT === 'true') {
     const reactions = [
-        '🌼', '❤️', '💐', '🔥', '🏵️', '❄️', '🧊', '🐳', '💥', '🥀', '❤‍🔥', '🥹', '😩', '🫣', 
-        '🤭', '👻', '👾', '🫶', '😻', '🙌', '🫂', '🫀', '👩‍🦰', '🧑‍🦰', '👩‍⚕️', '🧑‍⚕️', '🧕', 
-        '👩‍🏫', '👨‍💻', '👰‍♀', '🦹🏻‍♀️', '🧟‍♀️', '🧟', '🧞‍♀️', '🧞', '🙅‍♀️', '💁‍♂️', '💁‍♀️', '🙆‍♀️', 
-        '🙋‍♀️', '🤷', '🤷‍♀️', '🤦', '🤦‍♀️', '💇‍♀️', '💇', '💃', '🚶‍♀️', '🚶', '🧶', '🧤', '👑', 
+        '🌼', '❤', '💐', '🔥', '🏵', '❄', '🧊', '🐳', '💥', '🥀', '❤‍🔥', '🥹', '😩', '🫣', 
+        '🤭', '👻', '👾', '🫶', '😻', '🙌', '🫂', '🫀', '👩‍🦰', '🧑‍🦰', '👩‍⚕', '🧑‍⚕', '🧕', 
+        '👩‍🏫', '👨‍💻', '👰‍♀', '🦹🏻‍♀', '🧟‍♀', '🧟', '🧞‍♀', '🧞', '🙅‍♀', '💁‍♂', '💁‍♀', '🙆‍♀', 
+        '🙋‍♀', '🤷', '🤷‍♀', '🤦', '🤦‍♀', '💇‍♀', '💇', '💃', '🚶‍♀', '🚶', '🧶', '🧤', '👑', 
         '💍', '👝', '💼', '🎒', '🥽', '🐻', '🐼', '🐭', '🐣', '🪿', '🦆', '🦊', '🦋', '🦄', 
-        '🪼', '🐋', '🐳', '🦈', '🐍', '🕊️', '🦦', '🦚', '🌱', '🍃', '🎍', '🌿', '☘️', '🍀', 
+        '🪼', '🐋', '🐳', '🦈', '🐍', '🕊', '🦦', '🦚', '🌱', '🍃', '🎍', '🌿', '☘', '🍀', 
         '🍁', '🪺', '🍄', '🍄‍🟫', '🪸', '🪨', '🌺', '🪷', '🪻', '🥀', '🌹', '🌷', '💐', '🌾', 
-        '🌸', '🌼', '🌻', '🌝', '🌚', '🌕', '🌎', '💫', '🔥', '☃️', '❄️', '🌨️', '🫧', '🍟', 
-        '🍫', '🧃', '🧊', '🪀', '🤿', '🏆', '🥇', '🥈', '🥉', '🎗️', '🤹', '🤹‍♀️', '🎧', '🎤', 
-        '🥁', '🧩', '🎯', '🚀', '🚁', '🗿', '🎙️', '⌛', '⏳', '💸', '💎', '⚙️', '⛓️', '🔪', 
+        '🌸', '🌼', '🌻', '🌝', '🌚', '🌕', '🌎', '💫', '🔥', '☃', '❄', '🌨', '🫧', '🍟', 
+        '🍫', '🧃', '🧊', '🪀', '🤿', '🏆', '🥇', '🥈', '🥉', '🎗', '🤹', '🤹‍♀', '🎧', '🎤', 
+        '🥁', '🧩', '🎯', '🚀', '🚁', '🗿', '🎙', '⌛', '⏳', '💸', '💎', '⚙', '⛓', '🔪', 
         '🧸', '🎀', '🪄', '🎈', '🎁', '🎉', '🏮', '🪩', '📩', '💌', '📤', '📦', '📊', '📈', 
-        '📑', '📉', '📂', '🔖', '🧷', '📌', '📝', '🔏', '🔐', '🩷', '❤️', '🧡', '💛', '💚', 
+        '📑', '📉', '📂', '🔖', '🧷', '📌', '📝', '🔏', '🔐', '🩷', '❤', '🧡', '💛', '💚', 
         '🩵', '💙', '💜', '🖤', '🩶', '🤍', '🤎', '❤‍🔥', '❤‍🩹', '💗', '💖', '💘', '💝', '❌', 
-        '✅', '🔰', '〽️', '🌐', '🌀', '⤴️', '⤵️', '🔴', '🟢', '🟡', '🟠', '🔵', '🟣', '⚫', 
-        '⚪', '🟤', '🔇', '🔊', '📢', '🔕', '♥️', '🕐', '🚩', '🇵🇰'
+        '✅', '🔰', '〽', '🌐', '🌀', '⤴', '⤵', '🔴', '🟢', '🟡', '🟠', '🔵', '🟣', '⚫', 
+        '⚪', '🟤', '🔇', '🔊', '📢', '🔕', '♥', '🕐', '🚩', '🇵🇰'
     ];
 
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
@@ -299,8 +299,8 @@ const isBanned = bannedUsers.includes(sender);
 
 if (isBanned) return; // Ignore banned users completely
 	  
-  const ownerFile = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  // Dml 
-  const ownerNumberFormatted = `${config.OWNER_NUMBER}@s.whatsapp.net`;
+  const ownerFile = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  // Dml
+  const ownerNumberFormatted = ${config.OWNER_NUMBER}@s.whatsapp.net;
   // json file setup
   const isFileOwner = ownerFile.includes(sender);
   const isRealOwner = sender === ownerNumberFormatted || isMe || isFileOwner;
@@ -486,7 +486,7 @@ if (isBanned) return; // Ignore banned users completely
     //=====================================================
     conn.getFile = async(PATH, save) => {
       let res
-      let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split `,` [1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
+      let data = Buffer.isBuffer(PATH) ? PATH : /^data:.?\/.?;base64,/i.test(PATH) ? Buffer.from(PATH.split , [1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
           //if (!Buffer.isBuffer(data)) throw new TypeError('Result is not a buffer')
       let type = await FileType.fromBuffer(data) || {
           mime: 'application/octet-stream',
@@ -621,7 +621,7 @@ if (isBanned) return; // Ignore banned users completely
              */
     //=====================================================
     conn.sendImage = async(jid, path, caption = '', quoted = '', options) => {
-      let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split `,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
+      let buffer = Buffer.isBuffer(path) ? path : /^data:.?\/.?;base64,/i.test(path) ? Buffer.from(path.split , [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
       return await conn.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
     
@@ -751,7 +751,7 @@ if (isBanned) return; // Ignore banned users completely
                 jid,
                 {
                     contacts: {
-                        displayName: `${list.length} Contact`,
+                        displayName: ${list.length} Contact,
                         contacts: list,
                     },
                     ...opts,
@@ -785,7 +785,7 @@ if (isBanned) return; // Ignore banned users completely
   app.get("/", (req, res) => {
   res.send("DML MD STARTED ✅");
   });
-  app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
+  app.listen(port, () => console.log(Server listening on port http://localhost:${port}));
   setTimeout(() => {
   connectToWA()
   }, 4000);
