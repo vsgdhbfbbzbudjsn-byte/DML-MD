@@ -78,10 +78,6 @@ cmd({
       caption: `> *Powered by DML-TECH*`
     });
 
-  } catch (error) {
-    console.error("Nokia Error:", error);
-    reply(`An error occurred: ${error.response?.data?.message || error.message || "Unknown error"}`);
-  }
      await zk.sendMessage(m.chat, {
       text: message.trim(),
       contextInfo: {
@@ -94,6 +90,10 @@ cmd({
         }
       }
     }, { quoted: m });
+  } catch (error) {
+    console.error("Nokia Error:", error);
+    reply(`An error occurred: ${error.response?.data?.message || error.message || "Unknown error"}`);
+  }
 
   
 });
