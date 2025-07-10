@@ -70,7 +70,10 @@ You need a session to connect your bot. Choose your preferred method:
 [![Pair Device](https://img.shields.io/badge/GET_PAIR_CODE-1BAFBA?style=for-the-badge&logo=connectdevelop&logoColor=white)](https://dmlactive.onrender.com/)
 
 ---
+### 🔹 Step 3: Deploy with One Click
+Easily deploy to Heroku with the button below:
 
+[![Deploy](https://img.shields.io/badge/DEPLOY_TO_HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/MLILA17/DML-MD)
 </div>
 
 ---
