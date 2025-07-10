@@ -112,7 +112,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╭────〔 🤖 AI MENU 〕────╮
 ┃ 🧠 ai       🤖 gpt3     🤖 gpt2     🤖 gptmini
 ┃ 🤖 gpt     🔵 meta     📦 blackbox 🌈 luma
-┃ 🎧 dj      👑 khan     🤵 jawad    🧠 gpt4
+┃ 🎧 dj      👑 dml1     🤵 dml    🧠 gpt4
 ┃ 🔍 bing    🎨 imagine  🖼️ imagine2 🤖 copilot
 ╰────────────────────────╯
 
