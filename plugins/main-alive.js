@@ -14,7 +14,7 @@ cmd({
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-╭───〔 *🤖 ${config.BOT_NAME} STATUS* 〕───◉
+╭─🔴──〔 *🤖 ${config.BOT_NAME} STATUS* 〕───◉
 │✨ *Bot is Active & Online!*
 │
 │🧠 *Owner:* ${config.OWNER_NAME}
@@ -23,7 +23,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 │📳 *Mode:* [${config.MODE}]
 │💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
 │↪ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
+╰─🔴───────────────────◉
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
