@@ -26,7 +26,6 @@
     "file_size_url": "1.0.4",
     "fs-extra": "^11.1.0",
     "fs": "^0.0.1-security",
-    "jimp": "^1.6.0",
     "ffmpeg": "^0.0.4",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
