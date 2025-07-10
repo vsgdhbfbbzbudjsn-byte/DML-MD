@@ -113,7 +113,7 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('DML-MD CONNECTED SUCCESSFULLY ✅')
   
-  let up = `*Hello there DML-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet DML-MD WhatsApp Bot.\n\n *Thanks for using DML-MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C\n\n- *YOUR PREFIX:* = ${prefix}\n\n- *BOT MODE:* = ${config.MODE}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/MLILA17/DML-MD \n\n> © POWERED BY DML-TECH \ud83d\udda4`;
+  let up = `*Hello there DML-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet DML-MD WhatsApp Bot.\n\n *Thanks for using DML-MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C\n\n- *YOUR PREFIX:* = ${prefix}\n\n- *BOT MODE:* = ${config.MODE}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/MLILA17/DML-MD \n\n> © POWERED BY DML-TECH 💪🏻\ud83d\udda4`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/vcdwmp.jpg` }, caption: up })
   }
   })
