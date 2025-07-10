@@ -82,4 +82,18 @@ cmd({
     console.error("Nokia Error:", error);
     reply(`An error occurred: ${error.response?.data?.message || error.message || "Unknown error"}`);
   }
+     await zk.sendMessage(m.chat, {
+      text: message.trim(),
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: "120363382023564830@newsletter",
+          newsletterName: "🌐𝐁.𝐌.𝐁-𝐗𝐌𝐃🌐",
+          serverMessageId: 1
+        }
+      }
+    }, { quoted: m });
+
+  
 });
