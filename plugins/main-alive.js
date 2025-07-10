@@ -8,7 +8,7 @@ cmd({
     alias: ["status", "online", "a"],
     desc: "Check bot is alive or not",
     category: "main",
-    react: "⚡",
+    react: "📌",
     filename: __filename
 },
 async (conn, mek, m, { from, sender, reply }) => {
@@ -18,12 +18,11 @@ async (conn, mek, m, { from, sender, reply }) => {
 │✨ *Bot is Active & Online!*
 │
 │🧠 *Owner:* ${config.OWNER_NAME}
-│⚡ *Version:* 4.0.0
+│⚡ *Version:* 4.1.0
 │📝 *Prefix:* [${config.PREFIX}]
 │📳 *Mode:* [${config.MODE}]
 │💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-│🖥️ *Host:* ${os.hostname()}
-│⌛ *Uptime:* ${runtime(process.uptime())}
+│↪ *Uptime:* ${runtime(process.uptime())}
 ╰────────────────────◉
 > ${config.DESCRIPTION}`;
 
