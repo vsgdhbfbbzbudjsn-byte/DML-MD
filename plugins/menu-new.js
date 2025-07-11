@@ -59,9 +59,9 @@ cmd({
             }
         };
 
-        // Random image selection from Dml folder
+        // Random image selection from Dml folder (case-insensitive check)
         const dmlFolder = path.join(__dirname, '../Dml');
-        const dmlImages = fs.readdirSync(dmlFolder).filter(f => /^dml\d+\.jpg$/i.test(f));
+        const dmlImages = fs.readdirSync(dmlFolder).filter(f => /^Dml\d+\.jpg$/i.test(f));  // Case insensitive matching
         const randomIndex = Math.floor(Math.random() * dmlImages.length);
         const randomImage = path.join(dmlFolder, dmlImages[randomIndex]);
 
