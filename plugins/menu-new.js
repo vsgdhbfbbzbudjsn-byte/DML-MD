@@ -1,9 +1,9 @@
 const fs = require('fs');
-const path = require('path');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { runtime } = require('../lib/functions');
 const axios = require('axios');
+const path = require('path');
 
 cmd({
     pattern: "menu",
@@ -59,18 +59,19 @@ cmd({
             }
         };
 
+        // Random image selection from Dml folder
+        const dmlFolder = path.join(__dirname, '../Dml');
+        const dmlImages = fs.readdirSync(dmlFolder).filter(f => /^dml\d+\.jpg$/i.test(f));
+        const randomIndex = Math.floor(Math.random() * dmlImages.length);
+        const randomImage = path.join(dmlFolder, dmlImages[randomIndex]);
+
         // Function to send menu image with timeout
         const sendMenuImage = async () => {
             try {
-                // Generate random index to select image
-                const randomIndex = Math.floor(Math.random() * 10) + 1;
-                const imagePath = path.join(__dirname, '..', 'Dml', `Dml${randomIndex}.jpg`);
-                const imageBuffer = fs.readFileSync(imagePath); // Read image buffer
-
                 return await conn.sendMessage(
                     from,
                     {
-                        image: imageBuffer, // Send image as buffer
+                        image: { url: `file://${randomImage}` },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
