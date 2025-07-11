@@ -71,7 +71,7 @@ cmd({
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: `file://${randomImage}` },
+                        image: { url: `file://${randomImage}` }, // Using the random image from Dml folder
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
