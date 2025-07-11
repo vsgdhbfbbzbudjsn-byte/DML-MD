@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { runtime } = require('../lib/functions');
@@ -61,10 +62,15 @@ cmd({
         // Function to send menu image with timeout
         const sendMenuImage = async () => {
             try {
+                // Generate random index to select image
+                const randomIndex = Math.floor(Math.random() * 10) + 1;
+                const imagePath = path.join(__dirname, '..', 'Dml', `Dml${randomIndex}.jpg`);
+                const imageBuffer = fs.readFileSync(imagePath); // Read image buffer
+
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/vcdwmp.jpg' },
+                        image: imageBuffer, // Send image as buffer
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
