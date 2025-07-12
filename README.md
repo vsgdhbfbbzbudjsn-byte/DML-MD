@@ -10,26 +10,9 @@
 </p>
 
 
-<div align="center">
 
 
 
-## 📊 Project Stats
-
-<div align="center">
-
-| Statistic | Badge |
-|-----------|-------|
-| **Profile Views** | <img src="https://komarev.com/ghpvc/?username=MLILA17&label=Profile+Views&color=9D00FF&style=flat-square"> |
-| **Last Update** | <img src="https://img.shields.io/github/last-commit/MLILA17/DML-MD?color=9D00FF&label=Last+Update&style=flat-square"> |
-| **Repo Size** | <img src="https://img.shields.io/github/repo-size/MLILA17/DML-MD?color=9D00FF&label=Repo+Size&style=flat-square"> |
-| **Stars** | <img src="https://img.shields.io/github/stars/MLILA17/DML-MD?color=9D00FF&label=Stars&style=flat-square"> |
-| **Forks** | <img src="https://img.shields.io/github/forks/MLILA17/DML-MD?color=9D00FF&label=Forks&style=flat-square"> |
-| **Visitors** | <img src="https://visitor-badge.laobi.icu/badge?page_id=MLILA17.DML-MD&style=flat-square&color=9D00FF"> | 
-| **Maintained** | <img src="https://img.shields.io/badge/Maintained-Yes-00C853?style=flat-square"> |
-| **Version** | <img src="https://img.shields.io/badge/Version-1.0.0-0D47A1?style=flat-square"> |
-
-</div>
 
 
 
