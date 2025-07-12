@@ -3,7 +3,6 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 const { runtime } = require('../lib/functions');
 const axios = require('axios');
-const path = require('path');
 
 cmd({
     pattern: "menu",
@@ -59,19 +58,13 @@ cmd({
             }
         };
 
-        // Random image selection from Dml folder (case-insensitive check)
-        const dmlFolder = path.join(__dirname, '../Dml');
-        const dmlImages = fs.readdirSync(dmlFolder).filter(f => /^Dml\d+\.jpg$/i.test(f));  // Case insensitive matching
-        const randomIndex = Math.floor(Math.random() * dmlImages.length);
-        const randomImage = path.join(dmlFolder, dmlImages[randomIndex]);
-
         // Function to send menu image with timeout
         const sendMenuImage = async () => {
             try {
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: `file://${randomImage}` }, // Using the random image from Dml folder
+                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/vcdwmp.jpg' },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
