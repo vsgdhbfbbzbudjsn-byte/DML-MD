@@ -3,25 +3,14 @@ const { cmd } = require('../command');
 
 cmd({
     pattern: "news",
-    desc: "Get the latest news headlines or view newsletter channel.",
+    desc: "Get the latest news headlines.",
     category: "news",
     react: "📰",
     filename: __filename
 },
-async (conn, mek, m, { from, reply, args }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        // Check if user wants to view channel
-        if (args[0]?.toLowerCase() === 'channel') {
-            const channelJid = '120363387497418815@newsletter';
-            await conn.sendMessage(from, {
-                text: `📰 Newsletter Channel:\n\nYou can view the channel at: ${channelJid}\n\nUse WhatsApp's channel view feature to access it.`,
-                mentions: [DML]
-            });
-            return;
-        }
-
-        // Default news functionality
-        const apiKey = "0f2c43ab11324578a7b1709651736382";
+        const apiKey="0f2c43ab11324578a7b1709651736382";
         const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
         const articles = response.data.articles;
 
@@ -49,7 +38,7 @@ async (conn, mek, m, { from, reply, args }) => {
             }
         };
     } catch (e) {
-        console.error("Error:", e);
-        reply("An error occurred. Please try again later.");
+        console.error("Error fetching news:", e);
+        reply("Could not fetch news. Please try again later.");
     }
 });
