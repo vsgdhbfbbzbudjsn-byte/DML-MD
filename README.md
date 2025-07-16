@@ -65,8 +65,8 @@ Easily deploy to Heroku with the button below:
 [![Deploy](https://img.shields.io/badge/DEPLOY_TO_KOYEB-430098?style=for-the-badge&logo=koyeb&logoColor=white)](https://app.koyeb.com)
 
 
-[![Deploy]
-**TalkDrove**  
+
+
 [![](https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-FF004D?style=for-the-badge&logo=telegram)](https://talkdrove.com/share-bot/11)
 
 
