@@ -21,7 +21,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🌐 Platform   : Heroku
 ┃ 📦 Version    : 4.0.0
 ┃ ⏱️ Runtime    : ${runtime(process.uptime())}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
 ╭─────〔 📥 DOWNLOAD MENU 〕─────╮
@@ -70,7 +70,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🍃 leaf          🌌 galaxy       💀 sans
 ┃ 💥 boom          💻 hacker        😈 devilwings
 ┃ 🇳🇬 nigeria       💡 bulb          👼 angelwings
-┃ ♈ zodiac         💎 luxury        🎨 paint
+┃ ♈ zodiac        💎 luxury        🎨 paint
 ┃ ❄️ frozen        🏰 castle        🖋️ tatoo
 ┃ 🔫 valorant      🐻 bear          🔠 typography
 ┃ 🎂 birthday
@@ -83,7 +83,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 📦 repo       🚫 block      ✅ unblock
 ┃ 🖼️ fullpp     🖼️ setpp      🔄 restart
 ┃ ⏹️ shutdown   🔄 updatecmd  💚 alive
-┃ 🏓 ping       🆔 gjid        🆔 jid
+┃ 🏓 ping       🆔 gjid       🆔 jid
 ╰────────────────────────────╯
 
 
@@ -93,7 +93,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 💌 pickup     😆 joke        ❤️ hrt
 ┃ 😊 hpy        😔 syd         😠 anger
 ┃ 😳 shy        💋 kiss        🧐 mon
-┃ 😕 cunfuzed   ✋ hand         🤲 hold
+┃ 😕 cunfuzed   ✋ hand        🤲 hold
 ┃ 🤗 hug        👉 poke        🎵 hifi
 ╰──────────────────────────╯
 
