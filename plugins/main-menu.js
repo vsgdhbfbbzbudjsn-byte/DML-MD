@@ -17,7 +17,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
          
 
-      const randomIndex = Math.floor(Math.random() * 10) + 1;
+      const randomIndex = Math.floor(Math.random() * 8) + 1;
       const imagePath = path.join(__dirname, '..', 'scs', `menu${randomIndex}.jpg`);
       const imageBuffer = fs.readFileSync(imagePath);
         let dec = ` ╭━━━〔 🚀 BOT INFORMATION 〕━━━╮
