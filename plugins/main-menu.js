@@ -21,7 +21,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🌐 Platform   : Heroku
 ┃ 📦 Version    : 4.0.0
 ┃ ⏱️ Runtime    : ${runtime(process.uptime())}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
 ╭─────〔 📥 DOWNLOAD MENU 〕─────╮
