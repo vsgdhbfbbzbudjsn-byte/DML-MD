@@ -18,7 +18,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
          
 
       const randomIndex = Math.floor(Math.random() * 10) + 1;
-      const imagePath = path.join(__dirname, '..', 'Dml', `menu${randomIndex}.jpg`);
+      const imagePath = path.join(__dirname, '..', 'scs', `menu${randomIndex}.jpg`);
       const imageBuffer = fs.readFileSync(imagePath);
         let dec = ` ╭━━━〔 🚀 BOT INFORMATION 〕━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
