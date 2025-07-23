@@ -14,12 +14,7 @@ cmd({
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-         
-
-      const randomIndex = Math.floor(Math.random() * 8) + 1;
-      const imagePath = path.join(__dirname, '..', 'scs', `menu${randomIndex}.jpg`);
-      const imageBuffer = fs.readFileSync(imagePath);
+  
         let dec = ` ╭━━━〔 🚀 BOT INFORMATION 〕━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
 ┃ ⚙️ Prefix     : [${config.PREFIX}]
