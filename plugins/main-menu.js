@@ -15,13 +15,13 @@ cmd({
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        let dec = ` ╭━━━━━━〔 🚀 BOT INFORMATION 〕━━━━━╮
+        let dec = ` ╭━━━━━〔 🚀 BOT INFORMATION 〕━━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
 ┃ ⚙️ Prefix     : [${config.PREFIX}]
 ┃ 🌐 Platform   : Heroku
 ┃ 📦 Version    : 4.0.0
 ┃ ⏱️ Runtime    : ${runtime(process.uptime())}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
 ╭─────〔 📥 DOWNLOAD MENU 〕─────╮
