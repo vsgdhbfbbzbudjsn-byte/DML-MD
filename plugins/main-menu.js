@@ -2,30 +2,26 @@ const config = require('../config')
 const { cmd, commands } = require('../command');
 const os = require("os")
 const {runtime} = require('../lib/functions')
-const fs = require("fs");
-const path = require("path");
+const axios = require('axios')
 
 cmd({
     pattern: "menu",
     alias: ["allmenu","fullmenu"],
-    use: '.menu2',
+    use: '.menu',
     desc: "Show all bot commands",
     category: "menu",
-    react: "📜",
+    react: "⤵️",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    const randomIndex = Math.floor(Math.random() * 10) + 1;
-      const imagePath = path.join(__dirname, '..', 'scs', `menu${randomIndex}.jpg`);
-      const imageBuffer = fs.readFileSync(imagePath);
-  
-        let dec = ` ╭━━━〔 🚀 BOT INFORMATION 〕━━━╮
+    try {
+        let dec = ` ╭━━━━━━━━━━━━〔 🚀 BOT INFORMATION 〕━━━━━━━━━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
 ┃ ⚙️ Prefix     : [${config.PREFIX}]
 ┃ 🌐 Platform   : Heroku
 ┃ 📦 Version    : 4.0.0
 ┃ ⏱️ Runtime    : ${runtime(process.uptime())}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
 ╭─────〔 📥 DOWNLOAD MENU 〕─────╮
@@ -38,7 +34,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🎵 ytmp3        📹 ytmp4         🎶 song
 ┃ 🎬 darama       ☁️ gdrive        🌐 ssweb
 ┃ 🎵 tiks
-╰────────────────────────────╯
+╰────────────────────────────────╯
 
 
 ╭─────〔 👥 GROUP MENU 〕─────╮
@@ -52,7 +48,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🔇 mute          🔊 unmute      🔒 lockgc
 ┃ 🔓 unlockgc      📩 invite      #️⃣ tag
 ┃ 🏷️ hidetag       @️⃣ tagall     👔 tagadmins
-╰────────────────────────────╯
+╰───────────────────────────────╯
 
 
 ╭────〔 🎭 REACTIONS MENU 〕────╮
@@ -63,7 +59,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🤝 handhold 🍜 nom      🦷 bite    🤗 glomp
 ┃ 👋 slap     💀 kill     😊 happy   😉 wink
 ┃ 👉 poke     💃 dance    😬 cringe
-╰───────────────────────────╯
+╰────────────────────────────────╯
 
 
 ╭────〔 🎨 LOGO MAKER 〕────╮
@@ -74,11 +70,11 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 🍃 leaf          🌌 galaxy       💀 sans
 ┃ 💥 boom          💻 hacker        😈 devilwings
 ┃ 🇳🇬 nigeria       💡 bulb          👼 angelwings
-┃ ♈ zodiac        💎 luxury        🎨 paint
+┃ ♈ zodiac         💎 luxury        🎨 paint
 ┃ ❄️ frozen        🏰 castle        🖋️ tatoo
 ┃ 🔫 valorant      🐻 bear          🔠 typography
 ┃ 🎂 birthday
-╰─────────────────────────────╯
+╰──────────────────────────────╯
 
 
 ╭────〔 👑 OWNER MENU 〕────╮
@@ -87,7 +83,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 📦 repo       🚫 block      ✅ unblock
 ┃ 🖼️ fullpp     🖼️ setpp      🔄 restart
 ┃ ⏹️ shutdown   🔄 updatecmd  💚 alive
-┃ 🏓 ping       🆔 gjid       🆔 jid
+┃ 🏓 ping       🆔 gjid        🆔 jid
 ╰────────────────────────────╯
 
 
@@ -97,7 +93,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃ 💌 pickup     😆 joke        ❤️ hrt
 ┃ 😊 hpy        😔 syd         😠 anger
 ┃ 😳 shy        💋 kiss        🧐 mon
-┃ 😕 cunfuzed   ✋ hand        🤲 hold
+┃ 😕 cunfuzed   ✋ hand         🤲 hold
 ┃ 🤗 hug        👉 poke        🎵 hifi
 ╰──────────────────────────╯
 
@@ -155,7 +151,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: imageBuffer,
+                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/vcdwmp.jpg' },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -171,7 +167,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             { quoted: mek }
         );
 
-      
         
     } catch (e) {
         console.log(e);
