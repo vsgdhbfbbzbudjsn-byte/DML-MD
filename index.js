@@ -1,4 +1,3 @@
-
 const {
   default: makeWASocket,
     useMultiFileAuthState,
@@ -114,12 +113,12 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `╭─〔 *🤖 DML-MD BOT* 〕  
+  let up = `╭─〔 *🇹🇿 DML-MD BOT* 〕  
 ├─▸ *Ultra Super Fast Powerfull ⚠️*  
 │     *World Best BOT DML-MD* 
-╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
+╰─➤ *Your Smart WhatsApp Bot is Ready To use ⤵!*  
 
-- *🤝 Thank You for Choosing DML-MD!* 
+- *↪ Thank You for Choosing DML-MD!* 
 
 ╭──〔 🔗 *Information* 〕  
 ├─ ↪ Prefix:= ${prefix}
