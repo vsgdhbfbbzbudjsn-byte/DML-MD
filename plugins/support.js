@@ -52,7 +52,7 @@ ${readMore}
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/NdGZ99mN/705f0162-de6f-4fb8-a78f-6c563969093c.jpg` },
+                image: { url: `https://files.catbox.moe/tjt2z2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
