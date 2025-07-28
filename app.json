@@ -121,11 +121,7 @@
       "required": false,
       "value": "false"
     },
-    "ANTICALL": {
-      "description": "Make it true if you want bot to block incoming calls 📴",
-      "required": false,
-      "value": "true"
-    }
+    
 
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
@@ -206,6 +202,12 @@
       "value": "false"
     }
 
+},
+  "ANTICALL": {
+      "description": "Make it true if you want bot to block incoming calls.",
+      "required": false,
+      "value": "true"
+    }
 },
 
      "buildpacks": [
