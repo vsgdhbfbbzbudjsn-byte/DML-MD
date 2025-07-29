@@ -1,1 +1,326 @@
-function _0x562f(_0x2ae9cd,_0x346268){const _0x430970=_0x4309();return _0x562f=function(_0x562f5e,_0x48d391){_0x562f5e=_0x562f5e-0x9f;let _0x5c7ffb=_0x430970[_0x562f5e];if(_0x562f['RkNIlS']===undefined){var _0x11002e=function(_0x4bb039){const _0x49736d='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x5818f6='',_0x26b7b7='';for(let _0x50ba1e=0x0,_0x1f94ad,_0x26453b,_0x107871=0x0;_0x26453b=_0x4bb039['charAt'](_0x107871++);~_0x26453b&&(_0x1f94ad=_0x50ba1e%0x4?_0x1f94ad*0x40+_0x26453b:_0x26453b,_0x50ba1e++%0x4)?_0x5818f6+=String['fromCharCode'](0xff&_0x1f94ad>>(-0x2*_0x50ba1e&0x6)):0x0){_0x26453b=_0x49736d['indexOf'](_0x26453b);}for(let _0x5efd81=0x0,_0x44ae92=_0x5818f6['length'];_0x5efd81<_0x44ae92;_0x5efd81++){_0x26b7b7+='%'+('00'+_0x5818f6['charCodeAt'](_0x5efd81)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x26b7b7);};_0x562f['NOKJzi']=_0x11002e,_0x2ae9cd=arguments,_0x562f['RkNIlS']=!![];}const _0x441712=_0x430970[0x0],_0x543d01=_0x562f5e+_0x441712,_0x5420c8=_0x2ae9cd[_0x543d01];return!_0x5420c8?(_0x5c7ffb=_0x562f['NOKJzi'](_0x5c7ffb),_0x2ae9cd[_0x543d01]=_0x5c7ffb):_0x5c7ffb=_0x5420c8,_0x5c7ffb;},_0x562f(_0x2ae9cd,_0x346268);}const _0x48c5ca=_0x562f,_0x13caf7=_0x562f,_0x15eee3=_0x562f,_0x12fe90=_0x562f;(function(_0x8393ff,_0x4bd3cd){const _0x5bf2dd=_0x562f,_0x53b3fb=_0x562f,_0x20f79c=_0x562f,_0x54fcde=_0x562f,_0xe86c43=_0x8393ff();while(!![]){try{const _0x231430=parseInt(_0x5bf2dd('0xbe'))/0x1*(parseInt(_0x5bf2dd('0x9f'))/0x2)+-parseInt(_0x5bf2dd('0xc0'))/0x3*(parseInt(_0x53b3fb('0xba'))/0x4)+-parseInt(_0x20f79c('0xb3'))/0x5*(-parseInt(_0x5bf2dd('0xa5'))/0x6)+parseInt(_0x53b3fb('0xa4'))/0x7+-parseInt(_0x53b3fb('0xb9'))/0x8+parseInt(_0x53b3fb('0xa9'))/0x9*(parseInt(_0x20f79c('0xa6'))/0xa)+-parseInt(_0x20f79c('0xb6'))/0xb*(parseInt(_0x53b3fb('0xa7'))/0xc);if(_0x231430===_0x4bd3cd)break;else _0xe86c43['push'](_0xe86c43['shift']());}catch(_0x349876){_0xe86c43['push'](_0xe86c43['shift']());}}}(_0x4309,0x38177));const config=require(_0x48c5ca('0xa0')),{cmd}=require('../command'),{runtime}=require('../lib/functions'),fs=require('fs'),path=require(_0x13caf7('0xae'));cmd({'pattern':_0x15eee3('0xb0'),'alias':[_0x12fe90('0xbb'),'fullmenu'],'use':_0x13caf7('0xad'),'desc':'Show\x20all\x20bot\x20commands','category':_0x13caf7('0xb0'),'react':'⤵️','filename':__filename},async(_0x4bb039,_0x49736d,_0x5818f6,{from:_0x26b7b7,reply:_0x50ba1e})=>{const _0x2491a1=_0x48c5ca,_0x42385c=_0x15eee3,_0x603736=_0x13caf7,_0x521787=_0x15eee3;try{const _0x1f94ad=path[_0x2491a1('0xa1')](__dirname,_0x2491a1('0xa2')),_0x26453b=fs[_0x42385c('0xaa')](_0x1f94ad)[_0x42385c('0xa8')](_0x3309c0=>/^menu\d+\.jpg$/i[_0x42385c('0xb2')](_0x3309c0)),_0x107871=_0x26453b[Math[_0x603736('0xb5')](Math[_0x2491a1('0xbd')]()*_0x26453b['length'])],_0x5efd81=path[_0x521787('0xa1')](_0x1f94ad,_0x107871);let _0x44ae92=_0x42385c('0xa3')+config[_0x603736('0xb7')]+_0x2491a1('0xaf')+config['PREFIX']+']\x0a┃\x20🌐\x20Platform\x20\x20:\x20Heroku\x0a┃\x20📦\x20Version\x20\x20\x20:\x204.0.0\x0a┃\x20⏱️\x20Runtime\x20\x20\x20:\x20'+runtime(process[_0x603736('0xb4')]())+'\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20📥\x20𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🟦\x20facebook\x0a┃\x20📁\x20mediafire\x0a┃\x20🎵\x20tiktok\x0a┃\x20🐦\x20twitter\x0a┃\x20📷\x20insta\x0a┃\x20📦\x20apk\x0a┃\x20🖼️\x20img\x0a┃\x20▶️\x20tt2\x0a┃\x20📌\x20pins\x0a┃\x20🔄\x20apk2\x0a┃\x20🔵\x20fb2\x0a┃\x20📍\x20pinterest\x0a┃\x20🎶\x20spotify\x0a┃\x20🎧\x20play\x0a┃\x20🎧\x20play2\x0a┃\x20🔉\x20audio\x0a┃\x20🎬\x20video\x0a┃\x20📹\x20video2\x0a┃\x20🎵\x20ytmp3\x0a┃\x20📹\x20ytmp4\x0a┃\x20🎶\x20song\x0a┃\x20🎬\x20darama\x0a┃\x20☁️\x20gdrive\x0a┃\x20🌐\x20ssweb\x0a┃\x20🎵\x20tiks\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20👥\x20𝗚𝗥𝗢𝗨𝗣\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🔗\x20grouplink\x0a┃\x20➕\x20add\x0a┃\x20➖\x20remove\x0a┃\x20👢\x20kick\x0a┃\x20⬆️\x20promote\x0a┃\x20⬇️\x20demote\x0a┃\x20🚮\x20dismiss\x0a┃\x20🔄\x20revoke\x0a┃\x20👋\x20setgoodbye\x0a┃\x20🎉\x20setwelcome\x0a┃\x20🗑️\x20delete\x0a┃\x20🖼️\x20getpic\x0a┃\x20ℹ️\x20ginfo\x0a┃\x20⏳\x20disappear\x20on/off/7D\x0a┃\x20📝\x20updategname\x0a┃\x20📝\x20updategdesc\x0a┃\x20📩\x20joinrequests\x0a┃\x20📨\x20senddm\x0a┃\x20🏃\x20nikal\x0a┃\x20🔇\x20mute\x0a┃\x20🔊\x20unmute\x0a┃\x20🔒\x20lockgc\x0a┃\x20🔓\x20unlockgc\x0a┃\x20📩\x20invite\x0a┃\x20#️⃣\x20tag\x0a┃\x20🏷️\x20hidetag\x0a┃\x20@️⃣\x20tagall\x0a┃\x20👔\x20tagadmins\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🎭\x20𝗥𝗘𝗔𝗖𝗧𝗜𝗢𝗡𝗦\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20👊\x20bully\x0a┃\x20🤗\x20cuddle\x0a┃\x20😢\x20cry\x0a┃\x20🤗\x20hug\x0a┃\x20🐺\x20awoo\x0a┃\x20💋\x20kiss\x0a┃\x20👅\x20lick\x0a┃\x20🖐️\x20pat\x0a┃\x20😏\x20smug\x0a┃\x20🔨\x20bonk\x0a┃\x20🚀\x20yeet\x0a┃\x20😊\x20blush\x0a┃\x20😄\x20smile\x0a┃\x20👋\x20wave\x0a┃\x20✋\x20highfive\x0a┃\x20🤝\x20handhold\x0a┃\x20🍜\x20nom\x0a┃\x20🦷\x20bite\x0a┃\x20🤗\x20glomp\x0a┃\x20👋\x20slap\x0a┃\x20💀\x20kill\x0a┃\x20😊\x20happy\x0a┃\x20😉\x20wink\x0a┃\x20👉\x20poke\x0a┃\x20💃\x20dance\x0a┃\x20😬\x20cringe\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🎨\x20𝗟𝗢𝗚𝗢\x20𝗠𝗔𝗞𝗘𝗥\x20〕──╮\x0a┃\x20💡\x20neonlight\x0a┃\x20🎀\x20blackpink\x0a┃\x20🐉\x20dragonball\x0a┃\x20🎭\x203dcomic\x0a┃\x20🇺🇸\x20america\x0a┃\x20🍥\x20naruto\x0a┃\x20😢\x20sadgirl\x0a┃\x20☁️\x20clouds\x0a┃\x20🚀\x20futuristic\x0a┃\x20📜\x203dpaper\x0a┃\x20✏️\x20eraser\x0a┃\x20🌇\x20sunset\x0a┃\x20🍃\x20leaf\x0a┃\x20🌌\x20galaxy\x0a┃\x20💀\x20sans\x0a┃\x20💥\x20boom\x0a┃\x20💻\x20hacker\x0a┃\x20😈\x20devilwings\x0a┃\x20🇳🇬\x20nigeria\x0a┃\x20💡\x20bulb\x0a┃\x20👼\x20angelwings\x0a┃\x20♈\x20zodiac\x0a┃\x20💎\x20luxury\x0a┃\x20🎨\x20paint\x0a┃\x20❄️\x20frozen\x0a┃\x20🏰\x20castle\x0a┃\x20🖋️\x20tatoo\x0a┃\x20🔫\x20valorant\x0a┃\x20🐻\x20bear\x0a┃\x20🔠\x20typography\x0a┃\x20🎂\x20birthday\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20👑\x20𝗢𝗪𝗡𝗘𝗥\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20👑\x20owner\x0a┃\x20📜\x20menu\x0a┃\x20📜\x20menu2\x0a┃\x20📊\x20vv\x0a┃\x20📋\x20listcmd\x0a┃\x20📚\x20allmenu\x0a┃\x20📦\x20repo\x0a┃\x20🚫\x20block\x0a┃\x20✅\x20unblock\x0a┃\x20🖼️\x20fullpp\x0a┃\x20🖼️\x20setpp\x0a┃\x20🔄\x20restart\x0a┃\x20⏹️\x20shutdown\x0a┃\x20🔄\x20updatecmd\x0a┃\x20💚\x20alive\x0a┃\x20🏓\x20ping\x0a┃\x20🆔\x20gjid\x0a┃\x20🆔\x20jid\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🎉\x20𝗙𝗨𝗡\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🤪\x20shapar\x0a┃\x20⭐\x20rate\x0a┃\x20🤬\x20insult\x0a┃\x20💻\x20hack\x0a┃\x20💘\x20ship\x0a┃\x20🎭\x20character\x0a┃\x20💌\x20pickup\x0a┃\x20😆\x20joke\x0a┃\x20❤️\x20hrt\x0a┃\x20😊\x20hpy\x0a┃\x20😔\x20syd\x0a┃\x20😠\x20anger\x0a┃\x20😳\x20shy\x0a┃\x20💋\x20kiss\x0a┃\x20🧐\x20mon\x0a┃\x20😕\x20cunfuzed\x0a┃\x20✋\x20hand\x0a┃\x20🤲\x20hold\x0a┃\x20🤗\x20hug\x0a┃\x20👉\x20poke\x0a┃\x20🎵\x20hifi\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🔄\x20𝗖𝗢𝗡𝗩𝗘𝗥𝗧\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🏷️\x20sticker\x0a┃\x20🏷️\x20sticker2\x0a┃\x20😀\x20emojimix\x0a┃\x20✨\x20fancy\x0a┃\x20🖼️\x20take\x0a┃\x20🎵\x20tomp3\x0a┃\x20🗣️\x20tts\x0a┃\x20🌐\x20trt\x0a┃\x20🔢\x20base64\x0a┃\x20🔠\x20unbase64\x0a┃\x20010\x20binary\x0a┃\x20🔤\x20dbinary\x0a┃\x20🔗\x20tinyurl\x0a┃\x20🌐\x20urldecode\x0a┃\x20🌐\x20urlencode\x0a┃\x20🌐\x20url\x0a┃\x20🔁\x20repeat\x0a┃\x20❓\x20ask\x0a┃\x20📖\x20readmore\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🤖\x20𝗔𝗜\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🧠\x20ai\x0a┃\x20🤖\x20gpt3\x0a┃\x20🤖\x20gpt2\x0a┃\x20🤖\x20gptmini\x0a┃\x20🤖\x20gpt\x0a┃\x20🔵\x20meta\x0a┃\x20📦\x20blackbox\x0a┃\x20🌈\x20luma\x0a┃\x20🎧\x20dj\x0a┃\x20👑\x20dml1\x0a┃\x20🤵\x20dml\x0a┃\x20🧠\x20gpt4\x0a┃\x20🔍\x20bing\x0a┃\x20🎨\x20imagine\x0a┃\x20🖼️\x20imagine2\x0a┃\x20🤖\x20copilot\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20⚡\x20𝗠𝗔𝗜𝗡\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🏓\x20ping\x0a┃\x20🏓\x20ping2\x0a┃\x20🚀\x20speed\x0a┃\x20📡\x20live\x0a┃\x20💚\x20alive\x0a┃\x20⏱️\x20runtime\x0a┃\x20⏳\x20uptime\x0a┃\x20📦\x20repo\x0a┃\x20👑\x20owner\x0a┃\x20📜\x20menu\x0a┃\x20📜\x20menu2\x0a┃\x20🔄\x20restart\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20🎎\x20𝗔𝗡𝗜𝗠𝗘\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🤬\x20fack\x0a┃\x20✅\x20truth\x0a┃\x20😨\x20dare\x0a┃\x20🐶\x20dog\x0a┃\x20🐺\x20awoo\x0a┃\x20👧\x20garl\x0a┃\x20👰\x20waifu\x0a┃\x20🐱\x20neko\x0a┃\x20🧙\x20megnumin\x0a┃\x20👗\x20maid\x0a┃\x20👧\x20loli\x0a┃\x20🎎\x20animegirl(1–5)\x0a┃\x20🎬\x20anime(1–5)\x0a┃\x20📰\x20animenews\x0a┃\x20🦊\x20foxgirl\x0a┃\x20🍥\x20naruto\x0a╰────────────────────────╯\x0a\x0a╭──〔\x20ℹ️\x20𝗢𝗧𝗛𝗘𝗥\x20𝗠𝗘𝗡𝗨\x20〕──╮\x0a┃\x20🕒\x20timenow\x0a┃\x20📅\x20date\x0a┃\x20🔢\x20count\x0a┃\x20🧮\x20calculate\x0a┃\x20🔢\x20countx\x0a┃\x20🎲\x20flip\x0a┃\x20🪙\x20coinflip\x0a┃\x20🎨\x20rcolor\x0a┃\x20🎲\x20roll\x0a┃\x20ℹ️\x20fact\x0a┃\x20💻\x20cpp\x0a┃\x20🎲\x20rw\x0a┃\x20💑\x20pair(1–3)\x0a┃\x20✨\x20fancy\x0a┃\x20🎨\x20logo\x20<text>\x0a┃\x20📖\x20define\x0a┃\x20📰\x20news\x0a┃\x20🎬\x20movie\x0a┃\x20☀️\x20weather\x0a┃\x20📦\x20srepo\x0a┃\x20🤬\x20insult\x0a┃\x20💾\x20save\x0a┃\x20🌐\x20wikipedia\x0a┃\x20🔑\x20gpass\x0a┃\x20👤\x20githubstalk\x0a┃\x20🔍\x20yts\x0a┃\x20📹\x20ytv\x0a╰────────────────────────╯\x0a>\x20'+config[_0x42385c('0xac')];await _0x4bb039[_0x42385c('0xbc')](_0x26b7b7,{'image':{'url':_0x5efd81},'caption':_0x44ae92,'contextInfo':{'mentionedJid':[_0x5818f6[_0x603736('0xbf')]],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':'120363387497418815@newsletter@newsletter','newsletterName':config[_0x42385c('0xb8')],'serverMessageId':0x8f}}},{'quoted':_0x49736d});}catch(_0x4a2f25){console[_0x521787('0xb1')](_0x4a2f25),_0x50ba1e(_0x603736('0xab')+_0x4a2f25);}});function _0x4309(){const _0x16486a=['nZuWodq4t1HNsK51','mtyWndG4B3bzrfD4','mJCWtvnvALjg','mZCYALDYzMHk','zMLSDgvY','mtiZotu3wM5yA0HS','CMvHzgrPCLn5BMm','4P2mievYCM9YoIa','revtq1jjufrjt04','lM1LBNu','Cgf0Aa','cUkuGYdIMPNVUi8GuhjLzML4icaGidOGwW','BwvUDq','Bg9N','DgvZDa','odbdzuvTwKS','Dxb0Aw1L','zMXVB3i','mtqXntGXy1fKzKzr','t1DorvjFtKfnrq','qK9ux05btuu','mtG5ndyWogHAue16uW','mtaWAwP6BMzW','ywXSBwvUDq','C2vUze1LC3nHz2u','CMfUzg9T','mtK2oxbmAhbeAW','C2vUzgvY','mZq1mtHJs0nrDhy','mJuWCMzzCKHw','lI4Vy29UzMLN','AM9PBG','lI4Vrg1S','iokvREkuGooaLcdWN5QaipcDL5xWNzEI8j2xPYdWNzEC8j2xOFcDL5NWNzEI8j2xPFcDL6dWNzEu8j2xP/cDL5ZWNzEI8j2xOsdJGjxILidILA4k4PsdipcFKzeGt3DUzxiGicaGidOG'];_0x4309=function(){return _0x16486a;};return _0x4309();}
+const config = require('../config');
+const { cmd } = require('../command');
+const { runtime } = require('../lib/functions');
+const fs = require('fs');
+const path = require('path');
+
+cmd({
+    pattern: "menu",
+    alias: ["allmenu", "fullmenu"],
+    use: '.menu',
+    desc: "Show all bot commands",
+    category: "menu",
+    react: "⤵️",
+    filename: __filename
+},
+async (conn, mek, m, { from, reply }) => {
+    try {
+        // Random image from /scs folder
+        const scsFolder = path.join(__dirname, "../Dml");
+        const images = fs.readdirSync(scsFolder).filter(f => /^menu\d+\.jpg$/i.test(f));
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+        const imagePath = path.join(scsFolder, randomImage);
+
+        let dec = ` ╭─〔 🚀 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 〕─╮
+┃ 👑 Owner     : ${config.OWNER_NAME}
+┃ ⚙️ Prefix    : [${config.PREFIX}]
+┃ 🌐 Platform  : Heroku
+┃ 📦 Version   : 4.0.0
+┃ ⏱️ Runtime   : ${runtime(process.uptime())}
+╰────────────────────────╯
+
+╭──〔 📥 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🟦 facebook
+┃ 📁 mediafire
+┃ 🎵 tiktok
+┃ 🐦 twitter
+┃ 📷 insta
+┃ 📦 apk
+┃ 🖼️ img
+┃ ▶️ tt2
+┃ 📌 pins
+┃ 🔄 apk2
+┃ 🔵 fb2
+┃ 📍 pinterest
+┃ 🎶 spotify
+┃ 🎧 play
+┃ 🎧 play2
+┃ 🔉 audio
+┃ 🎬 video
+┃ 📹 video2
+┃ 🎵 ytmp3
+┃ 📹 ytmp4
+┃ 🎶 song
+┃ 🎬 darama
+┃ ☁️ gdrive
+┃ 🌐 ssweb
+┃ 🎵 tiks
+╰────────────────────────╯
+
+╭──〔 👥 𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🔗 grouplink
+┃ ➕ add
+┃ ➖ remove
+┃ 👢 kick
+┃ ⬆️ promote
+┃ ⬇️ demote
+┃ 🚮 dismiss
+┃ 🔄 revoke
+┃ 👋 setgoodbye
+┃ 🎉 setwelcome
+┃ 🗑️ delete
+┃ 🖼️ getpic
+┃ ℹ️ ginfo
+┃ ⏳ disappear on/off/7D
+┃ 📝 updategname
+┃ 📝 updategdesc
+┃ 📩 joinrequests
+┃ 📨 senddm
+┃ 🏃 nikal
+┃ 🔇 mute
+┃ 🔊 unmute
+┃ 🔒 lockgc
+┃ 🔓 unlockgc
+┃ 📩 invite
+┃ #️⃣ tag
+┃ 🏷️ hidetag
+┃ @️⃣ tagall
+┃ 👔 tagadmins
+╰────────────────────────╯
+
+╭──〔 🎭 𝗥𝗘𝗔𝗖𝗧𝗜𝗢𝗡𝗦 𝗠𝗘𝗡𝗨 〕──╮
+┃ 👊 bully
+┃ 🤗 cuddle
+┃ 😢 cry
+┃ 🤗 hug
+┃ 🐺 awoo
+┃ 💋 kiss
+┃ 👅 lick
+┃ 🖐️ pat
+┃ 😏 smug
+┃ 🔨 bonk
+┃ 🚀 yeet
+┃ 😊 blush
+┃ 😄 smile
+┃ 👋 wave
+┃ ✋ highfive
+┃ 🤝 handhold
+┃ 🍜 nom
+┃ 🦷 bite
+┃ 🤗 glomp
+┃ 👋 slap
+┃ 💀 kill
+┃ 😊 happy
+┃ 😉 wink
+┃ 👉 poke
+┃ 💃 dance
+┃ 😬 cringe
+╰────────────────────────╯
+
+╭──〔 🎨 𝗟𝗢𝗚𝗢 𝗠𝗔𝗞𝗘𝗥 〕──╮
+┃ 💡 neonlight
+┃ 🎀 blackpink
+┃ 🐉 dragonball
+┃ 🎭 3dcomic
+┃ 🇺🇸 america
+┃ 🍥 naruto
+┃ 😢 sadgirl
+┃ ☁️ clouds
+┃ 🚀 futuristic
+┃ 📜 3dpaper
+┃ ✏️ eraser
+┃ 🌇 sunset
+┃ 🍃 leaf
+┃ 🌌 galaxy
+┃ 💀 sans
+┃ 💥 boom
+┃ 💻 hacker
+┃ 😈 devilwings
+┃ 🇳🇬 nigeria
+┃ 💡 bulb
+┃ 👼 angelwings
+┃ ♈ zodiac
+┃ 💎 luxury
+┃ 🎨 paint
+┃ ❄️ frozen
+┃ 🏰 castle
+┃ 🖋️ tatoo
+┃ 🔫 valorant
+┃ 🐻 bear
+┃ 🔠 typography
+┃ 🎂 birthday
+╰────────────────────────╯
+
+╭──〔 👑 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 〕──╮
+┃ 👑 owner
+┃ 📜 menu
+┃ 📊 vv
+┃ 📋 listcmd
+┃ 📚 allmenu
+┃ 📦 repo
+┃ 🚫 block
+┃ ✅ unblock
+┃ 🖼️ fullpp
+┃ 🖼️ setpp
+┃ 🔄 restart
+┃ ⏹️ shutdown
+┃ 🔄 updatecmd
+┃ 💚 alive
+┃ 🏓 ping
+┃ 🆔 gjid
+┃ 🆔 jid
+╰────────────────────────╯
+
+╭──〔 🎉 𝗙𝗨𝗡 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🤪 shapar
+┃ ⭐ rate
+┃ 🤬 insult
+┃ 💻 hack
+┃ 💘 ship
+┃ 🎭 character
+┃ 💌 pickup
+┃ 😆 joke
+┃ ❤️ hrt
+┃ 😊 hpy
+┃ 😔 syd
+┃ 😠 anger
+┃ 😳 shy
+┃ 💋 kiss
+┃ 🧐 mon
+┃ 😕 cunfuzed
+┃ ✋ hand
+┃ 🤲 hold
+┃ 🤗 hug
+┃ 👉 poke
+┃ 🎵 hifi
+╰────────────────────────╯
+
+╭──〔 🔄 𝗖𝗢𝗡𝗩𝗘𝗥𝗧 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🏷️ sticker
+┃ 🏷️ sticker2
+┃ 😀 emojimix
+┃ ✨ fancy
+┃ 🖼️ take
+┃ 🎵 tomp3
+┃ 🗣️ tts
+┃ 🌐 trt
+┃ 🔢 base64
+┃ 🔠 unbase64
+┃ 010 binary
+┃ 🔤 dbinary
+┃ 🔗 tinyurl
+┃ 🌐 urldecode
+┃ 🌐 urlencode
+┃ 🌐 url
+┃ 🔁 repeat
+┃ ❓ ask
+┃ 📖 readmore
+╰────────────────────────╯
+
+╭──〔 🤖 𝗔𝗜 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🧠 ai
+┃ 🤖 gpt3
+┃ 🤖 gpt2
+┃ 🤖 gptmini
+┃ 🤖 gpt
+┃ 🔵 meta
+┃ 📦 blackbox
+┃ 🌈 luma
+┃ 🎧 dj
+┃ 👑 dml1
+┃ 🤵 dml
+┃ 🧠 gpt4
+┃ 🔍 bing
+┃ 🎨 imagine
+┃ 🖼️ imagine2
+┃ 🤖 copilot
+╰────────────────────────╯
+
+╭──〔 ⚡ 𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🏓 ping
+┃ 🏓 ping2
+┃ 🚀 speed
+┃ 📡 live
+┃ 💚 alive
+┃ ⏱️ runtime
+┃ ⏳ uptime
+┃ 📦 repo
+┃ 👑 owner
+┃ 📜 menu
+┃ 📜 menu2
+┃ 🔄 restart
+╰────────────────────────╯
+
+╭──〔 🎎 𝗔𝗡𝗜𝗠𝗘 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🤬 fack
+┃ ✅ truth
+┃ 😨 dare
+┃ 🐶 dog
+┃ 🐺 awoo
+┃ 👧 garl
+┃ 👰 waifu
+┃ 🐱 neko
+┃ 🧙 megnumin
+┃ 👗 maid
+┃ 👧 loli
+┃ 🎎 animegirl(1–5)
+┃ 🎬 anime(1–5)
+┃ 📰 animenews
+┃ 🦊 foxgirl
+┃ 🍥 naruto
+╰────────────────────────╯
+
+╭──〔 ℹ️ 𝗢𝗧𝗛𝗘𝗥 𝗠𝗘𝗡𝗨 〕──╮
+┃ 🕒 timenow
+┃ 📅 date
+┃ 🔢 count
+┃ 🧮 calculate
+┃ 🔢 countx
+┃ 🎲 flip
+┃ 🪙 coinflip
+┃ 🎨 rcolor
+┃ 🎲 roll
+┃ ℹ️ fact
+┃ 💻 cpp
+┃ 🎲 rw
+┃ 💑 pair(1–3)
+┃ ✨ fancy
+┃ 🎨 logo <text>
+┃ 📖 define
+┃ 📰 news
+┃ 🎬 movie
+┃ ☀️ weather
+┃ 🤬 insult
+┃ 💾 save
+┃ 🌐 wikipedia
+┃ 🔑 gpass
+┃ 👤 githubstalk
+┃ 🔍 yts
+┃ 📹 ytv
+╰────────────────────────╯
+> ${config.DESCRIPTION}`;
+
+        await conn.sendMessage(
+            from,
+            {
+                image: { url: imagePath },
+                caption: dec,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363387497418815@newsletter',
+                        newsletterName: config.BOT_NAME,
+                        serverMessageId: 143
+                    }
+                }
+            },
+            { quoted: mek }
+        );
+
+    } catch (e) {
+        console.log(e);
+        reply(`❌ Error: ${e}`);
+    }
+});
