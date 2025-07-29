@@ -1,20 +1,26 @@
-const config = require('../config')
-const { cmd, commands } = require('../command');
-const os = require("os")
-const {runtime} = require('../lib/functions')
-const axios = require('axios')
+const config = require('../config');
+const { cmd } = require('../command');
+const { runtime } = require('../lib/functions');
+const fs = require('fs');
+const path = require('path');
 
 cmd({
     pattern: "menu",
-    alias: ["allmenu","fullmenu"],
+    alias: ["allmenu", "fullmenu"],
     use: '.menu',
     desc: "Show all bot commands",
     category: "menu",
     react: "⤵️",
     filename: __filename
-}, 
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+},
+async (conn, mek, m, { from, reply }) => {
     try {
+        // Random image from /scs folder
+        const scsFolder = path.join(__dirname, "../scs");
+        const images = fs.readdirSync(scsFolder).filter(f => /^menu\d+\.jpg$/i.test(f));
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+        const imagePath = path.join(scsFolder, randomImage);
+
         let dec = ` ╭━━━━━〔 🚀 BOT INFORMATION 〕━━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
 ┃ ⚙️ Prefix     : [${config.PREFIX}]
@@ -151,14 +157,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/vcdwmp.jpg' },
+                image: { url: imagePath },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363387497418815@newsletter',
+                        newsletterJid: '120363382023564830@newsletter',
                         newsletterName: config.BOT_NAME,
                         serverMessageId: 143
                     }
@@ -167,7 +173,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             { quoted: mek }
         );
 
-        
     } catch (e) {
         console.log(e);
         reply(`❌ Error: ${e}`);
