@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted, reply, isCreator }) => {
         }
 
         let envSettings = `
-╭─ ✦ ${config.BOT_NAME} - CONFIG PANEL ✦ ─╮
+╭─ 🔴 ${config.BOT_NAME} - CONFIG PANEL 🔴 ─╮
 
 │ 💡 BOT INFO
 │ ┌───────────────
