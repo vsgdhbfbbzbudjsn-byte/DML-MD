@@ -111,7 +111,7 @@
 
      "ANTI_LINK_KICK": {
       "description": "Make it true if you want bot auto remove group link.",
-      "required": false,
+      "required": true,
       "value": "false"
       
     },
@@ -121,7 +121,6 @@
       "required": false,
       "value": "false"
     },
-    
 
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
@@ -143,8 +142,8 @@
 
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
-      "required": true,
-      "value": "true"
+      "required": false,
+      "value": "false"
     },
     
     "AUTO_RECORDING": {
@@ -203,13 +202,8 @@
     }
 
 },
-"ANTICALL": {
-      "description": "Make it true if you want bot to block incoming calls.",
-      "required": false,
-      "value": "true"
-    }
-},
-    "buildpacks": [
+
+     "buildpacks": [
         {
             "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
         }
