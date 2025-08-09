@@ -1,1 +1,55 @@
-function _0x4665(_0x46fed1,_0x4bd169){const _0x346591=_0x3465();return _0x4665=function(_0x466522,_0x21b3ed){_0x466522=_0x466522-0x134;let _0x56852d=_0x346591[_0x466522];if(_0x4665['vFvIWH']===undefined){var _0x5a7593=function(_0x1a75af){const _0x370ca0='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xb3df97='',_0x506ba1='';for(let _0x513513=0x0,_0x303e9d,_0x3e4db0,_0x5a9aa8=0x0;_0x3e4db0=_0x1a75af['charAt'](_0x5a9aa8++);~_0x3e4db0&&(_0x303e9d=_0x513513%0x4?_0x303e9d*0x40+_0x3e4db0:_0x3e4db0,_0x513513++%0x4)?_0xb3df97+=String['fromCharCode'](0xff&_0x303e9d>>(-0x2*_0x513513&0x6)):0x0){_0x3e4db0=_0x370ca0['indexOf'](_0x3e4db0);}for(let _0x37b214=0x0,_0x5216e0=_0xb3df97['length'];_0x37b214<_0x5216e0;_0x37b214++){_0x506ba1+='%'+('00'+_0xb3df97['charCodeAt'](_0x37b214)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x506ba1);};_0x4665['TwuLBU']=_0x5a7593,_0x46fed1=arguments,_0x4665['vFvIWH']=!![];}const _0x39b430=_0x346591[0x0],_0x5aaf84=_0x466522+_0x39b430,_0x50aa09=_0x46fed1[_0x5aaf84];return!_0x50aa09?(_0x56852d=_0x4665['TwuLBU'](_0x56852d),_0x46fed1[_0x5aaf84]=_0x56852d):_0x56852d=_0x50aa09,_0x56852d;},_0x4665(_0x46fed1,_0x4bd169);}function _0x3465(){const _0x2834e2=['C3bSAxq','BwvZC2fNzq','AMLTCa','CxvVDgvK','Bxr5Cgu','re1mlvbst0zjteu','yMX1CG','kVcFK5SGvgHPCYbJB21Tyw5KignHBIbVBMX5igjLihvZzwqGyNKGDgHLigjVDcbVCIbPDhmGB3DUzxiUkG','z2v0qNvMzMvYqxn5BMm','zxjYB3i','Dg9VBhm','C2vUzgvY','kUkDJcbfCNjVCIb1CgrHDgLUzYbWCM9MAwXLihbPy3r1CMu6kGO','C2v0zha','kUkAOo+4JYbqBgvHC2uGCMvWBhKGDg8Gyw4GAw1Hz2uGDg8GC2v0igfZihbYB2zPBguGCgLJDhvYzsO','nZaWmZG4zNfZDfHU','zNvSBhbWievYCM9YoG','ode0odeWEeTbseDn','lI4Vy29TBwfUza','DxnLCG','y2XVBMu','CMvHza','y292zxi','ntiXotKYt2L4zvf5','Aw5JBhvKzxm','mtKZntC2tNH4ugPU','4PYficPxAgf0C2fWCcbqCM9MAwXLifbPy3r1CMuGvxbKyxrLzcbZDwnJzxnZzNvSBhKHkG','mJm2otG1ufjqAxLL','mtiWmZyZmZG3ndK3nde4ode1qg5LD3nSzxr0zxi','tuLnrv9kuevh','y29UDgfPBG','nZmWmNrxv2LJuq','C2vUze1LC3nHz2u','y29TCg9ZAxrL','DxbKyxrLuhjVzMLSzvbPy3r1CMu','kUkpSYbqCM9JzxnZAw5NigLTywDLlcbWBgvHC2uGD2fPDc4UlIO','mZG3nJzlD05WvfO','mta5ovz4yvHKuW','u2v0igz1BgWGAw1Hz2uGyxmGyM90j3mGChjVzMLSzsbWAwn0DxjL'];_0x3465=function(){return _0x2834e2;};return _0x3465();}const _0x2e7a90=_0x4665,_0x8f86b7=_0x4665,_0x9bf576=_0x4665,_0x42dd43=_0x4665;(function(_0x5d6ee2,_0x3c0958){const _0x3434ba=_0x4665,_0xc32590=_0x4665,_0x1b79ca=_0x4665,_0x12207a=_0x4665,_0x37b8bd=_0x5d6ee2();while(!![]){try{const _0xc0c3f4=-parseInt(_0x3434ba('0x141'))/0x1+parseInt(_0x3434ba('0x136'))/0x2+-parseInt(_0x3434ba('0x138'))/0x3+parseInt(_0x1b79ca('0x153'))/0x4+-parseInt(_0xc32590('0x155'))/0x5+parseInt(_0x1b79ca('0x13c'))/0x6*(parseInt(_0x1b79ca('0x142'))/0x7)+-parseInt(_0xc32590('0x134'))/0x8;if(_0xc0c3f4===_0x3c0958)break;else _0x37b8bd['push'](_0x37b8bd['shift']());}catch(_0x521ebc){_0x37b8bd['push'](_0x37b8bd['shift']());}}}(_0x3465,0x1c8f6));const {cmd}=require(_0x2e7a90('0x156')),Jimp=require(_0x2e7a90('0x146'));cmd({'pattern':'fullpp','alias':['setpp',_0x2e7a90('0x151'),'pp'],'react':'✅','desc':_0x2e7a90('0x143'),'category':_0x9bf576('0x14e'),'filename':__filename},async(_0x1a75af,_0x370ca0,_0xb3df97,{from:_0x506ba1,isCreator:_0x513513})=>{const _0xf317ee=_0x42dd43,_0x54d196=_0x9bf576,_0x46b6e8=_0x2e7a90,_0x2d7c53=_0x9bf576;try{const _0x303e9d=_0x1a75af['user']?.['id']||_0x1a75af[_0xf317ee('0x157')]['id'][_0xf317ee('0x144')](':')[0x0]+'@s.whatsapp.net';if(_0x370ca0[_0x46b6e8('0x14f')]!==_0x303e9d&&!_0x513513)return await _0x1a75af[_0xf317ee('0x13d')](_0x506ba1,{'text':_0x2d7c53('0x14b')},{'quoted':_0x370ca0});if(!_0x370ca0[_0x2d7c53('0x147')]||!_0x370ca0[_0xf317ee('0x147')][_0x46b6e8('0x148')]||!_0x370ca0[_0x54d196('0x147')][_0xf317ee('0x148')][_0x2d7c53('0x135')]('image'))return await _0x1a75af[_0xf317ee('0x13d')](_0x506ba1,{'text':_0xf317ee('0x152')},{'quoted':_0x370ca0});await _0x1a75af[_0x46b6e8('0x13d')](_0x506ba1,{'text':_0x2d7c53('0x140')},{'quoted':_0x370ca0});const _0x3e4db0=await _0x370ca0[_0x54d196('0x147')]['download'](),_0x5a9aa8=await Jimp[_0xf317ee('0x159')](_0x3e4db0),_0x37b214=_0x5a9aa8[_0xf317ee('0x158')]()[_0x46b6e8('0x15a')](0x280,0x280)[_0x46b6e8('0x14a')](0xa),_0x5216e0=_0x5a9aa8['clone']()[_0x2d7c53('0x13b')](0x280,0x280);_0x37b214[_0x2d7c53('0x13e')](_0x5216e0,0x0,0x0);const _0x440ac0=await _0x37b214[_0x54d196('0x14c')](Jimp[_0xf317ee('0x13a')]);await _0x1a75af[_0x2d7c53('0x13f')](_0x303e9d,_0x440ac0),await _0x1a75af[_0x46b6e8('0x13d')](_0x506ba1,{'text':_0x46b6e8('0x137'),'contextInfo':{'mentionedJid':[m[_0x2d7c53('0x14f')]],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x2d7c53('0x139'),'newsletterName':_0xf317ee('0x149'),'serverMessageId':0x8f}}},{'quoted':_0x370ca0});}catch(_0x416437){console[_0x46b6e8('0x14d')](_0x54d196('0x154'),_0x416437),await _0x1a75af[_0x54d196('0x13d')](_0x506ba1,{'text':_0x46b6e8('0x150')+_0x416437[_0x54d196('0x145')]},{'quoted':_0x370ca0});}});
+const { cmd } = require("../command");
+const Jimp = require("jimp");
+
+cmd({
+  pattern: "fullpp",
+  alias: ["setpp", "setdp", "pp"],
+  react: "✅",
+  desc: "Set full image as bot's profile picture",
+  category: "tools",
+  filename: __filename
+}, async (client, message, match, { from, isCreator }) => {
+  try {
+    // Get bot's JID (two possible methods)
+    const botJid = client.user?.id || (client.user.id.split(":")[0] + "@s.whatsapp.net");
+    
+    // Allow both bot owner and bot itself to use the command
+    if (message.sender !== botJid && !isCreator) {
+      return await client.sendMessage(from, {
+        text: "*📛 This command can only be used by the bot or its owner.*"
+      }, { quoted: message });
+    }
+
+    if (!message.quoted || !message.quoted.mtype || !message.quoted.mtype.includes("image")) {
+      return await client.sendMessage(from, {
+        text: "*⚠️ Please reply to an image to set as profile picture*"
+      }, { quoted: message });
+    }
+
+    await client.sendMessage(from, {
+      text: "*⏳ Processing image, please wait...*"
+    }, { quoted: message });
+
+    const imageBuffer = await message.quoted.download();
+    const image = await Jimp.read(imageBuffer);
+
+    // Image processing pipeline
+    const blurredBg = image.clone().cover(640, 640).blur(10);
+    const centeredImage = image.clone().contain(640, 640);
+    blurredBg.composite(centeredImage, 0, 0);
+    const finalImage = await blurredBg.getBufferAsync(Jimp.MIME_JPEG);
+
+    // Update profile picture
+    await client.updateProfilePicture(botJid, finalImage);
+
+    await client.sendMessage(from, {
+      text: "*✅ Whatsapp profile picture updated successfully!*"
+    }, { quoted: message });
+
+  } catch (error) {
+    console.error("fullpp Error:", error);
+    await client.sendMessage(from, {
+      text: `*❌ Error updating profile picture:*\n${error.message}`
+    }, { quoted: message });
+  }
+});
