@@ -1,6 +1,22 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
+const whatsappChannelLink = 'https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C';
+
+// Contact used for quoting the reply
+const quotedContact = {
+  key: {
+    fromMe: false,
+    participant: "0@s.whatsapp.net",
+    remoteJid: "status@broadcast"
+  },
+  message: {
+    contactMessage: {
+      displayName: "⚙️ DML-MD | Verified ✅",
+      vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:SCIFI\nORG:DML-PING BOT;\nTEL;type=CELL;type=VOICE;waid=255615752312:+255 135 41112\nEND:VCARD"
+    }
+  }
+};
 cmd({
     pattern: "ping",
     alias: ["speed","pong"],use: '.ping',
