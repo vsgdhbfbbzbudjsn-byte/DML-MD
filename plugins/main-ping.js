@@ -62,7 +62,16 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                     serverMessageId: 143
                 }
             }
-        }, { quoted: mek });
+        },  
+        externalAdReply: {
+          title: "⚙️ Dml | System Pulse",
+          body: "Speed • Stability • Sync",
+          thumbnailUrl: 'https://files.catbox.moe/xweghi.jpg',
+          sourceUrl: whatsappChannelLink,
+          mediaType: 1,
+          renderLargerThumbnail: false,
+        }
+      { quoted: mek });
 
     } catch (e) {
         console.error("Error in ping command:", e);
