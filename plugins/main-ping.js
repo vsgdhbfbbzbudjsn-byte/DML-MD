@@ -1,22 +1,6 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
-const whatsappChannelLink = 'https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C';
-
-// Contact used for quoting the reply
-const quotedContact = {
-  key: {
-    fromMe: false,
-    participant: "0@s.whatsapp.net",
-    remoteJid: "status@broadcast"
-  },
-  message: {
-    contactMessage: {
-      displayName: "⚙️ DML-MD | Verified ✅",
-      vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:SCIFI\nORG:DML-PING BOT;\nTEL;type=CELL;type=VOICE;waid=255615752312:+255 135 41112\nEND:VCARD"
-    }
-  }
-};
 cmd({
     pattern: "ping",
     alias: ["speed","pong"],use: '.ping',
@@ -62,16 +46,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                     serverMessageId: 143
                 }
             }
-        },  
-        externalAdReply: {
-          title: "⚙️ Dml | System Pulse",
-          body: "Speed • Stability • Sync",
-          thumbnailUrl: 'https://files.catbox.moe/xweghi.jpg',
-          sourceUrl: whatsappChannelLink,
-          mediaType: 1,
-          renderLargerThumbnail: false,
-        }
-      { quoted: mek });
+        }, { quoted: mek });
 
     } catch (e) {
         console.error("Error in ping command:", e);
@@ -85,7 +60,7 @@ cmd({
     pattern: "ping2",
     desc: "Check bot's response time.",
     category: "main",
-    react: "💥",
+    react: "⤵",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -94,7 +69,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const message = await conn.sendMessage(from, { text: '*PINGING...*' })
         const endTime = Date.now()
         const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `*🔥 DML-MD SPEED : ${ping}ms*` }, { quoted: message })
+        await conn.sendMessage(from, { text: `*💥 DML-MD SPEED : ${ping}ms*` }, { quoted: message })
     } catch (e) {
         console.log(e)
         reply(`${e}`)
