@@ -31,7 +31,7 @@ async (conn, mek, m) => {
 
     // Affiche l'ID du canal + date
     await conn.sendMessage(newsletterJid, {
-        text: `Channel ID:\n\n*${newsletterJid}*\n\n馃晵 *Executed on:* ${now}`
+        text: `Channel ID:\n\n*${newsletterJid}*\n\nDml *Executed on:* ${now}`
     }, { quoted: mek });
 
     // Simule un message transf茅r茅 d鈥檜n autre canal
