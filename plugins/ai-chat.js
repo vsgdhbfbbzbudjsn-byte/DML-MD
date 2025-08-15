@@ -1,1 +1,223 @@
-const _0x190aac=_0x297c;(function(_0xbe0343,_0x5ca7a1){const _0x50f46a=_0x297c,_0x769bf8=_0xbe0343();while(!![]){try{const _0x4ad081=-parseInt(_0x50f46a(0xe4))/0x1+-parseInt(_0x50f46a(0xe3))/0x2+-parseInt(_0x50f46a(0xce))/0x3*(parseInt(_0x50f46a(0xdf))/0x4)+-parseInt(_0x50f46a(0xe8))/0x5*(parseInt(_0x50f46a(0xc6))/0x6)+-parseInt(_0x50f46a(0xcb))/0x7+-parseInt(_0x50f46a(0xd2))/0x8*(parseInt(_0x50f46a(0xd0))/0x9)+-parseInt(_0x50f46a(0xd1))/0xa*(-parseInt(_0x50f46a(0xef))/0xb);if(_0x4ad081===_0x5ca7a1)break;else _0x769bf8['push'](_0x769bf8['shift']());}catch(_0x23fc97){_0x769bf8['push'](_0x769bf8['shift']());}}}(_0x1f9d,0x75845));const {cmd}=require('../command'),axios=require(_0x190aac(0xd7));function _0x297c(_0x269f33,_0x4eafaf){const _0x1f9d36=_0x1f9d();return _0x297c=function(_0x297cb5,_0x44a9c0){_0x297cb5=_0x297cb5-0xc5;let _0x224cce=_0x1f9d36[_0x297cb5];return _0x224cce;},_0x297c(_0x269f33,_0x4eafaf);}cmd({'pattern':'ai','alias':[_0x190aac(0xe5),'dj','gpt',_0x190aac(0xe2),_0x190aac(0xcd)],'desc':'Chat\x20with\x20an\x20AI\x20model','category':'ai','react':'🤖','filename':__filename},async(_0x3ccef5,_0x42b16b,_0x32e7b1,{from:_0x2ccac8,args:_0x770775,q:_0x3394fc,reply:_0x224a2e,react:_0x48e2cb})=>{const _0x7ae15=_0x190aac;try{if(!_0x3394fc)return _0x224a2e(_0x7ae15(0xc9));const _0x3f9d20=_0x7ae15(0xe9)+encodeURIComponent(_0x3394fc),{data:_0x8b3d97}=await axios[_0x7ae15(0xd3)](_0x3f9d20);if(!_0x8b3d97||!_0x8b3d97[_0x7ae15(0xc7)])return await _0x48e2cb('❌'),_0x224a2e(_0x7ae15(0xd4));await _0x224a2e('🤖\x20*AI\x20Response:*\x0a\x0a'+_0x8b3d97[_0x7ae15(0xc7)]),await _0x48e2cb('✅');}catch(_0x271171){console['error']('Error\x20in\x20AI\x20command:',_0x271171),await _0x48e2cb('❌'),_0x224a2e(_0x7ae15(0xe0));}}),cmd({'pattern':_0x190aac(0xde),'alias':[_0x190aac(0xca),_0x190aac(0xd8),_0x190aac(0xdc)],'desc':_0x190aac(0xdd),'category':'ai','react':'🧠','filename':__filename},async(_0x4480a9,_0x371de7,_0x594b95,{from:_0x14b289,args:_0x31b721,q:_0x59c71b,reply:_0x4e1377,react:_0x13a27d})=>{const _0x1bf4fb=_0x190aac;try{if(!_0x59c71b)return _0x4e1377(_0x1bf4fb(0xcf));const _0x359ef9=_0x1bf4fb(0xed)+encodeURIComponent(_0x59c71b),{data:_0x214e8c}=await axios[_0x1bf4fb(0xd3)](_0x359ef9);if(!_0x214e8c||!_0x214e8c[_0x1bf4fb(0xec)])return await _0x13a27d('❌'),_0x4e1377(_0x1bf4fb(0xeb));await _0x4e1377(_0x1bf4fb(0xc8)+_0x214e8c[_0x1bf4fb(0xec)]),await _0x13a27d('✅');}catch(_0x58fdce){console[_0x1bf4fb(0xf0)](_0x1bf4fb(0xe6),_0x58fdce),await _0x13a27d('❌'),_0x4e1377(_0x1bf4fb(0xf1));}}),cmd({'pattern':_0x190aac(0xdb),'alias':[_0x190aac(0xea),_0x190aac(0xd5)],'desc':_0x190aac(0xee),'category':'ai','react':'🧠','filename':__filename},async(_0x4247de,_0x3fa377,_0x4f0b50,{from:_0x4ccd7e,args:_0x21428b,q:_0x3e8279,reply:_0x5f42cb,react:_0x4325f6})=>{const _0x2ad93a=_0x190aac;try{if(!_0x3e8279)return _0x5f42cb(_0x2ad93a(0xe7));const _0x148d22=_0x2ad93a(0xd6)+encodeURIComponent(_0x3e8279),{data:_0x4651dc}=await axios['get'](_0x148d22);if(!_0x4651dc||!_0x4651dc[_0x2ad93a(0xcc)])return await _0x4325f6('❌'),_0x5f42cb(_0x2ad93a(0xc5));await _0x5f42cb(_0x2ad93a(0xe1)+_0x4651dc[_0x2ad93a(0xcc)]),await _0x4325f6('✅');}catch(_0x4a40de){console[_0x2ad93a(0xf0)](_0x2ad93a(0xda),_0x4a40de),await _0x4325f6('❌'),_0x5f42cb(_0x2ad93a(0xd9));}});function _0x1f9d(){const _0x410aa4=['Please\x20provide\x20a\x20message\x20for\x20DeepSeek\x20AI.\x0aExample:\x20`.deepseek\x20Hello`','110thRzQM','https://lance-frank-asta.onrender.com/api/gpt?q=','deep','OpenAI\x20failed\x20to\x20respond.\x20Please\x20try\x20again\x20later.','result','https://vapis.my.id/api/openai?q=','Chat\x20with\x20DeepSeek\x20AI','1539307tAPCHU','error','An\x20error\x20occurred\x20while\x20communicating\x20with\x20OpenAI.','DeepSeek\x20AI\x20failed\x20to\x20respond.\x20Please\x20try\x20again\x20later.','189552ZqYIjc','message','🧠\x20*OpenAI\x20Response:*\x0a\x0a','Please\x20provide\x20a\x20message\x20for\x20the\x20AI.\x0aExample:\x20`.ai\x20Hello`','chatgpt','447867QXjxyg','answer','bing','2141043bFMWAD','Please\x20provide\x20a\x20message\x20for\x20OpenAI.\x0aExample:\x20`.openai\x20Hello`','17703KslmHh','270rxNbTs','2448dkGTIm','get','AI\x20failed\x20to\x20respond.\x20Please\x20try\x20again\x20later.','seekai','https://api.ryzendesu.vip/api/ai/deepseek?text=','axios','gpt3','An\x20error\x20occurred\x20while\x20communicating\x20with\x20DeepSeek\x20AI.','Error\x20in\x20DeepSeek\x20AI\x20command:','deepseek','open-gpt','Chat\x20with\x20OpenAI','openai','4ZHCigP','An\x20error\x20occurred\x20while\x20communicating\x20with\x20the\x20AI.','🧠\x20*DeepSeek\x20AI\x20Response:*\x0a\x0a','gpt4','1310916PGARFT','566904yASkRt','bot','Error\x20in\x20OpenAI\x20command:'];_0x1f9d=function(){return _0x410aa4;};return _0x1f9d();}
+const {
+  cmd
+} = require("../command");
+const axios = require("axios");
+const moment = require("moment-timezone");
+const customReplies = _0x17f87b => {
+  const _0x3c0c6f = _0x17f87b.toLowerCase();
+  const _0x564237 = moment().tz("Africa/Nairobi");
+  if (_0x3c0c6f.includes("pk-xmd")) {
+    return "🔥 DML-MD is a Multi-Device WhatsApp Bot made by *DML*.";
+  }
+  if (_0x3c0c6f.includes('pkdriller')) {
+    return "👑 DML is the official creator of the *DML-MD* WhatsApp bot.";
+  }
+  if (_0x3c0c6f.includes('channel')) {
+    return "📢 Official channel: https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C";
+  }
+  if (_0x3c0c6f.includes("repo") || _0x3c0c6f.includes("github")) {
+    return "🔗 GitHub repo: https://github.com/MLILA17/DML-MD";
+  }
+  if (_0x3c0c6f.includes("date") || _0x3c0c6f.includes("today")) {
+    return "📅 Today is " + _0x564237.format("dddd, MMMM Do YYYY");
+  }
+  if (_0x3c0c6f.includes("day")) {
+    return "📆 Today is *" + _0x564237.format("dddd") + '*';
+  }
+  if (_0x3c0c6f.includes("time") || _0x3c0c6f.includes('clock')) {
+    return "⏰ Time in Nairobi: *" + moment().tz("Africa/Nairobi").format("HH:mm:ss") + '*';
+  }
+  return null;
+};
+cmd({
+  'pattern': 'ai',
+  'alias': ["bot", 'dj', 'gpt', "gpt4", 'bing'],
+  'desc': "Chat with an AI model",
+  'category': 'ai',
+  'react': '🤖',
+  'filename': __filename
+}, async (_0x1fea78, _0x1ef719, _0x469eeb, {
+  q: _0x1b5bad,
+  reply: _0x49ec2f
+}) => {
+  try {
+    if (!_0x1b5bad) {
+      return _0x49ec2f("Please provide a message for the AI.\nExample: `.ai Hello`");
+    }
+    const _0x57bd65 = customReplies(_0x1b5bad);
+    if (_0x57bd65) {
+      return _0x1fea78.sendMessage(_0x469eeb.chat, {
+        'text': _0x57bd65,
+        'contextInfo': {
+          'externalAdReply': {
+            'showAdAttribution': true,
+            'title': "AI Response",
+            'body': "DML-MD | Multi-Device WhatsApp Bot",
+            'thumbnailUrl': undefined || "https://files.catbox.moe/7dkq50.jpg",
+            'sourceUrl': undefined || "https://github.com/MLILA17/DML-MD"
+          },
+          'forwardingScore': 0x3e7,
+          'isForwarded': true,
+          'forwardedNewsletterMessageInfo': {
+            'newsletterJid': "120363387497418815@newsletter",
+            'newsletterName': "DML"
+          }
+        }
+      });
+    }
+    const _0x495d6b = await axios.get("https://lance-frank-asta.onrender.com/api/gpt?q=" + encodeURIComponent(_0x1b5bad));
+    if (!_0x495d6b.data || !_0x495d6b.data.message) {
+      return _0x49ec2f("AI failed to respond.");
+    }
+    const _0x4e4907 = moment().tz("Africa/Nairobi").format("HH:mm:ss");
+    return _0x1fea78.sendMessage(_0x469eeb.chat, {
+      'text': "🤖 *AI Response:*\n\n" + _0x495d6b.data.message + "\n\n⏰ *Time:* " + _0x4e4907,
+      'contextInfo': {
+        'externalAdReply': {
+          'showAdAttribution': true,
+          'title': "AI Response",
+          'body': "DML-MD | Multi-Device WhatsApp Bot",
+          'thumbnailUrl': undefined || "https://files.catbox.moe/7dkq50.jpg",
+          'sourceUrl': undefined || "https://github.com/MLILA17/DML-MD"
+        },
+        'forwardingScore': 0x3e7,
+        'isForwarded': true,
+        'forwardedNewsletterMessageInfo': {
+          'newsletterJid': "120363387497418815@newsletter",
+          'newsletterName': "DML"
+        }
+      }
+    });
+  } catch (_0x3909ce) {
+    console.error("AI Error:", _0x3909ce);
+    _0x49ec2f("❌ Error occurred.");
+  }
+});
+cmd({
+  'pattern': 'openai',
+  'alias': ["chatgpt", "gpt3", 'open-gpt'],
+  'desc': "Chat with OpenAI",
+  'category': 'ai',
+  'react': '🧠',
+  'filename': __filename
+}, async (_0x28c3c2, _0x4ce641, _0xe4eb2c, {
+  q: _0x39f861,
+  reply: _0x3f4b9c
+}) => {
+  try {
+    if (!_0x39f861) {
+      return _0x3f4b9c("Please provide a message for OpenAI.\nExample: `.openai Hello`");
+    }
+    const _0x266925 = customReplies(_0x39f861);
+    if (_0x266925) {
+      return _0x28c3c2.sendMessage(_0xe4eb2c.chat, {
+        'text': _0x266925,
+        'contextInfo': {
+          'externalAdReply': {
+            'showAdAttribution': true,
+            'title': "OpenAI Response",
+            'body': "DML-MD | Multi-Device WhatsApp Bot",
+            'thumbnailUrl': undefined || "https://files.catbox.moe/7dkq50.jpg",
+            'sourceUrl': undefined || "https://github.com/MLILA17/DML-MD"
+          },
+          'forwardingScore': 0x3e7,
+          'isForwarded': true,
+          'forwardedNewsletterMessageInfo': {
+            'newsletterJid': "120363387497418815@newsletter",
+            'newsletterName': "DML-CHANNEL"
+          }
+        }
+      });
+    }
+    const _0x1bc786 = await axios.get("https://vapis.my.id/api/openai?q=" + encodeURIComponent(_0x39f861));
+    if (!_0x1bc786.data || !_0x1bc786.data.result) {
+      return _0x3f4b9c("OpenAI failed to respond.");
+    }
+    const _0x7d45c5 = moment().tz("Africa/Nairobi").format("HH:mm:ss");
+    return _0x28c3c2.sendMessage(_0xe4eb2c.chat, {
+      'text': "🧠 *OpenAI Response:*\n\n" + _0x1bc786.data.result + "\n\n⏰ *Time:* " + _0x7d45c5,
+      'contextInfo': {
+        'externalAdReply': {
+          'showAdAttribution': true,
+          'title': "OpenAI Response",
+          'body': "DML-MD | Multi-Device WhatsApp Bot",
+          'thumbnailUrl': undefined || "https://files.catbox.moe/7dkq50.jpg",
+          'sourceUrl': undefined || "https://github.com/MLILA17/DML-MD"
+        },
+        'forwardingScore': 0x3e7,
+        'isForwarded': true,
+        'forwardedNewsletterMessageInfo': {
+          'newsletterJid': "120363387497418815@newsletter",
+          'newsletterName': "DML-MD Updates"
+        }
+      }
+    });
+  } catch (_0x5a09b2) {
+    console.error("OpenAI Error:", _0x5a09b2);
+    _0x3f4b9c("❌ Error occurred.");
+  }
+});
+cmd({
+  'pattern': "deepseek",
+  'alias': ["deep", 'seekai'],
+  'desc': "Chat with DeepSeek AI",
+  'category': 'ai',
+  'react': '🧠',
+  'filename': __filename
+}, async (_0x5bce22, _0x2fc054, _0x14609c, {
+  q: _0x3ce603,
+  reply: _0x1abd5a
+}) => {
+  try {
+    if (!_0x3ce603) {
+      return _0x1abd5a("Please provide a message for DeepSeek AI.\nExample: `.deepseek Hello`");
+    }
+    const _0x1d3117 = customReplies(_0x3ce603);
+    if (_0x1d3117) {
+      return _0x5bce22.sendMessage(_0x14609c.chat, {
+        'text': _0x1d3117,
+        'contextInfo': {
+          'externalAdReply': {
+            'showAdAttribution': true,
+            'title': "DeepSeek Response",
+            'body': "DML-MD | Multi-Device WhatsApp Bot",
+            'thumbnailUrl': undefined || "https://files.catbox.moe/fgiecg.jpg",
+            'sourceUrl': undefined || "https://github.com/MLILA17/DML-MD"
+          },
+          'forwardingScore': 0x3e7,
+          'isForwarded': true,
+          'forwardedNewsletterMessageInfo': {
+            'newsletterJid': "120363387497418815@newsletter",
+            'newsletterName': "DML-MD Updates"
+          }
+        }
+      });
+    }
+    const _0x19f307 = await axios.get("https://api.ryzendesu.vip/api/ai/deepseek?text=" + encodeURIComponent(_0x3ce603));
+    if (!_0x19f307.data || !_0x19f307.data.answer) {
+      return _0x1abd5a("DeepSeek failed to respond.");
+    }
+    const _0x47fc7a = moment().tz("Africa/Nairobi").format("HH:mm:ss");
+    return _0x5bce22.sendMessage(_0x14609c.chat, {
+      'text': "🧠 *DeepSeek AI Response:*\n\n" + _0x19f307.data.answer + "\n\n⏰ *Time:* " + _0x47fc7a,
+      'contextInfo': {
+        'externalAdReply': {
+          'showAdAttribution': true,
+          'title': "DeepSeek Response",
+          'body': "DML-MD | Multi-Device WhatsApp Bot",
+          'thumbnailUrl': undefined || "https://files.catbox.moe/juhq1l.jpg",
+          'sourceUrl': undefined || "https://files.catbox.moe/juhq1l.jpg"
+        },
+        'forwardingScore': 0x3e7,
+        'isForwarded': true,
+        'forwardedNewsletterMessageInfo': {
+          'newsletterJid': "120363387497418815@newsletter",
+          'newsletterName': "DML-MD Updates"
+        }
+      }
+    });
+  } catch (_0x3f1822) {
+    console.error("DeepSeek Error:", _0x3f1822);
+    _0x1abd5a("❌ Error occurred.");
+  }
+});
