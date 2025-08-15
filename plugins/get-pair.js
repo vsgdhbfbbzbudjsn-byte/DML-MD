@@ -1,1 +1,86 @@
-function _0x4318(){const _0x22654b=['C2vUzgvY','ota5ntaWohrKB1nwDa','mZqXmJe5oxfHCvPUyW','BgvUz3rO','y29Kzq','CMvWBgfJzq','zgf0yq','lNbHAxiGmJu1nZG1ntKXmJG5','lMnVChKG','ndeWnZG3ouDxreXuAG','zxjYB3i','Ahr0Chm6lY9NAxrODwiUy29Tl01msuXbmtCVre1mlu1e','re1mlu1eifzfuKLgsuve','mZq5odHMAg5dt3q','zg93BMXVywq','4P2miezHAwXLzcb0BYbYzxrYAwv2zsbWywLYAw5NignVzguUifbSzwfZzsb0CNKGywDHAw4GBgf0zxiU','re1mlu1eifvqrefurvm','cGRILzekcUkvMUkvKpcFMOdILzdJGjqGug93zxjLzcbIEsbetuWG44cv4Pwq8j+AGokvKokvNqOk','y2XVBMvIB3q','nJu4odaWB0rcseXK','nuncqxbzCW','qvvutYbqqvjjtKC','mtiWmZyZmZG3ndK3nde4ode1qg5LD3nSzxr0zxi','4P2mifbHAxiGy29TBwfUzcbLCNjVCJO','4PwuiokCHsbetuWTtuqGFcbqquLssu5hifnvq0nfu1ngvuWG4Pwq4PwxcGRILzekcUkvKsaGipcFK7eGkK51BwjLCJOQia','4P2mifbSzwfZzsbWCM92AwrLigeGDMfSAwqGCgHVBMuGBNvTyMvYihDPDgHVDxqGycTGcKv4yw1WBgu6igaUCgfPCIaYntu3odu1oteYodLG','CgfPCG','mtKZndm3mevWuwL4qW','vgfWigjLBg93ihrVigDLDcbKBwWTBwqGy29KzsbHz2fPBIbMB3iGy29WEwLUzZO','m0XQwgPbvG','qKvhsu46vKnbuKqkvKvsu0LptJOZlJaktJPct1q7re1mlu1eoZS7cKzooKrntc1nraPPDgvTms5uruW7D2fPzd0Yntu3mdaWmdaWmda6kZi1nsa3mdaGmdaWmdaWcML0zw0XlLGTqujmywjLBdPcB3qkru5eoLzdqvje','C3rHDhvZqgjYB2fKy2fZDa','z2v0CgfPCG','oduWr2HkCvHp','mebZlNDOyxrZyxbWlM5LDa','Ahr0Chm6lY9KBwWTC2vYDMvYlM9UCMvUzgvYlMnVBs9JB2rLp251BwjLCJ0','Ahr0Chm6lY9MAwXLCY5JyxrIB3GUBw9LlZfQAhnWAI5QCgC','z2v0','4PYfienVChKGq29Kzq','DhjPBq','nZu4vMXQv05m'];_0x4318=function(){return _0x22654b;};return _0x4318();}const _0x29f078=_0x3380,_0x5b05b3=_0x3380,_0x1fbbeb=_0x3380,_0x15cbad=_0x3380;(function(_0x50e9a9,_0xe80736){const _0x4ab8ac=_0x3380,_0x4d166f=_0x3380,_0x17b81d=_0x3380,_0x1ff95e=_0x3380,_0x3f5716=_0x50e9a9();while(!![]){try{const _0x495d69=-parseInt(_0x4ab8ac('0x16d'))/0x1*(-parseInt(_0x4ab8ac('0x166'))/0x2)+parseInt(_0x4ab8ac('0x162'))/0x3*(parseInt(_0x17b81d('0x17b'))/0x4)+-parseInt(_0x17b81d('0x182'))/0x5*(-parseInt(_0x1ff95e('0x160'))/0x6)+-parseInt(_0x4ab8ac('0x170'))/0x7+parseInt(_0x17b81d('0x16f'))/0x8+-parseInt(_0x4d166f('0x177'))/0x9+parseInt(_0x4ab8ac('0x181'))/0xa;if(_0x495d69===_0xe80736)break;else _0x3f5716['push'](_0x3f5716['shift']());}catch(_0x9d812c){_0x3f5716['push'](_0x3f5716['shift']());}}}(_0x4318,0xdeb20));const {cmd}=require('../command'),axios=require('axios');function _0x3380(_0x5547b6,_0x1d68f7){const _0x43184=_0x4318();return _0x3380=function(_0x3380b5,_0x45e08e){_0x3380b5=_0x3380b5-0x15f;let _0x16f6cd=_0x43184[_0x3380b5];if(_0x3380['gGVMBb']===undefined){var _0x3bd275=function(_0x87931f){const _0x39b3ca='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x3f8d1f='',_0x59848e='';for(let _0x1aa14c=0x0,_0x1d09c9,_0x186643,_0x137dc7=0x0;_0x186643=_0x87931f['charAt'](_0x137dc7++);~_0x186643&&(_0x1d09c9=_0x1aa14c%0x4?_0x1d09c9*0x40+_0x186643:_0x186643,_0x1aa14c++%0x4)?_0x3f8d1f+=String['fromCharCode'](0xff&_0x1d09c9>>(-0x2*_0x1aa14c&0x6)):0x0){_0x186643=_0x39b3ca['indexOf'](_0x186643);}for(let _0x1412fd=0x0,_0x1460a1=_0x3f8d1f['length'];_0x1412fd<_0x1460a1;_0x1412fd++){_0x59848e+='%'+('00'+_0x3f8d1f['charCodeAt'](_0x1412fd)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x59848e);};_0x3380['BtOYxg']=_0x3bd275,_0x5547b6=arguments,_0x3380['gGVMBb']=!![];}const _0x220969=_0x43184[0x0],_0xdd70a1=_0x3380b5+_0x220969,_0x1b4a94=_0x5547b6[_0xdd70a1];return!_0x1b4a94?(_0x16f6cd=_0x3380['BtOYxg'](_0x16f6cd),_0x5547b6[_0xdd70a1]=_0x16f6cd):_0x16f6cd=_0x1b4a94,_0x16f6cd;},_0x3380(_0x5547b6,_0x1d68f7);}cmd({'pattern':_0x29f078('0x15f'),'alias':[_0x29f078('0x165'),_0x29f078('0x180')],'react':'✅','desc':'Get\x20pairing\x20code\x20for\x20DML-MD\x20bot','category':_0x15cbad('0x17c'),'use':_0x15cbad('0x175'),'filename':__filename},async(_0x87931f,_0x39b3ca,_0x3f8d1f,{from:_0x59848e,quoted:_0x1aa14c,args:_0x1d09c9,q:_0x186643,senderNumber:_0x137dc7,reply:_0x1412fd})=>{const _0x4cc7e8=_0x29f078,_0x47315a=_0x29f078,_0x23195e=_0x29f078,_0x4af691=_0x1fbbeb;try{const _0x1460a1=_0x186643?_0x186643[_0x4cc7e8('0x16c')]()['replace'](/[^0-9]/g,''):_0x137dc7[_0x4cc7e8('0x173')](/[^0-9]/g,'');if(!_0x1460a1||_0x1460a1[_0x23195e('0x171')]<0xa||_0x1460a1[_0x4cc7e8('0x171')]>0xf)return await _0x1412fd(_0x23195e('0x187'));const _0x2bc058=await axios[_0x23195e('0x16a')](_0x4af691('0x168')+encodeURIComponent(_0x1460a1));if(!_0x2bc058[_0x4cc7e8('0x174')]||!_0x2bc058['data'][_0x4cc7e8('0x172')])return await _0x1412fd(_0x4cc7e8('0x17d'));const _0x249ed6=_0x2bc058['data'][_0x23195e('0x172')],_0x3aff74=(_0x4af691('0x186')+_0x1460a1+'\x0a\x0a║\x20\x20\x20🔗\x20*Pairing\x20Code:*\x20'+_0x249ed6+_0x23195e('0x17f'))['trim']();await _0x87931f['sendMessage'](_0x59848e,{'image':{'url':'https://files.catbox.moe/1jhspj.jpg'},'caption':_0x3aff74,'footer':_0x47315a('0x161'),'templateButtons':[{'index':0x1,'quickReplyButton':{'displayText':_0x23195e('0x16b'),'id':_0x4cc7e8('0x176')+_0x249ed6}}],'contextInfo':{'mentionedJid':[_0x3f8d1f[_0x47315a('0x16e')]],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x4af691('0x184'),'newsletterName':_0x23195e('0x17e'),'serverMessageId':0x77},'externalAdReply':{'title':_0x4cc7e8('0x183'),'body':'Auto\x20pairing\x20code\x20system','thumbnailUrl':_0x23195e('0x169'),'sourceUrl':_0x23195e('0x179')}}},{'quoted':{'key':{'fromMe':![],'participant':_0x4cc7e8('0x167'),'remoteJid':_0x4af691('0x164')},'message':{'contactMessage':{'displayName':_0x4af691('0x17a'),'vcard':_0x23195e('0x163')}}}});}catch(_0xc072e4){console[_0x47315a('0x178')](_0x23195e('0x185'),_0xc072e4),await _0x1412fd('❌\x20Error\x20retrieving\x20pairing\x20code.\x20Try\x20again\x20later.');}});
+const { cmd } = require('../command');
+const axios = require('axios');
+
+cmd({
+    pattern: "pair",
+    alias: ["getpair", "clonebot"],
+    react: "✅",
+    desc: "Get pairing code for DML-MD bot",
+    category: "download",
+    use: ".pair 255785591289",
+    filename: __filename
+}, 
+async (conn, mek, m, { from, quoted, args, q, senderNumber, reply }) => {
+    try {
+        const phoneNumber = q ? q.trim().replace(/[^0-9]/g, '') : senderNumber.replace(/[^0-9]/g, '');
+
+        if (!phoneNumber || phoneNumber.length < 10 || phoneNumber.length > 15) {
+            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 255785591289`");
+        }
+
+        const res = await axios.get(`https://dml-server.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
+        if (!res.data || !res.data.code) {
+            return await reply("❌ Failed to retrieve pairing code. Please try again later.");
+        }
+
+        const pairingCode = res.data.code;
+
+        const codeMessage = `╔ ✅ DML-MD | PAIRING SUCCESSFUL ═╗
+║
+║   📱 *Number:* ${phoneNumber}
+║   🔗 *Pairing Code:* ${pairingCode}
+║
+╚═🚀═〔 Powered by DML 〕═🚀═╝
+`.trim();
+
+        await conn.sendMessage(from, {
+            image: { url: `https://files.catbox.moe/1jhspj.jpg` },
+            caption: codeMessage,
+            footer: 'Tap below to get dml-md code again for copying:',
+            templateButtons: [
+                {
+                    index: 1,
+                    quickReplyButton: {
+                        displayText: "✅ Copy Code",
+                        id: `.copy ${pairingCode}`
+                    }
+                }
+            ],
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363387497418815@newsletter',
+                    newsletterName: 'DML-MD UPDATES',
+                    serverMessageId: 119
+                },
+                externalAdReply: {
+                    title: "AUTO PARING",
+                    body: "Auto pairing code system",
+                    thumbnailUrl: `https://files.catbox.moe/1jhspj.jpg`,
+                    sourceUrl: "https://github.com/MLILA17/DML-MD"
+                }
+            }
+        }, {
+            quoted: {
+                key: {
+                    fromMe: false,
+                    participant: "0@s.whatsapp.net",
+                    remoteJid: "status@broadcast"
+                },
+                message: {
+                    contactMessage: {
+                        displayName: "DML-MD VERIFIED",
+                        vcard: `BEGIN:VCARD\nVERSION:3.0\nN:BOT;DML-MD;;;\nFN:DML-MD\nitem1.TEL;waid=255700000000:+255 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                    }
+                }
+            }
+        });
+
+    } catch (error) {
+        console.error("❌ Pair command error:", error);
+        await reply("❌ Error retrieving pairing code. Try again later.");
+    }
+});
+                    
