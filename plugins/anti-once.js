@@ -3,106 +3,107 @@ const { cmd } = require("../command");
 cmd({
   pattern: "vv2",
   alias: ["viewchannel", "newsletter"],
-  desc: "Owner Only - View newsletter channel or retrieve quoted message",
+  desc: "Owner Only - View newsletter channel or retrieve quoted messages",
   category: "owner",
   filename: __filename
 }, async (client, message, match, { from, isCreator }) => {
   try {
     if (!isCreator) return;
 
-    // Channel viewing option
-    if (match === "channel") {
-      const channelJid = "120363387497418815@newsletter";
-      
+    const channelJid = "120363387497418815@newsletter";
+    
+    // Channel viewing function
+    const viewChannel = async () => {
       try {
-        // 1. Get channel info
-        const channelInfo = await client.getNewsletterMetadata(channelJid);
+        // Try to get channel metadata
+        const metadata = await client.groupMetadata(channelJid).catch(() => null);
         
-        await client.sendMessage(from, {
-          text: `📢 *Channel Info*\n\n` +
-                `• *Name:* ${channelInfo.name}\n` +
-                `• *Description:* ${channelInfo.description || 'None'}\n` +
-                `• *Subscribers:* ${channelInfo.subscribersCount}\n` +
-                `• *JID:* ${channelJid}\n\n` +
-                `Use 'vv2 recent' to get latest messages`
-        }, { quoted: message });
+        if (!metadata) {
+          return await client.sendMessage(from, {
+            text: "❌ Couldn't fetch channel info. Make sure:\n1. The bot is in the channel\n2. The JID is correct"
+          }, { quoted: message });
+        }
+
+        // Get recent messages (last 3)
+        const messages = await client.loadMessages(channelJid, { limit: 3 });
+        
+        let infoText = `📢 *Channel Information*\n\n` +
+                      `• *Name:* ${metadata.subject}\n` +
+                      `• *ID:* ${metadata.id}\n` +
+                      `• *Participants:* ${metadata.participants?.length || 0}\n\n` +
+                      `*Last 3 Messages:*`;
+
+        await client.sendMessage(from, { text: infoText }, { quoted: message });
+
+        // Forward recent messages
+        if (messages && messages.length > 0) {
+          for (const msg of messages) {
+            await client.forwardMessage(from, msg, { quoted: message });
+          }
+        } else {
+          await client.sendMessage(from, {
+            text: "No recent messages found in this channel"
+          }, { quoted: message });
+        }
 
       } catch (error) {
         console.error("Channel Error:", error);
         await client.sendMessage(from, {
-          text: "❌ Failed to fetch channel info:\n" + error.message
+          text: `❌ Channel Error:\n${error.message}\n\n` +
+                `Possible solutions:\n` +
+                `1. Verify the JID is correct\n` +
+                `2. Ensure bot has proper permissions\n` +
+                `3. Check if channel exists`
         }, { quoted: message });
       }
-      return;
-    }
+    };
 
-    // Get recent messages option
-    if (match === "recent") {
-      const channelJid = "120363387497418815@newsletter";
-      
-      try {
-        const messages = await client.getNewsletterMessages(channelJid, { limit: 3 });
-        
-        if (!messages || messages.length === 0) {
-          return await client.sendMessage(from, {
-            text: "No recent messages found in the channel"
-          }, { quoted: message });
-        }
-
-        await client.sendMessage(from, {
-          text: `📢 Latest ${messages.length} channel messages:`
-        }, { quoted: message });
-
-        for (const msg of messages) {
-          await client.forwardMessage(from, msg);
-        }
-
-      } catch (error) {
-        console.error("Recent Messages Error:", error);
-        await client.sendMessage(from, {
-          text: "❌ Failed to fetch recent messages:\n" + error.message
-        }, { quoted: message });
-      }
-      return;
+    // Handle channel view request
+    if (match && (match.toLowerCase() === "channel" || match.toLowerCase() === "view")) {
+      return await viewChannel();
     }
 
     // Original view-once message functionality
     if (!message.quoted) {
       return await client.sendMessage(from, {
-        text: `*Usage Options:*\n\n` +
-              `1. Reply to a view-once message with 'vv2'\n` +
-              `2. Use 'vv2 channel' to view channel info\n` +
-              `3. Use 'vv2 recent' to get latest messages`
+        text: `*How to use vv2:*\n\n` +
+              `1. Reply to view-once message with "vv2"\n` +
+              `2. Use "vv2 channel" to view newsletter\n\n` +
+              `Current channel JID: ${channelJid}`
       }, { quoted: message });
     }
 
-    // Rest of the view-once message handling code...
-    const buffer = await message.quoted.download();
-    const mtype = message.quoted.mtype;
+    // Process view-once message
+    try {
+      const buffer = await message.quoted.download();
+      const mtype = message.quoted.mtype;
 
-    let messageContent = {};
-    switch (mtype) {
-      case "imageMessage":
-        messageContent = { image: buffer, mimetype: message.quoted.mimetype };
-        break;
-      case "videoMessage":
-        messageContent = { video: buffer, mimetype: message.quoted.mimetype };
-        break;
-      case "audioMessage":
-        messageContent = { audio: buffer, mimetype: "audio/mp4", ptt: message.quoted.ptt };
-        break;
-      default:
+      let content = {};
+      if (mtype === "imageMessage") {
+        content = { image: buffer, mimetype: message.quoted.mimetype };
+      } else if (mtype === "videoMessage") {
+        content = { video: buffer, mimetype: message.quoted.mimetype };
+      } else if (mtype === "audioMessage") {
+        content = { audio: buffer, mimetype: "audio/mp4", ptt: message.quoted.ptt };
+      } else {
         return await client.sendMessage(from, {
-          text: "❌ Only image/video/audio messages supported"
+          text: "❌ Only images/videos/audio can be retrieved"
         }, { quoted: message });
+      }
+
+      await client.sendMessage(message.sender, content, { quoted: message });
+      
+    } catch (error) {
+      console.error("View Once Error:", error);
+      await client.sendMessage(from, {
+        text: "❌ Failed to retrieve message:\n" + error.message
+      }, { quoted: message });
     }
 
-    await client.sendMessage(message.sender, messageContent, { quoted: message });
-
   } catch (error) {
-    console.error("vv2 Error:", error);
+    console.error("vv2 Main Error:", error);
     await client.sendMessage(from, {
-      text: "❌ Command failed:\n" + error.message
+      text: "❌ Command failed unexpectedly:\n" + error.message
     }, { quoted: message });
   }
 });
