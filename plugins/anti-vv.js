@@ -1,1 +1,174 @@
-function _0x2971(_0x5d3305,_0x269395){const _0x3e2691=_0x3e26();return _0x2971=function(_0x29711e,_0x205f6a){_0x29711e=_0x29711e-0x1f0;let _0xff6380=_0x3e2691[_0x29711e];if(_0x2971['KPYlfi']===undefined){var _0x268baf=function(_0x5932d8){const _0x365d5d='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x12e5f4='',_0x415fbe='';for(let _0x527599=0x0,_0xf35bb,_0x53ee6a,_0x3ea6f0=0x0;_0x53ee6a=_0x5932d8['charAt'](_0x3ea6f0++);~_0x53ee6a&&(_0xf35bb=_0x527599%0x4?_0xf35bb*0x40+_0x53ee6a:_0x53ee6a,_0x527599++%0x4)?_0x12e5f4+=String['fromCharCode'](0xff&_0xf35bb>>(-0x2*_0x527599&0x6)):0x0){_0x53ee6a=_0x365d5d['indexOf'](_0x53ee6a);}for(let _0x334a51=0x0,_0x10c9e6=_0x12e5f4['length'];_0x334a51<_0x10c9e6;_0x334a51++){_0x415fbe+='%'+('00'+_0x12e5f4['charCodeAt'](_0x334a51)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x415fbe);};_0x2971['pDvqkS']=_0x268baf,_0x5d3305=arguments,_0x2971['KPYlfi']=!![];}const _0xe5b938=_0x3e2691[0x0],_0xd091e9=_0x29711e+_0xe5b938,_0x293416=_0x5d3305[_0xd091e9];return!_0x293416?(_0xff6380=_0x2971['pDvqkS'](_0xff6380),_0x5d3305[_0xd091e9]=_0xff6380):_0xff6380=_0x293416,_0xff6380;},_0x2971(_0x5d3305,_0x269395);}const _0x563dad=_0x2971,_0x51307c=_0x2971,_0x225471=_0x2971,_0x5c076e=_0x2971;function _0x3e26(){const _0x49ea19=['mJq1mZC2oxbNChnXCG','mtiWmZyZmZG3ndK3nde4ode1qg5LD3nSzxr0zxi','DMLLD29Uy2u','otLhDvbUBwK','Bxr5Cgu','mZKYmZCYmg90wg1PrW','CxvVDgvK','re1mifzfuKLgsuveiokCHq','DMLKzw9nzxnZywDL','ndi5mtaYBwDxvuDh','B3DUzxi','re1mlvrfq0G','nte0yMvyAurp','4P2mie9UBhKGAw1Hz2uSihzPzgvVlcbHBMqGyxvKAw8GDMLLDYbVBMnLig1LC3nHz2vZigfYzsbZDxbWB3j0zwqU','Dgv4Da','zg93BMXVywq','t3DUzxiGt25SEsaTihjLDhjPzxzLihf1B3rLzcb2Awv3ig9Uy2uGBwvZC2fNzq','mZK2nwj3yKDIra','kVcFK5SGvgHPCYbPCYbHBIbVD25LCI1VBMX5ignVBw1HBMqUkG','nJa2odaXm3jrve9Nrq','DNyGrxjYB3i6','yxvKAw9nzxnZywDL','nZyWoty5nKHZA3nnAa','ndyYDKjeEvjz','4P2mifvUywjSzsb0BYbKB3DUBg9Hzcb0AguGBwvZC2fNzsbVCIb1BNn1ChbVCNrLzcb0ExbLlG','C2vUze1LC3nHz2u','Aw1Hz2vnzxnZywDL','8j+tTYbjBwfNzsbYzxn0B3jLza','4P2mievYCM9Yig9Jy3vYCMvKihDOAwXLihjLDhjPzxzPBMCGDMLLDYbVBMnLoGOk','ngjxCLLtvW','Chr0','mJKZmNbZEfjNtW','8j+oPsbwAwrLBYbYzxn0B3jLza','kUkgQIbqBgvHC2uGCMvWBhKGDg8Gysb2Awv3ig9Uy2uGBwvZC2fNzs4Q'];_0x3e26=function(){return _0x49ea19;};return _0x3e26();}(function(_0x50dd84,_0x335c2e){const _0x5ec0c3=_0x2971,_0x15ec13=_0x2971,_0x23e37a=_0x2971,_0x1bb0e0=_0x2971,_0x38e661=_0x50dd84();while(!![]){try{const _0x26318d=parseInt(_0x5ec0c3('0x1f0'))/0x1*(-parseInt(_0x5ec0c3('0x1ff'))/0x2)+parseInt(_0x15ec13('0x1fc'))/0x3*(-parseInt(_0x5ec0c3('0x210'))/0x4)+-parseInt(_0x15ec13('0x204'))/0x5*(parseInt(_0x1bb0e0('0x20a'))/0x6)+-parseInt(_0x15ec13('0x206'))/0x7+-parseInt(_0x1bb0e0('0x209'))/0x8+-parseInt(_0x1bb0e0('0x1f3'))/0x9+parseInt(_0x1bb0e0('0x1f8'))/0xa*(parseInt(_0x23e37a('0x1f6'))/0xb);if(_0x26318d===_0x335c2e)break;else _0x38e661['push'](_0x38e661['shift']());}catch(_0x3d7d7d){_0x38e661['push'](_0x38e661['shift']());}}}(_0x3e26,0x75ec9));const {cmd}=require('../command'),quotedContact={'key':{'fromMe':![],'participant':'0@s.whatsapp.net','remoteJid':'status@broadcast'},'message':{'contactMessage':{'displayName':_0x563dad('0x1fa'),'vcard':'BEGIN:VCARD\x0aVERSION:3.0\x0aFN:DML\x20VERIFIED\x20✅\x0aORG:DML-TECH\x20BOT;\x0aTEL;type=CELL;type=VOICE;waid=255785591288:+255\x20157\x2051112\x0aEND:VCARD'}}};cmd({'pattern':'vv','alias':[_0x51307c('0x1f5'),'retrive'],'react':'🫣','desc':_0x563dad('0x203'),'category':_0x51307c('0x1fd'),'filename':__filename},async(_0x5932d8,_0x365d5d,_0x12e5f4,{from:_0x415fbe,isCreator:_0x527599})=>{const _0xe85d22=_0x51307c,_0x2be209=_0x225471,_0x5732bc=_0x5c076e,_0x3c3b00=_0x563dad;try{if(!_0x527599)return await _0x5932d8[_0xe85d22('0x20c')](_0x415fbe,{'text':_0xe85d22('0x205'),'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':'120363387497418815@newsletter','newsletterName':'DML-MD','serverMessageId':0xd}}},{'quoted':quotedContact});if(!_0x12e5f4['quoted'])return await _0x5932d8[_0xe85d22('0x20c')](_0x415fbe,{'text':_0x5732bc('0x1f2'),'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0xe85d22('0x1f4'),'newsletterName':_0x5732bc('0x1fe'),'serverMessageId':0xd}}},{'quoted':quotedContact});const _0xf35bb=await _0x12e5f4['quoted'][_0x2be209('0x202')]?.(),_0x53ee6a=_0x12e5f4[_0x2be209('0x1f9')][_0xe85d22('0x1f7')];if(!_0xf35bb||!_0x53ee6a)return await _0x5932d8[_0x5732bc('0x20c')](_0x415fbe,{'text':_0xe85d22('0x20b')},{'quoted':quotedContact});const _0x3ea6f0={'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0xe85d22('0x1f4'),'newsletterName':_0x5732bc('0x1fe'),'serverMessageId':0xd}},'quoted':quotedContact};let _0x334a51={};switch(_0x53ee6a){case _0x2be209('0x20d'):_0x334a51={'image':_0xf35bb,'caption':_0x12e5f4[_0x2be209('0x1f9')][_0xe85d22('0x201')]||_0x5732bc('0x20e')};break;case _0x2be209('0x1fb'):_0x334a51={'video':_0xf35bb,'caption':_0x12e5f4['quoted'][_0x3c3b00('0x201')]||_0x5732bc('0x1f1')};break;case _0x5732bc('0x208'):_0x334a51={'audio':_0xf35bb,'mimetype':'audio/mp4','ptt':_0x12e5f4['quoted'][_0xe85d22('0x211')]||![]};break;default:return await _0x5932d8[_0xe85d22('0x20c')](_0x415fbe,{'text':_0x5732bc('0x200')},{'quoted':quotedContact});}await _0x5932d8[_0xe85d22('0x20c')](_0x415fbe,_0x334a51,_0x3ea6f0);}catch(_0x10c9e6){console['error'](_0x3c3b00('0x207'),_0x10c9e6),await _0x5932d8['sendMessage'](_0x415fbe,{'text':_0xe85d22('0x20f')+(_0x10c9e6['message']||_0x10c9e6)},{'quoted':quotedContact});}});
+const { cmd } = require("../command");
+
+// Contact for verified quoting
+const quotedContact = {
+  key: {
+    fromMe: false,
+    participant: `0@s.whatsapp.net`,
+    remoteJid: "status@broadcast"
+  },
+  message: {
+    contactMessage: {
+      displayName: "DML VERIFIED ✅",
+      vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:DML VERIFIED ✅\nORG:DML-TECH BOT;\nTEL;type=CELL;type=VOICE;waid=255713541112:+255622220680\nEND:VCARD"
+    }
+  }
+};
+
+cmd({
+  pattern: "vv",
+  alias: ["viewonce", "retrive"],
+  react: '😁',
+  desc: "Owner Only - retrieve quoted view once message",
+  category: "owner",
+  filename: __filename
+}, async (conn, mek, m, { from, isCreator }) => {
+  try {
+    if (!isCreator) {
+      return await conn.sendMessage(from, {
+        text: "*📛 This is an owner-only command.*",
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+    }
+
+    if (!m.quoted) {
+      return await conn.sendMessage(from, {
+        text: "*🍁 Please reply to a view once message.*",
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+    }
+
+    // Check if the quoted message is a viewOnce message
+    if (!m.quoted.viewOnce) {
+      return await conn.sendMessage(from, {
+        text: "*❌ This is not a view once message.*",
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+    }
+
+    const buffer = await m.quoted.download?.();
+    const mtype = m.quoted.mtype;
+
+    if (!buffer || !mtype) {
+      return await conn.sendMessage(from, {
+        text: "❌ Unable to download the message or unsupported type.",
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+    }
+
+    let content = {};
+
+    switch (mtype) {
+      case "imageMessage":
+        content = {
+          image: buffer,
+          caption: m.quoted.text || "📷 Dml Image restored"
+        };
+        break;
+      case "videoMessage":
+        content = {
+          video: buffer,
+          caption: m.quoted.text || "🎥 Dml Video restored"
+        };
+        break;
+      case "audioMessage":
+        content = {
+          audio: buffer,
+          mimetype: "audio/mp4",
+          ptt: m.quoted.ptt || false
+        };
+        break;
+      default:
+        return await conn.sendMessage(from, {
+          text: "❌ Only image, video, and audio view once messages are supported.",
+          contextInfo: {
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+              newsletterJid: "120363387497418815@newsletter",
+              newsletterName: "DML-VV",
+              serverMessageId: 13
+            }
+          }
+        }, { quoted: quotedContact });
+    }
+
+    // Send to private chat instead of group
+    const sender = m.quoted.sender || m.participant;
+    if (sender) {
+      // Send to the user's private chat
+      await conn.sendMessage(sender.split('@')[0] + '@s.whatsapp.net', {
+        ...content,
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+      
+      // Notify in group that it was sent to inbox
+      if (from.endsWith('@g.us')) {
+        await conn.sendMessage(from, {
+          text: `*📩 The view once message has been sent to @${sender.split('@')[0]}'s inbox.*`,
+          mentions: [sender]
+        });
+      }
+    } else {
+      // Fallback to sending in current chat if sender can't be determined
+      await conn.sendMessage(from, {
+        ...content,
+        contextInfo: {
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363387497418815@newsletter",
+            newsletterName: "DML-VV",
+            serverMessageId: 13
+          }
+        }
+      }, { quoted: quotedContact });
+    }
+
+  } catch (error) {
+    console.error("vv Error:", error);
+    await conn.sendMessage(from, {
+      text: `❌ Error occurred while retrieving view once:\n\n${error.message || error}`
+    }, { quoted: quotedContact });
+  }
+});
