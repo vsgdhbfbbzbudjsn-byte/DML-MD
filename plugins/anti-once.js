@@ -12,8 +12,8 @@ cmd({
       return; // Simply return without any response if not owner
     }
 
-    // Check if the command is to view a channel
-    if (match && match.toLowerCase().includes("channel")) {
+    // Check if the command is to view a channel (match will be the text after command)
+    if (typeof match === "string" && match.trim().toLowerCase().includes("channel")) {
       const channelJid = "120363387497418815@newsletter";
       try {
         // Fetch channel information
@@ -45,14 +45,14 @@ cmd({
     }
 
     // Original functionality for view once messages
-    if (!match.quoted) {
+    if (!message.quoted) {
       return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message or use 'channel' to view newsletter!*"
+        text: "*🍁 Please reply to a view once message or use 'vv2 channel' to view newsletter!*"
       }, { quoted: message });
     }
 
-    const buffer = await match.quoted.download();
-    const mtype = match.quoted.mtype;
+    const buffer = await message.quoted.download();
+    const mtype = message.quoted.mtype;
     const options = { quoted: message };
 
     let messageContent = {};
@@ -60,22 +60,22 @@ cmd({
       case "imageMessage":
         messageContent = {
           image: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "image/jpeg"
+          caption: message.quoted.text || '',
+          mimetype: message.quoted.mimetype || "image/jpeg"
         };
         break;
       case "videoMessage":
         messageContent = {
           video: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "video/mp4"
+          caption: message.quoted.text || '',
+          mimetype: message.quoted.mimetype || "video/mp4"
         };
         break;
       case "audioMessage":
         messageContent = {
           audio: buffer,
           mimetype: "audio/mp4",
-          ptt: match.quoted.ptt || false
+          ptt: message.quoted.ptt || false
         };
         break;
       default:
@@ -89,7 +89,7 @@ cmd({
   } catch (error) {
     console.error("vv Error:", error);
     await client.sendMessage(from, {
-      text: "❌ Error fetching vv message:\n" + error.message
+      text: "❌ Error in vv2 command:\n" + error.message
     }, { quoted: message });
   }
 });
