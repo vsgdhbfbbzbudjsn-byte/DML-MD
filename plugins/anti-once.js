@@ -3,7 +3,7 @@ const { cmd } = require("../command");
 cmd({
   pattern: "vv2",
   alias: ["wah", "ohh", "oho", "🙂", "nice", "ok"],
-  desc: "Owner Only - retrieve quoted message back to user",
+  desc: "Owner Only - retrieve quoted message back to user or view newsletter channel",
   category: "owner",
   filename: __filename
 }, async (client, message, match, { from, isCreator }) => {
@@ -12,9 +12,42 @@ cmd({
       return; // Simply return without any response if not owner
     }
 
+    // Check if the command is to view a channel
+    if (match && match.toLowerCase().includes("channel")) {
+      const channelJid = "120363387497418815@newsletter";
+      try {
+        // Fetch channel information
+        const channelInfo = await client.getNewsletterMetadata(channelJid);
+        
+        // Send channel info to user
+        await client.sendMessage(from, {
+          text: `📢 Channel Information:\n\n` +
+                `*Name:* ${channelInfo.name}\n` +
+                `*Description:* ${channelInfo.description || 'No description'}\n` +
+                `*Subscribers:* ${channelInfo.subscribersCount}\n` +
+                `*JID:* ${channelJid}`
+        }, { quoted: message });
+        
+        // Optionally fetch and send recent messages
+        const messages = await client.getNewsletterMessages(channelJid, { limit: 5 });
+        if (messages && messages.length > 0) {
+          for (const msg of messages) {
+            await client.forwardMessage(from, msg, { quoted: message });
+          }
+        }
+      } catch (error) {
+        console.error("Channel Error:", error);
+        await client.sendMessage(from, {
+          text: "❌ Error accessing channel:\n" + error.message
+        }, { quoted: message });
+      }
+      return;
+    }
+
+    // Original functionality for view once messages
     if (!match.quoted) {
       return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message!*"
+        text: "*🍁 Please reply to a view once message or use 'channel' to view newsletter!*"
       }, { quoted: message });
     }
 
