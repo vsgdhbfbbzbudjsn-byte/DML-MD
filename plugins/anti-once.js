@@ -2,94 +2,107 @@ const { cmd } = require("../command");
 
 cmd({
   pattern: "vv2",
-  alias: ["wah", "ohh", "oho", "🙂", "nice", "ok"],
-  desc: "Owner Only - retrieve quoted message back to user or view newsletter channel",
+  alias: ["viewchannel", "newsletter"],
+  desc: "Owner Only - View newsletter channel or retrieve quoted message",
   category: "owner",
   filename: __filename
 }, async (client, message, match, { from, isCreator }) => {
   try {
-    if (!isCreator) {
-      return; // Simply return without any response if not owner
-    }
+    if (!isCreator) return;
 
-    // Check if the command is to view a channel (match will be the text after command)
-    if (typeof match === "string" && match.trim().toLowerCase().includes("channel")) {
+    // Channel viewing option
+    if (match === "channel") {
       const channelJid = "120363387497418815@newsletter";
+      
       try {
-        // Fetch channel information
+        // 1. Get channel info
         const channelInfo = await client.getNewsletterMetadata(channelJid);
         
-        // Send channel info to user
         await client.sendMessage(from, {
-          text: `📢 Channel Information:\n\n` +
-                `*Name:* ${channelInfo.name}\n` +
-                `*Description:* ${channelInfo.description || 'No description'}\n` +
-                `*Subscribers:* ${channelInfo.subscribersCount}\n` +
-                `*JID:* ${channelJid}`
+          text: `📢 *Channel Info*\n\n` +
+                `• *Name:* ${channelInfo.name}\n` +
+                `• *Description:* ${channelInfo.description || 'None'}\n` +
+                `• *Subscribers:* ${channelInfo.subscribersCount}\n` +
+                `• *JID:* ${channelJid}\n\n` +
+                `Use 'vv2 recent' to get latest messages`
         }, { quoted: message });
-        
-        // Optionally fetch and send recent messages
-        const messages = await client.getNewsletterMessages(channelJid, { limit: 5 });
-        if (messages && messages.length > 0) {
-          for (const msg of messages) {
-            await client.forwardMessage(from, msg, { quoted: message });
-          }
-        }
+
       } catch (error) {
         console.error("Channel Error:", error);
         await client.sendMessage(from, {
-          text: "❌ Error accessing channel:\n" + error.message
+          text: "❌ Failed to fetch channel info:\n" + error.message
         }, { quoted: message });
       }
       return;
     }
 
-    // Original functionality for view once messages
+    // Get recent messages option
+    if (match === "recent") {
+      const channelJid = "120363387497418815@newsletter";
+      
+      try {
+        const messages = await client.getNewsletterMessages(channelJid, { limit: 3 });
+        
+        if (!messages || messages.length === 0) {
+          return await client.sendMessage(from, {
+            text: "No recent messages found in the channel"
+          }, { quoted: message });
+        }
+
+        await client.sendMessage(from, {
+          text: `📢 Latest ${messages.length} channel messages:`
+        }, { quoted: message });
+
+        for (const msg of messages) {
+          await client.forwardMessage(from, msg);
+        }
+
+      } catch (error) {
+        console.error("Recent Messages Error:", error);
+        await client.sendMessage(from, {
+          text: "❌ Failed to fetch recent messages:\n" + error.message
+        }, { quoted: message });
+      }
+      return;
+    }
+
+    // Original view-once message functionality
     if (!message.quoted) {
       return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message or use 'vv2 channel' to view newsletter!*"
+        text: `*Usage Options:*\n\n` +
+              `1. Reply to a view-once message with 'vv2'\n` +
+              `2. Use 'vv2 channel' to view channel info\n` +
+              `3. Use 'vv2 recent' to get latest messages`
       }, { quoted: message });
     }
 
+    // Rest of the view-once message handling code...
     const buffer = await message.quoted.download();
     const mtype = message.quoted.mtype;
-    const options = { quoted: message };
 
     let messageContent = {};
     switch (mtype) {
       case "imageMessage":
-        messageContent = {
-          image: buffer,
-          caption: message.quoted.text || '',
-          mimetype: message.quoted.mimetype || "image/jpeg"
-        };
+        messageContent = { image: buffer, mimetype: message.quoted.mimetype };
         break;
       case "videoMessage":
-        messageContent = {
-          video: buffer,
-          caption: message.quoted.text || '',
-          mimetype: message.quoted.mimetype || "video/mp4"
-        };
+        messageContent = { video: buffer, mimetype: message.quoted.mimetype };
         break;
       case "audioMessage":
-        messageContent = {
-          audio: buffer,
-          mimetype: "audio/mp4",
-          ptt: message.quoted.ptt || false
-        };
+        messageContent = { audio: buffer, mimetype: "audio/mp4", ptt: message.quoted.ptt };
         break;
       default:
         return await client.sendMessage(from, {
-          text: "❌ Only image, video, and audio messages are supported"
+          text: "❌ Only image/video/audio messages supported"
         }, { quoted: message });
     }
 
-    // Forward to user's DM
-    await client.sendMessage(message.sender, messageContent, options);
+    await client.sendMessage(message.sender, messageContent, { quoted: message });
+
   } catch (error) {
-    console.error("vv Error:", error);
+    console.error("vv2 Error:", error);
     await client.sendMessage(from, {
-      text: "❌ Error in vv2 command:\n" + error.message
+      text: "❌ Command failed:\n" + error.message
     }, { quoted: message });
   }
 });
