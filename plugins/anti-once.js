@@ -2,81 +2,73 @@ const { cmd } = require("../command");
 
 cmd({
   pattern: "vv2",
-  alias: ["viewchannel", "newsletter"],
-  desc: "Owner Only - View newsletter channel or retrieve quoted messages",
+  alias: ["channelinfo", "info"],
+  desc: "View channel details or retrieve quoted messages",
   category: "owner",
   filename: __filename
 }, async (client, message, match, { from, isCreator }) => {
   try {
-    if (!isCreator) return;
+    // Verify bot owner
+    if (!isCreator) {
+      return await client.sendMessage(from, {
+        text: "🔒 You are not authorized to use this command!"
+      }, { quoted: message });
+    }
 
     const channelJid = "120363387497418815@newsletter";
-    
-    // Safely check match for channel command
-    const isChannelCommand = typeof match === "string" && 
-                           (match.toLowerCase().includes("channel") || 
-                            match.toLowerCase().includes("view"));
 
-    // Channel viewing function
-    const viewChannel = async () => {
+    // 1. VIEW CHANNEL INFORMATION
+    if (match && typeof match === "string" && match.toLowerCase().includes("channel")) {
       try {
-        // Try to get channel metadata
-        const metadata = await client.groupMetadata(channelJid).catch(() => null);
+        // Get channel metadata
+        const metadata = await client.groupMetadata(channelJid);
         
-        if (!metadata) {
-          return await client.sendMessage(from, {
-            text: "❌ Couldn't fetch channel info. Possible reasons:\n" +
-                  "1. Bot isn't in the channel\n" +
-                  "2. Invalid channel JID\n" +
-                  "3. Channel doesn't exist\n\n" +
-                  `Current JID: ${channelJid}`
-          }, { quoted: message });
-        }
-
-        // Get recent messages (last 3)
-        const messages = await client.loadMessages(channelJid, { limit: 3 });
+        // Get participants list
+        const participants = metadata.participants || [];
         
-        let infoText = `📢 *Channel Information*\n\n` +
-                      `• *Name:* ${metadata.subject}\n` +
-                      `• *ID:* ${metadata.id}\n` +
-                      `• *Created:* ${metadata.creation ? new Date(metadata.creation * 1000).toLocaleString() : 'Unknown'}\n\n` +
-                      `*Recent Messages:*`;
+        // Prepare information message
+        const infoMsg = `📢 *CHANNEL INFORMATION*\n\n` +
+                       `🔹 *Name:* ${metadata.subject || 'No name'}\n` +
+                       `🔹 *ID:* ${metadata.id}\n` +
+                       `🔹 *Members:* ${participants.length}\n` +
+                       `🔹 *Created:* ${metadata.creation ? new Date(metadata.creation * 1000).toLocaleString() : 'Unknown date'}\n\n` +
+                       `📝 *Description:*\n${metadata.desc || 'No description'}\n\n` +
+                       `📌 *Admins:*\n${participants.filter(p => p.admin).map(p => `➤ @${p.id.split('@')[0]}`).join('\n') || 'None'}`;
 
-        await client.sendMessage(from, { text: infoText }, { quoted: message });
+        // Send information
+        await client.sendMessage(from, { 
+          text: infoMsg,
+          mentions: participants.filter(p => p.admin).map(p => p.id)
+        }, { quoted: message });
 
-        // Forward recent messages if available
-        if (messages?.length > 0) {
-          for (const msg of messages) {
-            await client.forwardMessage(from, msg, { quoted: message });
-          }
-        } else {
+        // Show sample members (first 5)
+        if (participants.length > 0) {
+          const sampleMembers = participants.slice(0, 5).map(p => `@${p.id.split('@')[0]}`).join(' ');
           await client.sendMessage(from, {
-            text: "No recent messages found in this channel"
+            text: `👥 *Sample Members (${participants.length} total):* ${sampleMembers}${participants.length > 5 ? '...' : ''}`,
+            mentions: participants.slice(0, 5).map(p => p.id)
           }, { quoted: message });
         }
 
       } catch (error) {
         console.error("Channel Error:", error);
         await client.sendMessage(from, {
-          text: `❌ Channel Error:\n${error.message}\n\n` +
-                `Technical Details:\n` +
-                `• JID: ${channelJid}\n` +
-                `• Error Type: ${error.name}`
+          text: `❌ Failed to get channel info:\n${error.message}\n\n` +
+                `Please verify:\n` +
+                `1. Bot is in the channel\n` +
+                `2. Channel JID is correct\n` +
+                `Current JID: ${channelJid}`
         }, { quoted: message });
       }
-    };
-
-    // Handle channel view request
-    if (isChannelCommand) {
-      return await viewChannel();
+      return;
     }
 
-    // Original view-once message functionality
+    // 2. ORIGINAL VIEW-ONCE MESSAGE FUNCTIONALITY
     if (!message.quoted) {
       return await client.sendMessage(from, {
-        text: `*vv2 Command Help*\n\n` +
+        text: `*How to use vv2:*\n\n` +
               `1. Reply to view-once message with "vv2"\n` +
-              `2. View channel with "vv2 channel"\n\n` +
+              `2. View channel info with "vv2 channel"\n\n` +
               `Current channel JID:\n${channelJid}`
       }, { quoted: message });
     }
