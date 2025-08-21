@@ -22,10 +22,11 @@ async (conn, mek, m, {
     if (!isGroup) return reply("❌ This command can only be used in groups.");
     if (!isAdmins && !isCreator) return reply("❌ Only group admins can use this command.");
 
-    // Mentions for all members
+    // Hakikisha inataja WOTE
     const mentionAll = {
       mentions: participants.map(u => u.id),
       contextInfo: {
+        mentionedJid: participants.map(u => u.id), // <-- hii ndio inahakikisha wote wametajwa
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
@@ -36,16 +37,15 @@ async (conn, mek, m, {
       }
     };
 
-    // If no message or reply is provided
+    // Kama hakuna message au reply
     if (!q && !m.quoted) {
       return reply("❌ Please provide a message or reply to a message to tag all members.");
     }
 
-    // If a reply to a message
+    // Kama ni reply kwa message
     if (m.quoted) {
       const type = m.quoted.mtype || '';
       
-      // If it's a text message
       if (type === 'extendedTextMessage') {
         return await conn.sendMessage(from, {
           text: m.quoted.text || 'No message content found.',
@@ -53,7 +53,6 @@ async (conn, mek, m, {
         }, { quoted: mek });
       }
 
-      // Handle media messages
       if (['imageMessage', 'videoMessage', 'audioMessage', 'stickerMessage', 'documentMessage'].includes(type)) {
         try {
           const buffer = await m.quoted.download?.();
@@ -103,14 +102,13 @@ async (conn, mek, m, {
         }
       }
 
-      // Fallback for any other message type
       return await conn.sendMessage(from, {
         text: m.quoted.text || "📨 Message",
         ...mentionAll
       }, { quoted: mek });
     }
 
-    // If no quoted message, but a direct message is sent
+    // Kama sio reply bali ni text direct
     if (q) {
       if (isUrl(q)) {
         return await conn.sendMessage(from, { text: q, ...mentionAll }, { quoted: mek });
