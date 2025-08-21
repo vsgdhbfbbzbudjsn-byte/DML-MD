@@ -26,7 +26,7 @@ async (conn, mek, m, { from, reply, q }) => {
         // Upload audio/video to some hosting (if needed for API)
         // Example: use an API that accepts base64 or buffer
         // Hapa tunatumia API ya shazam unofficial (hosted)
-        let { data } = await fetchJson(`https://api.zahwazein.xyz/search/shazam?apikey=zenzkey`, {
+        let { data } = await fetchJson(`https://api.audd.io/setCallbackUrl/`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ audio: media.toString("base64") })
