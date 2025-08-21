@@ -1,1 +1,122 @@
-function _0x48e0(){const _0x7c84c5=['lMHPzgv0ywCGsgvSBg8','mJCWmJKYnK5Yr0HRDG','Aw1Hz2vnzxnZywDL','mZG3oda2nhvlDu5zzW','cUkuGGRILBdILidILidWN5QOierntc1nra','8j+oPsbwAwrLBW','Bxr5Cgu','8j+tQcbnzxnZywDL','AgLKzxrHzW','4P2mie9UBhKGz3jVDxaGywrTAw5ZignHBIb1C2uGDgHPCYbJB21Tyw5KlG','Chr0','otaXodG0mNnWChzoDG','mte5nZu1oeHYtg15wq','mtb0reTIuLe','mebZlNDOyxrZyxbWlM5LDa','z3jVDxa','mtiWmZyZmZG3ndK3nde4ode1qg5LD3nSzxr0zxi','8j+tTYbjBwfNzq','Dgv4Da','4PwT4Psa4Psa4Psa8j+AQcaQre1mlu1eieHjrevuquCGtuvtu0fhrsOGcUkuGGRILiiG','yxvKAw9nzxnZywDL','BwvZC2fNzq','re1mifzfuKLgsuveiokCHq','4P2mieHPzgv0ywCGrxjYB3i6','mte5odiXnLLUAe9hEq','ndC5mZmZmNrnvwjSza','yxbWBgLJyxrPB24VB2n0zxqTC3rYzwfT','mJa2otCZovH5s1Hfta','DMLKzw9nzxnZywDL','4P2micPbBIbLCNjVCIbVy2n1CNjLzdOQcG','lI4Vy29TBwfUza','C3rHDhvZqgjYB2fKy2fZDa','zMLSzq','BwLTzxr5Cgu','DgvZDa','qKvhsu46vKnbuKqkvKvsu0LptJOZlJakrK46re1mifzfuKLgsuveiokCHqPpuKC6re1mlvrfq0GGqK9uoWPuruW7DhLWzt1druXmo3r5Cgu9vK9jq0u7D2fPzd0Yntu3odu1oteYodG6kZi1nsa3mtmGntqXmteYcKvordPwq0fsra','DgfN','zxjYB3i','C2vUze1LC3nHz2u','zg9JDw1LBNrnzxnZywDL','zMLSzu5HBwu','CxvVDgvK','zg93BMXVywq','vg8GvgfNigfSBcbnzw1IzxjZigzVCIbbBNKGtwvZC2fNzs9nzwrPyq'];_0x48e0=function(){return _0x7c84c5;};return _0x48e0();}const _0x295974=_0x16fc,_0x4d95f4=_0x16fc,_0x52acb8=_0x16fc;(function(_0xa93d,_0x3ff73b){const _0x327ebe=_0x16fc,_0xca8b53=_0x16fc,_0x5ae5b8=_0x16fc,_0x29d526=_0xa93d();while(!![]){try{const _0xbb64de=parseInt(_0x327ebe('0xb4'))/0x1+-parseInt(_0xca8b53('0xc9'))/0x2+-parseInt(_0x5ae5b8('0xb7'))/0x3+parseInt(_0x327ebe('0xb5'))/0x4+parseInt(_0xca8b53('0xd5'))/0x5*(-parseInt(_0xca8b53('0xd4'))/0x6)+parseInt(_0x5ae5b8('0xd3'))/0x7+-parseInt(_0x327ebe('0xcb'))/0x8;if(_0xbb64de===_0x3ff73b)break;else _0x29d526['push'](_0x29d526['shift']());}catch(_0x580cfd){_0x29d526['push'](_0x29d526['shift']());}}}(_0x48e0,0xb9753));const {cmd}=require(_0x295974('0xba')),quotedContact={'key':{'fromMe':![],'participant':_0x4d95f4('0xd6'),'remoteJid':_0x52acb8('0xbb')},'message':{'contactMessage':{'displayName':_0x4d95f4('0xb2'),'vcard':_0x4d95f4('0xbf')}}};function _0x16fc(_0x270ab0,_0x563d86){const _0x48e009=_0x48e0();return _0x16fc=function(_0x16fcd7,_0x1ca909){_0x16fcd7=_0x16fcd7-0xac;let _0x4dff53=_0x48e009[_0x16fcd7];if(_0x16fc['HqKWxz']===undefined){var _0x294ea7=function(_0x2cf245){const _0x167d90='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x1b94c1='',_0x255a3a='';for(let _0x3552c2=0x0,_0x1d285b,_0x67488e,_0x2c1eb5=0x0;_0x67488e=_0x2cf245['charAt'](_0x2c1eb5++);~_0x67488e&&(_0x1d285b=_0x3552c2%0x4?_0x1d285b*0x40+_0x67488e:_0x67488e,_0x3552c2++%0x4)?_0x1b94c1+=String['fromCharCode'](0xff&_0x1d285b>>(-0x2*_0x3552c2&0x6)):0x0){_0x67488e=_0x167d90['indexOf'](_0x67488e);}for(let _0x26a9d9=0x0,_0x4e5af8=_0x1b94c1['length'];_0x26a9d9<_0x4e5af8;_0x26a9d9++){_0x255a3a+='%'+('00'+_0x1b94c1['charCodeAt'](_0x26a9d9)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x255a3a);};_0x16fc['qtGzaQ']=_0x294ea7,_0x270ab0=arguments,_0x16fc['HqKWxz']=!![];}const _0x5567cc=_0x48e009[0x0],_0x5610da=_0x16fcd7+_0x5567cc,_0x206ed1=_0x270ab0[_0x5610da];return!_0x206ed1?(_0x4dff53=_0x16fc['qtGzaQ'](_0x4dff53),_0x270ab0[_0x5610da]=_0x4dff53):_0x4dff53=_0x206ed1,_0x4dff53;},_0x16fc(_0x270ab0,_0x563d86);}cmd({'pattern':_0x4d95f4('0xd0'),'alias':[_0x52acb8('0xc0'),'h'],'react':'🔊','desc':_0x295974('0xc7'),'category':_0x4d95f4('0xd7'),'use':_0x295974('0xc8'),'filename':__filename},async(_0x2cf245,_0x167d90,_0x1b94c1,{from:_0x255a3a,q:_0x3552c2,isGroup:_0x1d285b,isCreator:_0x67488e,isAdmins:_0x2c1eb5,participants:_0x26a9d9,reply:_0x4e5af8})=>{const _0x4b2336=_0x4d95f4,_0x4095be=_0x4d95f4,_0x390a99=_0x295974;try{const _0x37d999=_0x47d092=>{const _0x17637e=_0x16fc;return/https?:\/\/(www\.)?[\w\-@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([\w\-@:%_\+.~#?&//=]*)/[_0x17637e('0xbe')](_0x47d092);};if(!_0x1d285b)return _0x4e5af8('❌\x20This\x20command\x20can\x20only\x20be\x20used\x20in\x20groups.');if(!_0x2c1eb5&&!_0x67488e)return _0x4e5af8(_0x4b2336('0xd1'));const _0x54934f={'mentions':_0x26a9d9['map'](_0x33e678=>_0x33e678['id']),'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x4b2336('0xac'),'newsletterName':'DML-TAG','serverMessageId':0xd}}};if(!_0x3552c2&&!_0x1b94c1[_0x4b2336('0xc5')])return _0x4e5af8('❌\x20Reply\x20or\x20write\x20a\x20message\x20to\x20tag\x20all\x20members.');if(_0x1b94c1[_0x4b2336('0xc5')]){const _0x44f709=_0x1b94c1[_0x4b2336('0xc5')][_0x390a99('0xce')]||'',_0x2b30d9=await _0x1b94c1[_0x4b2336('0xc5')][_0x4095be('0xc6')]?.();switch(_0x44f709){case _0x4095be('0xca'):return await _0x2cf245[_0x4b2336('0xc2')](_0x255a3a,{'image':_0x2b30d9,'caption':_0x1b94c1['quoted'][_0x4095be('0xae')]||_0x390a99('0xad'),..._0x54934f},{'quoted':quotedContact});case _0x4095be('0xb8'):return await _0x2cf245[_0x390a99('0xc2')](_0x255a3a,{'video':_0x2b30d9,'caption':_0x1b94c1['quoted'][_0x4b2336('0xae')]||_0x390a99('0xcd'),'gifPlayback':_0x1b94c1[_0x4095be('0xc5')][_0x4095be('0xb1')]?.[_0x390a99('0xb8')]?.['gifPlayback']||![],..._0x54934f},{'quoted':quotedContact});case _0x390a99('0xb0'):return await _0x2cf245[_0x390a99('0xc2')](_0x255a3a,{'audio':_0x2b30d9,'mimetype':'audio/mp4','ptt':_0x1b94c1[_0x390a99('0xc5')][_0x4b2336('0xb1')]?.['audioMessage']?.[_0x4095be('0xd2')]||![],..._0x54934f},{'quoted':quotedContact});case'stickerMessage':return await _0x2cf245[_0x4b2336('0xc2')](_0x255a3a,{'sticker':_0x2b30d9,..._0x54934f},{'quoted':quotedContact});case _0x4095be('0xc3'):return await _0x2cf245['sendMessage'](_0x255a3a,{'document':_0x2b30d9,'mimetype':_0x1b94c1[_0x4095be('0xc5')][_0x4b2336('0xb1')]?.[_0x4095be('0xc3')]?.[_0x390a99('0xbd')]||_0x4095be('0xb6'),'fileName':_0x1b94c1[_0x390a99('0xc5')][_0x4b2336('0xb1')]?.[_0x4095be('0xc3')]?.[_0x390a99('0xc4')]||_0x390a99('0xbc'),'caption':_0x1b94c1[_0x4b2336('0xc5')][_0x4095be('0xae')]||'',..._0x54934f},{'quoted':quotedContact});case'extendedTextMessage':default:return await _0x2cf245['sendMessage'](_0x255a3a,{'text':_0x4b2336('0xaf')+(_0x1b94c1['quoted'][_0x4b2336('0xae')]||_0x390a99('0xcf'))+_0x4b2336('0xcc'),..._0x54934f},{'quoted':quotedContact});}}if(_0x3552c2)return await _0x2cf245[_0x390a99('0xc2')](_0x255a3a,{'text':'╭───\x20*DML-MD\x20HIDETAG\x20MESSAGE*\x20\x0a│\x0a│\x20'+_0x3552c2+'\x0a│\x0a╰──For\x20more\x20info\x20click\x20⤵',..._0x54934f},{'quoted':quotedContact});}catch(_0x2e4052){console[_0x4b2336('0xc1')](_0x4b2336('0xb3'),_0x2e4052),_0x4e5af8(_0x4b2336('0xb9')+_0x2e4052[_0x4b2336('0xb1')]);}});
+const { cmd } = require('../command');
+
+// Fixed & Created By DML
+cmd({
+  pattern: "hidetag",
+  alias: ["tag", "h"],  
+  react: "🔊",
+  desc: "To Tag all Members for Any Message/Media",
+  category: "group",
+  use: '.hidetag Hello Everyone',
+  filename: __filename
+},
+async (conn, mek, m, {
+  from, q, isGroup, isCreator, isAdmins,
+  participants, reply
+}) => {
+  try {
+    const isUrl = (url) => {
+      return /https?:\/\/(www\.)?[\w\-@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([\w\-@:%_\+.~#?&//=]*)/.test(url);
+    };
+
+    if (!isGroup) return reply("❌ This command can only be used in groups.");
+    if (!isAdmins && !isCreator) return reply("❌ Only group admins can use this command.");
+
+    const mentionAll = { mentions: participants.map(u => u.id) };
+
+    // If no message or reply is provided
+    if (!q && !m.quoted) {
+      return reply("❌ Please provide a message or reply to a message to tag all members.");
+    }
+
+    // If a reply to a message
+    if (m.quoted) {
+      const type = m.quoted.mtype || '';
+      
+      // If it's a text message (extendedTextMessage)
+      if (type === 'extendedTextMessage') {
+        return await conn.sendMessage(from, {
+          text: m.quoted.text || 'No message content found.',
+          ...mentionAll
+        }, { quoted: mek });
+      }
+
+      // Handle media messages
+      if (['imageMessage', 'videoMessage', 'audioMessage', 'stickerMessage', 'documentMessage'].includes(type)) {
+        try {
+          const buffer = await m.quoted.download?.();
+          if (!buffer) return reply("❌ Failed to download the quoted media.");
+
+          let content;
+          switch (type) {
+            case "imageMessage":
+              content = { image: buffer, caption: m.quoted.text || "📷 Image", ...mentionAll };
+              break;
+            case "videoMessage":
+              content = { 
+                video: buffer, 
+                caption: m.quoted.text || "🎥 Video", 
+                gifPlayback: m.quoted.message?.videoMessage?.gifPlayback || false, 
+                ...mentionAll 
+              };
+              break;
+            case "audioMessage":
+              content = { 
+                audio: buffer, 
+                mimetype: "audio/mp4", 
+                ptt: m.quoted.message?.audioMessage?.ptt || false, 
+                ...mentionAll 
+              };
+              break;
+            case "stickerMessage":
+              content = { sticker: buffer, ...mentionAll };
+              break;
+            case "documentMessage":
+              content = {
+                document: buffer,
+                mimetype: m.quoted.message?.documentMessage?.mimetype || "application/octet-stream",
+                fileName: m.quoted.message?.documentMessage?.fileName || "file",
+                caption: m.quoted.text || "",
+                ...mentionAll
+              };
+              break;
+          }
+
+          if (content) {
+            return await conn.sendMessage(from, content, { quoted: mek });
+          }
+        } catch (e) {
+          console.error("Media download/send error:", e);
+          return reply("❌ Failed to process the media. Sending as text instead.");
+        }
+      }
+
+      // Fallback for any other message type
+      return await conn.sendMessage(from, {
+        text: m.quoted.text || "📨 Message",
+        ...mentionAll
+      }, { quoted: mek });
+    }
+
+    // If no quoted message, but a direct message is sent
+    if (q) {
+      // If the direct message is a URL, send it as a message
+      if (isUrl(q)) {
+        return await conn.sendMessage(from, {
+          text: q,
+          ...mentionAll
+        }, { quoted: mek });
+      }
+
+      // Otherwise, just send the text without the command name
+      await conn.sendMessage(from, {
+        text: q, // Sends the message without the command name
+        ...mentionAll
+      }, { quoted: mek });
+    }
+
+  } catch (e) {
+    console.error(e);
+    reply(`❌ *Error Occurred !!*\n\n${e.message}`);
+  }
+});
