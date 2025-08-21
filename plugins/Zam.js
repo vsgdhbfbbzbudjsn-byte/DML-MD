@@ -1,51 +1,59 @@
-const config = require('../config')
-const { cmd, commands } = require('../command')
+const { cmd } = require('../command')
 const { fetchJson } = require('../lib/functions')
 
+// Fixed & Created By DML
 cmd({
     pattern: "shazam",
+    alias: ["findsong", "whatmusic"],
     react: "🎵",
-    alias: ["findsong", "musicid"],
-    desc: "Identify song by audio",
+    desc: "Identify a song by replying with audio",
     category: "tools",
-    use: ".shazam (reply to audio/video)",
+    use: '.shazam (reply with audio)',
     filename: __filename
 },
-async (conn, mek, m, { from, reply, q }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        // Lazima mtu areply audio au video
-        if (!m.quoted) return reply("❌ Please reply to an *audio* or *video* file to identify the song.");
-        
-        let mime = (m.quoted.msg || m.quoted).mimetype || "";
-        if (!/audio|video/.test(mime)) return reply("❌ Please reply only to an audio or video file.");
+        if (!m.quoted) return reply("🎵 Please reply to an *audio/voice note* to identify the song.");
 
-        // Download the audio/video buffer
-        let media = await m.quoted.download?.();
-        if (!media) return reply("❌ Failed to download the file, try again.");
+        let type = m.quoted.mtype || "";
+        if (type !== "audioMessage") {
+            return reply("❌ Please reply to a valid *audio message*.");
+        }
 
-        // Upload audio/video to some hosting (if needed for API)
-        // Example: use an API that accepts base64 or buffer
-        // Hapa tunatumia API ya shazam unofficial (hosted)
-        let { data } = await fetchJson(`https://api.audd.io/setCallbackUrl/`, {
+        // Download the audio buffer
+        const buffer = await m.quoted.download?.();
+        if (!buffer) return reply("❌ Failed to download audio, try again.");
+
+        reply("⏳ Identifying song... Please wait!");
+
+        // Upload audio buffer to an online API that supports Shazam recognition
+        // Example: using shazam API from some free service
+        // NB: You need an API key or service that supports audio recognition
+        let formData = new FormData();
+        formData.append("file", buffer, "song.mp3");
+
+        let result = await fetchJson("https://api.audd.io/", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ audio: media.toString("base64") })
+            body: formData
         });
 
-        if (!data || !data.title) return reply("❌ Could not recognize the song.");
+        if (!result || !result.result) {
+            return reply("❌ Sorry, could not identify this song.");
+        }
 
-        let teks = `🎶 *Shazam Result*\n\n`;
-        teks += `▢ *Title:* ${data.title}\n`;
-        teks += `▢ *Artist:* ${data.artist}\n`;
-        teks += `▢ *Album:* ${data.album || "-"}\n`;
-        teks += `▢ *Genre:* ${data.genre || "-"}\n`;
-        teks += `▢ *Released:* ${data.release_date || "-"}\n`;
-        if (data.url) teks += `\n🔗 *Listen:* ${data.url}`;
+        let song = result.result;
+        let teks = `🎶 *Shazam Result* 🎶
+
+▢ *Title* : ${song.title || "Unknown"}
+▢ *Artist* : ${song.artist || "Unknown"}
+▢ *Album* : ${song.album || "Unknown"}
+▢ *Release Date* : ${song.release_date || "Unknown"}
+▢ *Link* : ${song.song_link || "N/A"}`;
 
         await conn.sendMessage(from, { text: teks }, { quoted: mek });
 
     } catch (e) {
         console.error("Shazam Error:", e);
-        reply(`❌ *Error Occurred while Shazaming !!*\n\n${e.message || e}`);
+        reply(`❌ *Error Occurred !!*\n\n${e.message}`);
     }
 });
