@@ -7,7 +7,7 @@ cmd({
   react: "🔊",
   desc: "To Tag all Members for Any Message/Media",
   category: "group",
-  use: '.hidetag Hello Everyone',
+  use: '.hidetag Hello',
   filename: __filename
 },
 async (conn, mek, m, {
@@ -22,7 +22,19 @@ async (conn, mek, m, {
     if (!isGroup) return reply("❌ This command can only be used in groups.");
     if (!isAdmins && !isCreator) return reply("❌ Only group admins can use this command.");
 
-    const mentionAll = { mentions: participants.map(u => u.id) };
+    // Mentions for all members
+    const mentionAll = {
+      mentions: participants.map(u => u.id),
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: "120363387497418815@newsletter",
+          newsletterName: "DML-TAG",
+          serverMessageId: 13
+        }
+      }
+    };
 
     // If no message or reply is provided
     if (!q && !m.quoted) {
@@ -33,7 +45,7 @@ async (conn, mek, m, {
     if (m.quoted) {
       const type = m.quoted.mtype || '';
       
-      // If it's a text message (extendedTextMessage)
+      // If it's a text message
       if (type === 'extendedTextMessage') {
         return await conn.sendMessage(from, {
           text: m.quoted.text || 'No message content found.',
@@ -100,19 +112,11 @@ async (conn, mek, m, {
 
     // If no quoted message, but a direct message is sent
     if (q) {
-      // If the direct message is a URL, send it as a message
       if (isUrl(q)) {
-        return await conn.sendMessage(from, {
-          text: q,
-          ...mentionAll
-        }, { quoted: mek });
+        return await conn.sendMessage(from, { text: q, ...mentionAll }, { quoted: mek });
       }
 
-      // Otherwise, just send the text without the command name
-      await conn.sendMessage(from, {
-        text: q, // Sends the message without the command name
-        ...mentionAll
-      }, { quoted: mek });
+      return await conn.sendMessage(from, { text: q, ...mentionAll }, { quoted: mek });
     }
 
   } catch (e) {
