@@ -1,1 +1,56 @@
-const _0x19f735=_0x4a63,_0x143723=_0x4a63,_0x2d9830=_0x4a63,_0x57f4ab=_0x4a63;(function(_0x4336e0,_0x2bcde6){const _0x20806d=_0x4a63,_0x472fe9=_0x4a63,_0x4a5dfb=_0x4a63,_0x116000=_0x4a63,_0x2f2706=_0x4336e0();while(!![]){try{const _0x226f4a=-parseInt(_0x20806d('0x100'))/0x1*(-parseInt(_0x472fe9('0x106'))/0x2)+parseInt(_0x472fe9('0x104'))/0x3*(-parseInt(_0x472fe9('0xf3'))/0x4)+-parseInt(_0x116000('0x10e'))/0x5*(parseInt(_0x4a5dfb('0x102'))/0x6)+-parseInt(_0x116000('0xf0'))/0x7*(parseInt(_0x20806d('0x103'))/0x8)+-parseInt(_0x4a5dfb('0x10a'))/0x9+parseInt(_0x20806d('0x10f'))/0xa*(-parseInt(_0x116000('0xfd'))/0xb)+parseInt(_0x20806d('0x10b'))/0xc*(parseInt(_0x20806d('0xf6'))/0xd);if(_0x226f4a===_0x2bcde6)break;else _0x2f2706['push'](_0x2f2706['shift']());}catch(_0x50d556){_0x2f2706['push'](_0x2f2706['shift']());}}}(_0x2c7a,0x1f8af));const config=require(_0x19f735('0xfc')),{cmd}=require('../command'),{getGroupAdmins}=require(_0x19f735('0xf1')),quotedContact={'key':{'fromMe':![],'participant':'0@s.whatsapp.net','remoteJid':_0x2d9830('0xfb')},'message':{'contactMessage':{'displayName':'DML\x20VERIFIED\x20✅','vcard':_0x57f4ab('0xfa')}}};function _0x2c7a(){const _0x5d236f=['ntu0EKv2vLfr','C2vUze1LC3nHz2u','C3bSAxq','DxnLCG','mta5mtyYohDWAKfXuW','otq2otCXnMfQzNjKvW','8j+xO++4JW','y2f0y2G','mtqXodbKELj2r1i','nde3nZbAu05mA2G','re1mlvrbr0fmta','4PwT4Psa4Psa4Psa44cuicRWN5oIierntcbhuK9vucbnru5usu9okIdJGjxILidILidILidIRkmk4PsccUkuGIaQ8j+uTcbhCM91CdOQia','vg8GvgfNigfSBcbnzw1IzxjZ','C3vIAMvJDa','8j+tOYbbDhrLBNrPB24GrxzLCNLVBMuH','z3jVDxbnzxrHzgf0yq','vgfNqwXSievYCM9YoG','4P2mie9UBhKGz3jVDxaGywrTAw5Zig9YihrOzsbIB3qGB3DUzxiGy2fUihvZzsb0AgLZignVBw1HBMqU','mtiWmZyZmZG3ndK3nde4ode1qg5LD3nSzxr0zxi','lNrHz2fSBcbBBwvZC2fNzv0','4P2micPfCNjVCIbpy2n1CNjLzcaHisOkcG','BgvUz3rO','BwvZC2fNzq','n2rLthDhBq','lI4VBgLIl2z1BMn0Aw9UCW','DhjPBq','mta3mJrvsKDAB2S','4P2K4Ocn8j+PUq','qhmUD2HHDhnHChaUBMv0','mtnkzwf0v0O','4P2miezHAwXLzcb0BYbMzxrJAcbNCM91CcbPBMzVlG','cKzVCIbTB3jLigLUzM8Gy2XPy2VIPlu','zMXVB3i','qKvhsu46vKnbuKqkvKvsu0LptJOZlJakrK46re1mifzfuKLgsuveiokCHqPpuKC6re1mlvrfq0GGqK9uoWPuruW7DhLWzt1druXmo3r5Cgu9vK9jq0u7D2fPzd0Yntu2mJiYmJa2oda6kZi1nsa3mtmGntqXmteYcKvordPwq0fsra','C3rHDhvZqgjYB2fKy2fZDa','lI4Vy29UzMLN','nte3rxDdwNn2','Aw5KzxHpzG','cUkuGIaQ8j+rPsbnzw1IzxjZoIOG','mtqZD2XcCgTe','z2nFDgfNywXS','mJe2zKjSrMLS','mtq0ntiWofvPyKPpwq','mteXt3fuzvzX','cUkuGGRILBdILidILidIRzveBwWGtwvUDgLVBMLUzYbbBgWG4OQW4Psa4Psa4Q2vcG'];_0x2c7a=function(){return _0x5d236f;};return _0x2c7a();}function _0x4a63(_0x2ffb28,_0x22dd96){const _0x2c7a29=_0x2c7a();return _0x4a63=function(_0x4a63a8,_0x4a54a0){_0x4a63a8=_0x4a63a8-0xe8;let _0x19cee0=_0x2c7a29[_0x4a63a8];if(_0x4a63['FCZFsM']===undefined){var _0x5a1f55=function(_0x52058a){const _0x2412f3='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x230026='',_0x55cdd9='';for(let _0x4438ad=0x0,_0x3c6bd9,_0x57acd3,_0x2d37e6=0x0;_0x57acd3=_0x52058a['charAt'](_0x2d37e6++);~_0x57acd3&&(_0x3c6bd9=_0x4438ad%0x4?_0x3c6bd9*0x40+_0x57acd3:_0x57acd3,_0x4438ad++%0x4)?_0x230026+=String['fromCharCode'](0xff&_0x3c6bd9>>(-0x2*_0x4438ad&0x6)):0x0){_0x57acd3=_0x2412f3['indexOf'](_0x57acd3);}for(let _0x3cb9f7=0x0,_0x4056bb=_0x230026['length'];_0x3cb9f7<_0x4056bb;_0x3cb9f7++){_0x55cdd9+='%'+('00'+_0x230026['charCodeAt'](_0x3cb9f7)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x55cdd9);};_0x4a63['IByfyP']=_0x5a1f55,_0x2ffb28=arguments,_0x4a63['FCZFsM']=!![];}const _0x4758fb=_0x2c7a29[0x0],_0x2865a6=_0x4a63a8+_0x4758fb,_0x59d419=_0x2ffb28[_0x2865a6];return!_0x59d419?(_0x19cee0=_0x4a63['IByfyP'](_0x19cee0),_0x2ffb28[_0x2865a6]=_0x19cee0):_0x19cee0=_0x59d419,_0x19cee0;},_0x4a63(_0x2ffb28,_0x22dd96);}cmd({'pattern':'tagall','react':'🗣','alias':[_0x143723('0x101')],'desc':_0x2d9830('0x112'),'category':'group','use':_0x19f735('0xec'),'filename':__filename},async(_0x52058a,_0x2412f3,_0x230026,{from:_0x55cdd9,participants:_0x4438ad,reply:_0x3c6bd9,isGroup:_0x57acd3,senderNumber:_0x2d37e6,groupAdmins:_0x3cb9f7,command:_0x4056bb,body:_0x39782c})=>{const _0x56c97f=_0x2d9830,_0x30ba21=_0x2d9830,_0x498567=_0x2d9830,_0x48635d=_0x19f735;try{if(!_0x57acd3)return _0x3c6bd9('❌\x20This\x20command\x20can\x20only\x20be\x20used\x20in\x20groups.');const _0x3902b7=_0x52058a[_0x56c97f('0x109')]['id'][_0x30ba21('0x108')](':')[0x0],_0x555e4d=_0x2d37e6+_0x498567('0xf5');if(!_0x3cb9f7['includes'](_0x555e4d)&&_0x2d37e6!==_0x3902b7)return _0x3c6bd9(_0x56c97f('0xea'));const _0x1b99c5=await _0x52058a[_0x48635d('0xe8')](_0x55cdd9)[_0x498567('0x10d')](()=>null);if(!_0x1b99c5)return _0x3c6bd9(_0x498567('0xf7'));const _0x43237c=_0x1b99c5[_0x56c97f('0x113')]||'Unknown\x20Group',_0x2a2a4b=_0x4438ad[_0x498567('0xee')],_0x1e43d1=['📢','🔊','🌐','🔰',_0x56c97f('0xf4'),'🤍','🖤','🩵','📝','💗','🔖','🪩','📦','🎉','🛡️','💸','⏳','🗿','🚀','🎧','🪀','⚡','🚩','🍁',_0x48635d('0x10c'),'👻','⚠️','🔥'],_0x334f41=_0x1e43d1[Math[_0x56c97f('0xf9')](Math['random']()*_0x1e43d1[_0x30ba21('0xee')])],_0x4e6164=_0x39782c['slice'](_0x39782c[_0x30ba21('0xfe')](_0x4056bb)+_0x4056bb[_0x30ba21('0xee')])[_0x56c97f('0xf2')]()||_0x56c97f('0x114');let _0x19ddf3=_0x498567('0x111')+_0x43237c+_0x48635d('0xff')+_0x2a2a4b+'\x0a│\x20*💬\x20Message:*\x20'+_0x4e6164+_0x56c97f('0x105');for(const _0x181d13 of _0x4438ad){if(!_0x181d13['id'])continue;_0x19ddf3+=_0x334f41+'\x20@'+_0x181d13['id'][_0x30ba21('0x108')]('@')[0x0]+'\x0a';}_0x19ddf3+=_0x30ba21('0xf8'),await _0x52058a[_0x498567('0x107')](_0x55cdd9,{'text':_0x19ddf3,'mentions':_0x4438ad['map'](_0x59c14b=>_0x59c14b['id']),'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x56c97f('0xeb'),'newsletterName':_0x498567('0x110'),'serverMessageId':0x1}}},{'quoted':quotedContact});}catch(_0x19c45f){console['error'](_0x56c97f('0xe9'),_0x19c45f),_0x3c6bd9(_0x56c97f('0xed')+(_0x19c45f[_0x30ba21('0xef')]||_0x19c45f));}});
+const config = require('../config')
+const { cmd, commands } = require('../command')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
+
+cmd({
+    pattern: "tagall",
+    react: "🔊",
+    alias: ["gc_tagall"],
+    desc: "To Tag all Members",
+    category: "group",
+    use: '.tagall [message]',
+    filename: __filename
+},
+async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAdmins, prefix, command, args, body }) => {
+    try {
+        if (!isGroup) return reply("❌ This command can only be used in groups.");
+        
+        const botOwner = conn.user.id.split(":")[0]; // Extract bot owner's number
+        const senderJid = senderNumber + "@s.whatsapp.net";
+
+        if (!groupAdmins.includes(senderJid) && senderNumber !== botOwner) {
+            return reply("❌ Only group admins or the bot owner can use this command.");
+        }
+
+        // Ensure group metadata is fetched properly
+        let groupInfo = await conn.groupMetadata(from).catch(() => null);
+        if (!groupInfo) return reply("❌ Failed to fetch group information.");
+
+        let groupName = groupInfo.subject || "Unknown Group";
+        let totalMembers = participants ? participants.length : 0;
+        if (totalMembers === 0) return reply("❌ No members found in this group.");
+
+        let emojis = ['📢', '🔊', '🌐', '🔰', '❤‍🩹', '🤍', '🖤', '🩵', '📝', '💗', '🔖', '🪩', '📦', '🎉', '🛡️', '💸', '⏳', '🗿', '🚀', '🎧', '🪀', '⚡', '🚩', '🍁', '🗣️', '👻', '⚠️', '🔥'];
+        let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+        // Proper message extraction
+        let message = body.slice(body.indexOf(command) + command.length).trim();
+        if (!message) message = "Attention Everyone"; // Default message
+
+        let teks = `▢ Group : *${groupName}*\n▢ Members : *${totalMembers}*\n▢ Message: *${message}*\n\n┌───⊷ *MENTIONS*\n`;
+
+        for (let mem of participants) {
+            if (!mem.id) continue; // Prevent undefined errors
+            teks += `${randomEmoji} @${mem.id.split('@')[0]}\n`;
+        }
+
+        teks += "└── DML ┃ MD ──";
+
+        conn.sendMessage(from, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek });
+
+    } catch (e) {
+        console.error("TagAll Error:", e);
+        reply(`❌ *Error Occurred !!*\n\n${e.message || e}`);
+    }
+});
+
