@@ -1,52 +1,42 @@
-// Useme hii command yako 
 const config = require('../config')
-const { cmd, commands } = require('../command')
-const { fetchJson } = require('../lib/functions')
+const { cmd } = require('../command')
+const mm = require('music-metadata') // library ya kusoma metadata
 
 cmd({
     pattern: "shazam",
     react: "🎵",
     alias: ["findsong", "musicid"],
-    desc: "Identify song by audio",
+    desc: "Identify song by reading metadata (offline)",
     category: "tools",
-    use: ".shazam (reply to audio/video)",
+    use: ".shazam (reply to audio)",
     filename: __filename
 },
-async (conn, mek, m, { from, reply, q }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        // Lazima mtu areply audio au video
-        if (!m.quoted) return reply("❌ Please reply to an *audio* or *video* file to identify the song.");
+        if (!m.quoted) return reply("❌ Please reply to an audio file.");
         
         let mime = (m.quoted.msg || m.quoted).mimetype || "";
-        if (!/audio|video/.test(mime)) return reply("❌ Please reply only to an audio or video file.");
+        if (!/audio/.test(mime)) return reply("❌ Only works on audio files.");
 
-        // Download the audio/video buffer
+        // Download the audio
         let media = await m.quoted.download?.();
-        if (!media) return reply("❌ Failed to download the file, try again.");
+        if (!media) return reply("❌ Failed to download audio.");
 
-        // Upload audio/video to some hosting (if needed for API)
-        // Example: use an API that accepts base64 or buffer
-        // Hapa tunatumia API ya shazam unofficial (hosted)
-        let { data } = await fetchJson(`https://api.zahwazein.xyz/search/shazam?apikey=zenzkey`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ audio: media.toString("base64") })
-        });
+        // Soma metadata ya audio
+        let metadata = await mm.parseBuffer(media, mime);
+        let common = metadata.common;
 
-        if (!data || !data.title) return reply("❌ Could not recognize the song.");
-
-        let teks = `🎶 *Shazam Result*\n\n`;
-        teks += `▢ *Title:* ${data.title}\n`;
-        teks += `▢ *Artist:* ${data.artist}\n`;
-        teks += `▢ *Album:* ${data.album || "-"}\n`;
-        teks += `▢ *Genre:* ${data.genre || "-"}\n`;
-        teks += `▢ *Released:* ${data.release_date || "-"}\n`;
-        if (data.url) teks += `\n🔗 *Listen:* ${data.url}`;
+        let teks = `🎶 *Song Metadata*\n\n`;
+        teks += `▢ *Title:* ${common.title || "Unknown"}\n`;
+        teks += `▢ *Artist:* ${common.artist || "Unknown"}\n`;
+        teks += `▢ *Album:* ${common.album || "Unknown"}\n`;
+        teks += `▢ *Genre:* ${common.genre ? common.genre.join(", ") : "Unknown"}\n`;
+        teks += `▢ *Year:* ${common.year || "Unknown"}\n`;
 
         await conn.sendMessage(from, { text: teks }, { quoted: mek });
 
     } catch (e) {
-        console.error("Shazam Error:", e);
-        reply(`❌ *Error Occurred while Shazaming !!*\n\n${e.message || e}`);
+        console.error("Shazam (offline) Error:", e);
+        reply(`❌ *Error Occurred !!*\n\n${e.message || e}`);
     }
 });
