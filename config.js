@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "DML-MD",
+SESSION_ID: process.env.SESSION_ID || "DML-MD~RusRXIrT#n1tRWLfK46OGVL1Nbox5x00SxkYdAnK05_zDLaYSRVU",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -15,7 +15,12 @@ AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // make true if you want auto reply on status 
 AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY DML-TECH 🇹🇿*",
 // set the auto reply massage on status reply  
-WELCOME: process.env.WELCOME || "true",
+WELCOME: process.env.WELCOME || "true" 𝘏𝘌𝘠𝘠 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 -➽*তোমার একটা one time করে কঠিন ছবি দিয়ে নিজের পরিচয় ডাউ 🥹❤️ দিতে হবে প্রবলেম হবে না🥹❤️*
+
+*-এটা আড্ডা মারার গ্রুপ 🥹❤️ রাতে গান, turth & dare, group ভিডিও এডিট হয়🥹❤️ left hobe na 🥹❤️*
+
+Problem hole group ta mute kore archive kore dao 🥹❤️
+𝐓𝗛𝗔𝗡𝗞𝗦❤‍🩹🌸𝐎𝐖𝐍𝐄𝐑- 𝐘𝐎𝐔𝐑 - 1   ᴍ,
 // true if want welcome and goodbye msg in groups    
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
